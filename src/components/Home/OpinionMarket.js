@@ -1,5 +1,5 @@
-import React from "react";
+import React from 'react';
 const OpinionMarket = () => {
-  return <div />;
+    return <div />;
 };
 export default OpinionMarket;
