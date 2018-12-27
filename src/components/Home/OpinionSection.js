@@ -1,420 +1,15 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
+import OpinionAnalysis from "./OpinionAnalysis";
+import OpinionMarket from "./OpinionMarket";
 const OpinionSection = () => {
   return (
     <section className="bg-white section-bottom-60">
       <div className="shell">
         <div className="range range-center range-40">
           <div className="cell-md-8 cell-lg-8">
-            <div className="section-xs">
-              <div className="section-title">
-                <h3>Opinion & Analysis</h3>
-              </div>
-              <div className="range range-center range-30">
-                <div className="cell-xs-10 cell-sm-6">
-                  <div className="post-type-1 post-type-1-mode">
-                    <img
-                      src="images/home-7-450x330.jpg"
-                      width="450"
-                      height="330"
-                      alt=""
-                    />
-                    <ul className="tag-list">
-                      <li>
-                        <a href="post.html">Economy</a>
-                      </li>
-                    </ul>
-                    <div className="caption">
-                      <h4 className="title">
-                        <a href="post.html">
-                          Spanish corporate growing pains drag on economy
-                        </a>
-                      </h4>
-                      <div className="bottom-block">
-                        <ul className="meta-list">
-                          <li>
-                            by <a href="post.html">Jon Snow</a>
-                          </li>
-                          <li>
-                            <a href="post.html">Aug 08, 2017 </a>
-                          </li>
-                        </ul>
-                        <div className="share-block">
-                          <div className="soc-icon">
-                            <a className="icon fa-twitter" href="/" />
-                            <a className="icon fa-facebook-square" href="/" />
-                            <a className="icon fa-instagram" href="/" />
-                            <a className="icon fa-pinterest" href="/" />
-                            <a className="icon fa-youtube-play" href="/" />
-                          </div>
-                          <span className="icon fa-share-alt" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="cell-xs-10 cell-sm-6">
-                  <div className="post-type-1 post-type-1-mode">
-                    <img
-                      src="images/home-8-450x330.jpg"
-                      width="450"
-                      height="330"
-                      alt=""
-                    />
-                    <ul className="tag-list">
-                      <li>
-                        <a href="post.html">Business</a>
-                      </li>
-                    </ul>
-                    <div className="caption">
-                      <h4 className="title">
-                        <a href="post.html">
-                          European equities a global laggard on political risk
-                        </a>
-                      </h4>
-                      <div className="bottom-block">
-                        <ul className="meta-list">
-                          <li>
-                            by <a href="post.html">Jon Snow</a>
-                          </li>
-                          <li>
-                            <a href="post.html">Aug 08, 2017 </a>
-                          </li>
-                        </ul>
-                        <div className="share-block">
-                          <div className="soc-icon">
-                            <a className="icon fa-twitter" href="/" />
-                            <a className="icon fa-facebook-square" href="/" />
-                            <a className="icon fa-instagram" href="/" />
-                            <a className="icon fa-pinterest" href="/" />
-                            <a className="icon fa-youtube-play" href="/" />
-                          </div>
-                          <span className="icon fa-share-alt" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="cell-xs-10 cell-sm-6">
-                  <div className="post-type-1 post-type-1-mode">
-                    <img
-                      src="images/home-9-450x330.jpg"
-                      width="450"
-                      height="330"
-                      alt=""
-                    />
-                    <ul className="tag-list">
-                      <li>
-                        <a href="post.html">Life</a>
-                      </li>
-                      <li>
-                        <a href="post.html">Business</a>
-                      </li>
-                    </ul>
-                    <div className="caption">
-                      <h4 className="title">
-                        <a href="post.html">
-                          Pharma giants see future of lower healthcare profits
-                        </a>
-                      </h4>
-                      <div className="bottom-block">
-                        <ul className="meta-list">
-                          <li>
-                            by <a href="post.html">Jon Snow</a>
-                          </li>
-                          <li>
-                            <a href="post.html">Aug 08, 2017 </a>
-                          </li>
-                        </ul>
-                        <div className="share-block">
-                          <div className="soc-icon">
-                            <a className="icon fa-twitter" href="/" />
-                            <a className="icon fa-facebook-square" href="/" />
-                            <a className="icon fa-instagram" href="/" />
-                            <a className="icon fa-pinterest" href="/" />
-                            <a className="icon fa-youtube-play" href="/" />
-                          </div>
-                          <span className="icon fa-share-alt" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="cell-xs-10 cell-sm-6">
-                  <div className="post-type-1 post-type-1-mode">
-                    <img
-                      src="images/home-10-450x330.jpg"
-                      width="450"
-                      height="330"
-                      alt=""
-                    />
-                    <ul className="tag-list">
-                      <li>
-                        <a href="post.html">Economy</a>
-                      </li>
-                    </ul>
-                    <div className="caption">
-                      <h4 className="title">
-                        <a href="post.html">
-                          US ordered to halt illegal tax breaks for Boeing
-                        </a>
-                      </h4>
-                      <div className="bottom-block">
-                        <ul className="meta-list">
-                          <li>
-                            by <a href="post.html">Jon Snow</a>
-                          </li>
-                          <li>
-                            <a href="post.html">Aug 08, 2017 </a>
-                          </li>
-                        </ul>
-                        <div className="share-block">
-                          <div className="soc-icon">
-                            <a className="icon fa-twitter" href="/" />
-                            <a className="icon fa-facebook-square" href="/" />
-                            <a className="icon fa-instagram" href="/" />
-                            <a className="icon fa-pinterest" href="/" />
-                            <a className="icon fa-youtube-play" href="/" />
-                          </div>
-                          <span className="icon fa-share-alt" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="section-xs">
-              <div className="section-title">
-                <h3>Markets</h3>
-              </div>
-              <div className="range range-xs-center tabs-custom-wrap">
-                <div className="cell-sm-12">
-                  <div
-                    className="tabs-custom tabs-horizontal tabs-custom-type-1"
-                    id="tabs-1"
-                  >
-                    <ul className="nav-custom nav-custom-tabs">
-                      <li className="active">
-                        <a href="#tabs-1-1" data-toggle="tab">
-                          U.S
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#tabs-1-2" data-toggle="tab">
-                          World
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#tabs-1-3" data-toggle="tab">
-                          Sectors
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#tabs-1-4" data-toggle="tab">
-                          Forex & Commodities
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#tabs-1-5" data-toggle="tab">
-                          % Gainers
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#tabs-1-6" data-toggle="tab">
-                          % Decliners
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="cell-sm-12">
-                  <div className="tab-content tab-content-type-1 text-left">
-                    <div className="tab-pane fade in active" id="tabs-1-1">
-                      <div className="range range-center">
-                        <div className="cell-sm-6">
-                          <div
-                            className="graphiq-block"
-                            style={{ width: "100%", margin: "10px 0" }}
-                          >
-                            <iframe
-                              src="https://sw.graphiq.com/w/jX7AyEEGvkx"
-                              width="600"
-                              height="520"
-                              title="graphicblock1"
-                              style={{
-                                position: "static",
-                                verticalAlign: "top",
-                                margin: "0 auto",
-                                display: "block",
-                                width: "600px !important",
-                                maxWidth: "100%",
-                                minHeight: "520px !important",
-                                maxHeight: "none !important",
-                                border: "none",
-                                overflow: "hidden"
-                              }}
-                            />
-                          </div>
-                        </div>
-                        <div className="cell-sm-6">
-                          <div
-                            className="graphiq-block"
-                            style={{ width: "100%", margin: "10px 0" }}
-                          >
-                            <iframe
-                              src="https://sw.graphiq.com/w/7kPPbQHH8wJ"
-                              width="700"
-                              height="490"
-                              title="graphicblock2"
-                              style={{
-                                position: "static",
-                                verticalAlign: "top",
-                                margin: "0 auto",
-                                display: "block",
-                                width: "700px !important",
-                                maxWidth: "100%",
-                                minHeight: "490px !important",
-                                maxHeight: "none !important",
-                                border: "none",
-                                overflow: "hidden"
-                              }}
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="tab-pane fade" id="tabs-1-2">
-                      <div
-                        className="graphiq-block"
-                        style={{ width: "100%", margin: "10px 0" }}
-                      >
-                        <iframe
-                          src="https://sw.graphiq.com/w/d1MSFcSkL3"
-                          width="780"
-                          height="490"
-                          title="graphicblock3"
-                          style={{
-                            position: "static",
-                            verticalAlign: "top",
-                            margin: "0 auto",
-                            display: "block",
-                            width: "780px !important",
-                            maxWidth: "100%",
-                            minHeight: "480px !important",
-                            maxHeight: "none !important",
-                            border: "none",
-                            overflow: "hidden"
-                          }}
-                        />
-                      </div>
-                    </div>
-                    <div className="tab-pane fade" id="tabs-1-3">
-                      <div
-                        className="graphiq-block"
-                        style={{ width: "100%", margin: "10px 0" }}
-                      >
-                        <iframe
-                          src="https://sw.graphiq.com/w/7kPPbQHH8wJ"
-                          width="700"
-                          height="490"
-                          title="graphicblock4"
-                          style={{
-                            position: "static",
-                            verticalAlign: "top",
-                            margin: "0 auto",
-                            display: "block",
-                            width: "700px !important",
-                            maxWidth: "100%",
-                            minHeight: "490px !important",
-                            maxHeight: "none !important",
-                            border: "none",
-                            overflow: "hidden"
-                          }}
-                        />
-                      </div>
-                    </div>
-                    <div className="tab-pane fade" id="tabs-1-4">
-                      <div
-                        className="graphiq-block"
-                        style={{ width: "100%", margin: "10px 0" }}
-                      >
-                        <iframe
-                          src="https://sw.graphiq.com/w/5CbupVRncC9"
-                          width="600"
-                          height="464"
-                          title="graphicblock5"
-                          style={{
-                            position: "static",
-                            verticalAlign: "top",
-                            margin: "0 auto",
-                            display: "block",
-                            width: "600px !important",
-                            maxWidth: "100%",
-                            minHeight: "464px !important",
-                            maxHeight: "none !important",
-                            border: "none",
-                            overflow: "hidden"
-                          }}
-                        />
-                      </div>
-                    </div>
-                    <div className="tab-pane fade" id="tabs-1-5">
-                      <div
-                        className="graphiq-block"
-                        style={{ width: "100%", margin: "10px 0" }}
-                      >
-                        <iframe
-                          src="https://sw.graphiq.com/w/81q1mF74HWZ"
-                          width="600"
-                          height="516"
-                          title="graphicblock6"
-                          style={{
-                            position: "static",
-                            verticalAlign: "top",
-                            margin: "0 auto",
-                            display: "block",
-                            width: "600px !important",
-                            maxWidth: "100%",
-                            minHeight: "516px !important",
-                            maxHeight: "none !important",
-                            border: "none",
-                            overflow: "hidden"
-                          }}
-                        />
-                      </div>
-                    </div>
-                    <div className="tab-pane fade" id="tabs-1-6">
-                      <div
-                        className="graphiq-block"
-                        style={{ width: "100%", margin: "10px 0" }}
-                      >
-                        <iframe
-                          src="https://sw.graphiq.com/w/5CbupVRncC9"
-                          width="600"
-                          height="464"
-                          title="graphicblock7"
-                          style={{
-                            position: "static",
-                            verticalAlign: "top",
-                            margin: "0 auto",
-                            display: "block",
-                            width: "600px !important",
-                            maxWidth: "100%",
-                            minHeight: "464px !important",
-                            maxHeight: "none !important",
-                            border: "none",
-                            overflow: "hidden"
-                          }}
-                        >
-                          {" "}
-                        </iframe>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <OpinionAnalysis />
+            <OpinionMarket />
             <div className="section-xs">
               <div className="section-title">
                 <h3>Inside Business</h3>
@@ -457,10 +52,12 @@ const OpinionSection = () => {
                           </ul>
                           <div className="share-block">
                             <div className="soc-icon">
-                              <a className="icon fa-twitter" href="/" />
-                              <a className="icon fa-facebook" href="/" />
-                              <a className="icon fa-google-plus" href="/" />
-                              <a className="icon fa-youtube-play" href="/" />
+                              <Link className="icon fa-twitter" to="/">
+                                {" "}
+                              </Link>
+                              <Link className="icon fa-facebook" to="/" />
+                              <Link className="icon fa-google-plus" to="/" />
+                              <Link className="icon fa-youtube-play" to="/" />
                             </div>
                             <span className="icon fa-share-alt" />
                           </div>
@@ -507,10 +104,12 @@ const OpinionSection = () => {
                           </ul>
                           <div className="share-block">
                             <div className="soc-icon">
-                              <a className="icon fa-twitter" href="/" />
-                              <a className="icon fa-facebook" href="/" />
-                              <a className="icon fa-google-plus" href="/" />
-                              <a className="icon fa-youtube-play" href="/" />
+                              <Link className="icon fa-twitter" to="/">
+                                {" "}
+                              </Link>
+                              <Link className="icon fa-facebook" to="/" />
+                              <Link className="icon fa-google-plus" to="/" />
+                              <Link className="icon fa-youtube-play" to="/" />
                             </div>
                             <span className="icon fa-share-alt" />
                           </div>
@@ -557,10 +156,12 @@ const OpinionSection = () => {
                           </ul>
                           <div className="share-block">
                             <div className="soc-icon">
-                              <a className="icon fa-twitter" href="/" />
-                              <a className="icon fa-facebook" href="/" />
-                              <a className="icon fa-google-plus" href="/" />
-                              <a className="icon fa-youtube-play" href="/" />
+                              <Link className="icon fa-twitter" to="/">
+                                {" "}
+                              </Link>
+                              <Link className="icon fa-facebook" to="/" />
+                              <Link className="icon fa-google-plus" to="/" />
+                              <Link className="icon fa-youtube-play" to="/" />
                             </div>
                             <span className="icon fa-share-alt" />
                           </div>
@@ -609,10 +210,12 @@ const OpinionSection = () => {
                           </ul>
                           <div className="share-block">
                             <div className="soc-icon">
-                              <a className="icon fa-twitter" href="/" />
-                              <a className="icon fa-facebook" href="/" />
-                              <a className="icon fa-google-plus" href="/" />
-                              <a className="icon fa-youtube-play" href="/" />
+                              <Link className="icon fa-twitter" to="/">
+                                {" "}
+                              </Link>
+                              <Link className="icon fa-facebook" to="/" />
+                              <Link className="icon fa-google-plus" to="/" />
+                              <Link className="icon fa-youtube-play" to="/" />
                             </div>
                             <span className="icon fa-share-alt" />
                           </div>
@@ -656,10 +259,12 @@ const OpinionSection = () => {
                           </ul>
                           <div className="share-block">
                             <div className="soc-icon">
-                              <a className="icon fa-twitter" href="/" />
-                              <a className="icon fa-facebook" href="/" />
-                              <a className="icon fa-google-plus" href="/" />
-                              <a className="icon fa-youtube-play" href="/" />
+                              <Link className="icon fa-twitter" to="/">
+                                {" "}
+                              </Link>
+                              <Link className="icon fa-facebook" to="/" />
+                              <Link className="icon fa-google-plus" to="/" />
+                              <Link className="icon fa-youtube-play" to="/" />
                             </div>
                             <span className="icon fa-share-alt" />
                           </div>
@@ -705,10 +310,12 @@ const OpinionSection = () => {
                           </ul>
                           <div className="share-block">
                             <div className="soc-icon">
-                              <a className="icon fa-twitter" href="/" />
-                              <a className="icon fa-facebook" href="/" />
-                              <a className="icon fa-google-plus" href="/" />
-                              <a className="icon fa-youtube-play" href="/" />
+                              <Link className="icon fa-twitter" to="/">
+                                {" "}
+                              </Link>
+                              <Link className="icon fa-facebook" to="/" />
+                              <Link className="icon fa-google-plus" to="/" />
+                              <Link className="icon fa-youtube-play" to="/" />
                             </div>
                             <span className="icon fa-share-alt"> </span>
                           </div>
@@ -757,7 +364,7 @@ const OpinionSection = () => {
                       action="bat/rd-mailform.php"
                     >
                       <div className="form-wrap">
-                        <label className="form-label" for="contact-email">
+                        <label className="form-label" htmlFor="contact-email">
                           Your Email Here
                         </label>
                         <input
@@ -778,11 +385,12 @@ const OpinionSection = () => {
                         Read our latest news on any of these social networks!
                       </p>
                       <div className="soc-icon">
-                        <a className="icon fa-twitter" href="/" />
-                        <a className="icon fa-facebook-square" href="/" />
-                        <a className="icon fa-instagram" href="/" />
-                        <a className="icon fa-pinterest" href="/" />
-                        <a className="icon fa-youtube-play" href="/" />
+                        <Link className="icon fa-twitter" to="/">
+                          {" "}
+                        </Link>
+                        <Link className="icon fa-facebook" to="/" />
+                        <Link className="icon fa-google-plus" to="/" />
+                        <Link className="icon fa-youtube-play" to="/" />
                       </div>
                     </div>
                   </div>
@@ -794,6 +402,7 @@ const OpinionSection = () => {
                   <div className="post-video">
                     <div className="embed-responsive embed-responsive-16by9">
                       <iframe
+                        title="textx2"
                         className="embed-responsive-item"
                         src="https://www.youtube.com/embed/0qvjg_39awQ"
                       />
@@ -815,10 +424,12 @@ const OpinionSection = () => {
                         </ul>
                         <div className="share-block">
                           <div className="soc-icon">
-                            <a className="icon fa-twitter" href="/" />
-                            <a className="icon fa-facebook" href="/" />
-                            <a className="icon fa-google-plus" href="/" />
-                            <a className="icon fa-youtube-play" href="/" />
+                            <Link className="icon fa-twitter" to="/">
+                              {" "}
+                            </Link>
+                            <Link className="icon fa-facebook" to="/" />
+                            <Link className="icon fa-google-plus" to="/" />
+                            <Link className="icon fa-youtube-play" to="/" />
                           </div>
                           <span className="icon fa-share-alt" />
                         </div>

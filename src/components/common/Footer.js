@@ -1,13 +1,13 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer>
-      <div class="shell page-footer-default page-footer-type-1">
-        <div class="range range-30 text-left">
-          <div class="cell-xs-6 cell-lg-3">
-            <h4 class="footer-title">Categories</h4>
-            <ul class="list">
+      <div className="shell page-footer-default page-footer-type-1">
+        <div className="range range-30 text-left">
+          <div className="cell-xs-6 cell-lg-3">
+            <h4 className="footer-title">Categories</h4>
+            <ul className="list">
               <li>
                 <a href="/">World</a>
               </li>
@@ -28,9 +28,9 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div class="cell-xs-6 cell-lg-3">
-            <h4 class="footer-title">Information</h4>
-            <ul class="list">
+          <div className="cell-xs-6 cell-lg-3">
+            <h4 className="footer-title">Information</h4>
+            <ul className="list">
               <li>
                 <a href="about.html">About</a>
               </li>
@@ -48,9 +48,9 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div class="cell-xs-12 cell-sm-6 cell-lg-3">
-            <h4 class="footer-title">Tags</h4>
-            <ul class="tag-list-type-1">
+          <div className="cell-xs-12 cell-sm-6 cell-lg-3">
+            <h4 className="footer-title">Tags</h4>
+            <ul className="tag-list-type-1">
               <li>
                 <a href="post.html">World</a>
               </li>
@@ -68,38 +68,41 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div class="cell-xs-12 cell-sm-6 cell-lg-3">
-            <h4 class="footer-title">Newsletter</h4>
-            <p class="text-italic">
+          <div className="cell-xs-12 cell-sm-6 cell-lg-3">
+            <h4 className="footer-title">Newsletter</h4>
+            <p className="text-italic">
               We will send you breaking news right to your inbox
             </p>
             <form
-              class="rd-mailform text-left rd-mailform-inline"
+              className="rd-mailform text-left rd-mailform-inline"
               data-form-output="form-output-global"
               data-form-type="subscribe"
               method="post"
               action="bat/rd-mailform.php"
             >
-              <div class="form-wrap">
-                <label class="form-label text-italic" for="subscribe-email">
+              <div className="form-wrap">
+                <label
+                  className="form-label text-italic"
+                  htmlFor="subscribe-email"
+                >
                   Your Email Here
                 </label>
                 <input
-                  class="form-input"
+                  className="form-input"
                   id="subscribe-email"
                   type="email"
                   name="email"
                   data-constraints="@Email @Required"
                 />
               </div>
-              <button class="button button-primary" type="submit">
+              <button className="button button-primary" type="submit">
                 Subscribe
               </button>
             </form>
           </div>
         </div>
-        <div class="range range-center range-xs-30 range-sm-0 footer-bottom-section">
-          <div class="cell-sm-6 text-sm-left">
+        <div className="range range-center range-xs-30 range-sm-0 footer-bottom-section">
+          <div className="cell-sm-6 text-sm-left">
             <a href="./">
               <img
                 src="images/logo-dark-266x54.png"
@@ -108,20 +111,19 @@ const Footer = () => {
                 alt=""
               />
             </a>
-            <p class="privacy">
+            <p className="privacy">
               MoneyWise &#169; <span id="copyright-year" />.
               <a href="privacy-policy.html">Privacy Policy</a>
             </p>
           </div>
-          <div class="cell-sm-6 text-sm-right">
-            <div class="soc-icon">
-              <a class="icon fa-twitter" href="/" />
-              <a class="icon fa-facebook-square" href="/" />
-              <a class="icon fa-instagram" href="/" />
-              <a class="icon fa-pinterest" href="/" />
-              <a class="icon fa-youtube-play" href="/">
+          <div className="cell-sm-6 text-sm-right">
+            <div className="soc-icon">
+              <Link className="icon fa-twitter" to="/">
                 {" "}
-              </a>
+              </Link>
+              <Link className="icon fa-facebook" to="/" />
+              <Link className="icon fa-google-plus" to="/" />
+              <Link className="icon fa-youtube-play" to="/" />
             </div>
           </div>
         </div>

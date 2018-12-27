@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 export default () => {
   return (
     <div className="post-type-1">
@@ -29,11 +29,12 @@ export default () => {
           </ul>
           <div className="share-block">
             <div className="soc-icon">
-              <a className="icon fa-twitter" href="/" />
-              <a className="icon fa-facebook-square" href="/" />
-              <a className="icon fa-instagram" href="/" />
-              <a className="icon fa-pinterest" href="/" />
-              <a className="icon fa-youtube-play" href="/" />
+              <Link className="icon fa-twitter" to="/">
+                {" "}
+              </Link>
+              <Link className="icon fa-facebook" to="/" />
+              <Link className="icon fa-google-plus" to="/" />
+              <Link className="icon fa-youtube-play" to="/" />
             </div>
             <span className="icon fa-share-alt" />
           </div>

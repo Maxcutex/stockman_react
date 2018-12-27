@@ -11,8 +11,8 @@ describe("App", () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it("should render Home correctly", () => {
-    const home = wrapper.find("Home");
-    expect(home.length).toBe(1);
-  });
+  // it("should render Home correctly", () => {
+  //   const home = wrapper.find("Home");
+  //   expect(home.length).toBe(1);
+  // });
 });
