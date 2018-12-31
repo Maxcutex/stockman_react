@@ -8,18 +8,20 @@ import Header from './common/Header';
 import Footer from './common/Footer';
 import Home from './Home/Home';
 
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 class App extends Component {
     render() {
         return (
             <BrowserRouter>
-                <div>
-                    <PriceBar />
-                    <Header />
-                    <Route exact path="/" component={Home} />
-                    <Footer />
-                </div>
+                <Switch>
+                    <div>
+                        <PriceBar />
+                        <Header />
+                        <Route exact path="/" component={Home} />
+                        <Footer />
+                    </div>
+                </Switch>
             </BrowserRouter>
         );
     }
