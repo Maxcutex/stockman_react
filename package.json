@@ -2,11 +2,13 @@
     "name": "client",
     "version": "0.1.0",
     "private": true,
-    "proxy": "http://localhost:3001",
+    "proxy": "http://localhost:8000",
     "dependencies": {
         "axios": "^0.18.0",
+        "coveralls": "^3.0.2",
         "enzyme": "^3.8.0",
         "enzyme-adapter-react-16": "^1.7.1",
+        "jwt-decode": "^2.2.0",
         "npm": "^6.5.0",
         "react": "^16.6.3",
         "react-dom": "^16.6.3",
@@ -15,7 +17,9 @@
         "react-scripts": "2.1.1",
         "react-test-renderer": "^16.6.3",
         "redux": "^4.0.1",
-        "coveralls": "^3.0.2"
+        "redux-devtools-extension": "^2.13.7",
+        "redux-immutable-state-invariant": "^2.1.0",
+        "redux-thunk": "^2.3.0"
     },
     "scripts": {
         "start": "react-scripts start",
