@@ -3,3 +3,8 @@ export default {
     activeUser: {},
     menus: [],
 };
+export const initialNews = {
+    isLoading: false,
+    isUpdating: false,
+    news: [],
+};
