@@ -14,14 +14,14 @@ class App extends Component {
     render() {
         return (
             <BrowserRouter>
-                <Switch>
-                    <div>
-                        <PriceBar />
-                        <Header />
+                <div>
+                    <PriceBar />
+                    <Header />
+                    <Switch>
                         <Route exact path="/" component={Home} />
-                        <Footer />
-                    </div>
-                </Switch>
+                    </Switch>
+                    <Footer />
+                </div>
             </BrowserRouter>
         );
     }

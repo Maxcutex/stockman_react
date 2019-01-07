@@ -1,0 +1,230 @@
+@media (min-width: 1281px) {
+    .mobile-menu {
+        display: none;
+    }
+    .desktop-menu {
+        display: block;
+    }
+    .menu {
+        display: none;
+    }
+    .search-mobile-section {
+        display: none;
+    }
+}
+
+/* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .mobile-menu {
+        display: none;
+    }
+    .desktop-menu {
+        display: block;
+    }
+    .menu {
+        display: none;
+    }
+    .search-mobile-section {
+        display: none;
+    }
+}
+
+/* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .mobile-menu {
+        display: block;
+    }
+    .desktop-menu {
+        display: none;
+    }
+    .menu {
+        display: block;
+        border: unset;
+        cursor: pointer;
+        background-color: white;
+        margin-right: 2rem;
+        margin-bottom: 3px;
+    }
+    .search-mobile-section {
+        display: block;
+    }
+    .stockman-logo img {
+        width: 140px;
+        height: 28.41px;
+    }
+    .rd-navbar-fixed .rd-navbar-panel {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        padding: 4px;
+        height: 56px;
+        color: #000;
+        z-index: 999;
+    }
+}
+
+/* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .mobile-menu {
+        display: block;
+    }
+    .desktop-menu {
+        display: none;
+    }
+    .menu {
+        display: block;
+        border: unset;
+        cursor: pointer;
+        background-color: white;
+        margin-right: 2rem;
+        margin-bottom: 3px;
+    }
+    .search-mobile-section {
+        display: block;
+    }
+    .stockman-logo img {
+        width: 140px;
+        height: 28.41px;
+    }
+    .rd-navbar-fixed .rd-navbar-panel {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        padding: 4px;
+        height: 56px;
+        color: #000;
+        z-index: 999;
+    }
+}
+
+/* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .mobile-menu {
+        display: block;
+    }
+    .desktop-menu {
+        display: none;
+    }
+    .menu {
+        display: block;
+        border: unset;
+        cursor: pointer;
+        background-color: white;
+        margin-right: 2rem;
+        margin-bottom: 3px;
+    }
+    .search-mobile-section {
+        display: block;
+    }
+    .stockman-logo img {
+        width: 140px;
+        height: 28.41px;
+    }
+    .rd-navbar-fixed .rd-navbar-panel {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        padding: 4px;
+        height: 56px;
+        color: #000;
+        z-index: 999;
+    }
+}
+
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .mobile-menu {
+        display: block;
+    }
+    .desktop-menu {
+        display: none;
+    }
+    .menu {
+        display: block;
+        border: unset;
+        cursor: pointer;
+        background-color: white;
+        margin-right: 2rem;
+        margin-bottom: 3px;
+    }
+    .search-mobile-section {
+        display: block;
+    }
+    .stockman-logo img {
+        width: 140px;
+        height: 28.41px;
+    }
+    .rd-navbar-fixed .rd-navbar-panel {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        padding: 4px;
+        height: 56px;
+        color: #000;
+        z-index: 999;
+    }
+}
+/*
+@media only screen and (max-width: 600px) {
+    .menu {
+        display: block;
+        border: unset;
+        cursor: pointer;
+        background-color: white;
+        margin-right: 2rem;
+        margin-bottom: 3px;
+    }
+}*/
+
+.menu .line {
+    width: 3rem;
+    height: 5px;
+    background-color: #000;
+    display: block;
+    display: block;
+    margin: 4px auto;
+    -webkit-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+
+.navBrandCustom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.search-icon-fa {
+    margin-right: 3rem;
+}
