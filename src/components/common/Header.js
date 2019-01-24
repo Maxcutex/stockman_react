@@ -233,7 +233,7 @@ const Header = () => {
                                     <div className="form-wrap">
                                         <label
                                             className="form-label form-label rd-input-label"
-                                            for="rd-navbar-search-form-input"
+                                            htmlFor="rd-navbar-search-form-input"
                                         >
                                             I`m looking for...
                                         </label>
@@ -242,7 +242,7 @@ const Header = () => {
                                             id="rd-navbar-search-form-input"
                                             type="text"
                                             name="s"
-                                            autocomplete="off"
+                                            autoComplete="off"
                                         />
                                         <div
                                             className="rd-search-results-live"
