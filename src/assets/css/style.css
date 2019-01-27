@@ -8628,6 +8628,8 @@ ol ol {
   right: 0;
   margin-top: 5px;
   text-align: left;
+  background-color: #f5f5f5;
+  padding: 3rem;
 }
 
 #rd-search-results-live #search-results {

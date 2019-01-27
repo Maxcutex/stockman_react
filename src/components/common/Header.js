@@ -1,6 +1,21 @@
-import React from 'react';
+import React,{Component} from 'react';
 // import { NavLink } from 'react-router-dom';
-const Header = () => {
+class Header extends Component {
+    constructor(){
+        super()
+        this.state = {
+            search:'',
+            showSearch:false
+        }
+    }
+    onChange = (e) => {
+        this.setState({[e.target.name]: e.target.value})
+        if((this.state.search).length > 0){
+            this.setState({showSearch: true})
+        } 
+    }
+    render(){
+
     return (
         <header className="page-header header-home-1">
             <div
@@ -231,23 +246,26 @@ const Header = () => {
                                     method="GET"
                                 >
                                     <div className="form-wrap">
-                                        <label
-                                            className="form-label form-label rd-input-label"
-                                            htmlFor="rd-navbar-search-form-input"
-                                        >
-                                            I`m looking for...
-                                        </label>
                                         <input
                                             className="rd-navbar-search-form-input form-input"
                                             id="rd-navbar-search-form-input"
                                             type="text"
-                                            name="s"
-                                            autoComplete="off"
+                                            name="search"
+                                            value={this.state.search}
+                                            onChange={this.onChange}
+                                            placeholder=" I`m looking for..."
+                                            autocomplete="off"
                                         />
+                                        {this.state.showSearch && (this.state.search).length > 0 && (
                                         <div
                                             className="rd-search-results-live"
                                             id="rd-search-results-live"
-                                        />
+                                        >
+                                        <h5>Quick Search</h5>
+                                        <p>No result to display</p>
+                                        </div>
+                                        )   
+                                        }
                                     </div>
                                     <button className="rd-search-form-submit fa-search" />
                                 </form>
@@ -258,6 +276,7 @@ const Header = () => {
             </div>
         </header>
     );
+    }
 };
 
 export default Header;
