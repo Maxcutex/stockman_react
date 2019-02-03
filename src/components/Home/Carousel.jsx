@@ -5,7 +5,7 @@ import { Carousel } from 'react-responsive-carousel';
 class CarouselComponent extends Component {
     render() {
         return (
-            <Carousel autoPlay interval={1500} infiniteLoop showThumbs={false}>
+            <Carousel autoPlay interval={3500} infiniteLoop showThumbs={false}>
                 <div>
                     <img src="images/slide-1-930x692.jpg" alt="image1" />
                     <p className="legend">Legend 1</p>

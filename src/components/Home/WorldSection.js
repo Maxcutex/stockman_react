@@ -7,7 +7,7 @@ class WorldSection extends Component {
         news: [
             {
                 id: 1,
-                section: 'World',
+                section: 'Economics',
                 title: 'news title1',
                 description: 'this is the description',
                 author: 'Jon Snow',
@@ -46,7 +46,7 @@ class WorldSection extends Component {
                 id: 5,
             },
             {
-                section: 'World',
+                section: 'Business',
                 title: 'news title2',
                 description: 'this is the description',
                 author: 'Jon Snow',
@@ -54,12 +54,44 @@ class WorldSection extends Component {
                 id: 6,
             },
             {
-                section: 'World',
+                section: 'Politics',
                 title: 'news title3',
                 description: 'this is the description',
                 author: 'Jon Snow',
                 date: '28-01-2019',
                 id: 7,
+            },
+            {
+                section: 'World',
+                title: 'news title1',
+                description: 'this is the description',
+                author: 'Jon Snow',
+                date: '28-01-2019',
+                id: 8,
+            },
+            {
+                section: 'World',
+                title: 'news title2',
+                description: 'this is the description',
+                author: 'Jon Snow',
+                date: '28-01-2019',
+                id: 9,
+            },
+            {
+                section: 'World',
+                title: 'news title3',
+                description: 'this is the description',
+                author: 'Jon Snow',
+                date: '28-01-2019',
+                id: 10,
+            },
+            {
+                id: 11,
+                section: 'World',
+                title: 'news Business',
+                description: 'this is the description',
+                author: 'Jon Snow',
+                date: '28-01-2019',
             },
         ],
         activeNews: [
@@ -86,6 +118,14 @@ class WorldSection extends Component {
                 author: 'Jon Snow',
                 date: '28-01-2019',
                 id: 10,
+            },
+            {
+                id: 11,
+                section: 'World',
+                title: 'news Business',
+                description: 'this is the description',
+                author: 'Jon Snow',
+                date: '28-01-2019',
             },
         ],
     };
@@ -196,9 +236,16 @@ class WorldSection extends Component {
                             </div>
                         </div>
                         <div className="cell-xs-12">
-                            <div className="row">
+                            <div
+                                className="row"
+                                style={{
+                                    marginLeft: 'auto',
+                                    marginRight: 'auto',
+                                    position: 'relative',
+                                }}
+                            >
                                 <div
-                                    className="isotope--loaded"
+                                    className="isotope isotope--loaded"
                                     data-isotope-layout="fitRows"
                                     data-isotope-group="gallery"
                                 >
