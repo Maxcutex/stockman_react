@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Home from '../../../components/Home/Home';
+import FeaturedSection from '../../../components/Home/FeaturedSection';
 
 describe('Home Test', () => {
     let wrapper;
@@ -12,7 +13,7 @@ describe('Home Test', () => {
     });
 
     it('should render Featured Section correctly', () => {
-        const featured = wrapper.find('FeaturedSection');
+        const featured = wrapper.find(FeaturedSection);
         expect(featured.length).toBe(1);
     });
 

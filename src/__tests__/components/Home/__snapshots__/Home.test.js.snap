@@ -18,7 +18,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <FeaturedSection />,
+        <Connect(FeaturedSection) />,
         <WorldSection />,
         <OpinionSection />,
       ],
@@ -37,7 +37,7 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {},
         "ref": null,
         "rendered": null,
@@ -62,7 +62,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <FeaturedSection />,
+          <Connect(FeaturedSection) />,
           <WorldSection />,
           <OpinionSection />,
         ],
@@ -81,7 +81,7 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {},
           "ref": null,
           "rendered": null,
