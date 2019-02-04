@@ -2,6 +2,8 @@ import axios from 'axios';
 import {
     FETCH_FEATURED_NEWS_SUCCESS,
     FETCH_GENERAL_NEWS_SUCCESS,
+    FETCH_FEATURED_NEWS_FAILURE,
+    FETCH_GENERAL_NEWS_FAILURE,
 } from './actionTypes';
 import { config } from '../config';
 
@@ -16,7 +18,14 @@ export const fetchFeaturedNewsSuccess = news => ({
     type: FETCH_FEATURED_NEWS_SUCCESS,
     payload: news,
 });
-
+export const fetchNewsFailure = error => ({
+    type: FETCH_GENERAL_NEWS_FAILURE,
+    payload: error,
+});
+export const fetchFeaturedNewsFailure = error => ({
+    type: FETCH_FEATURED_NEWS_FAILURE,
+    payload: error,
+});
 export const fetchNews = () => dispatch => {
     return axios
         .get(`${baseUrl}/News/`)
@@ -24,7 +33,7 @@ export const fetchNews = () => dispatch => {
             dispatch(fetchNewsSuccess(res.data.results));
         })
         .catch(error => {
-            // dispatch(fetchNewsFailure(error));
+            dispatch(fetchNewsFailure(error));
         });
 };
 
@@ -35,6 +44,6 @@ export const fetchFeaturedNews = () => dispatch => {
             dispatch(fetchFeaturedNewsSuccess(res.data.results));
         })
         .catch(error => {
-            //dispatch(fetchNewsFailure(error));
+            dispatch(fetchFeaturedNewsFailure(error));
         });
 };
