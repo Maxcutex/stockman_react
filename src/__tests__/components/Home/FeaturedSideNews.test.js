@@ -20,9 +20,10 @@ describe('FeaturedSideNews Component', () => {
                 ],
                 title: 'test title',
                 author: 'test',
+                id: 1,
             },
         };
-        component = shallow(<FeaturedSideNews {...props} />);
+        component = shallow(<FeaturedSideNews {...props} key={id} />);
     });
     it('renders without crashing', () => {
         expect(component).toMatchSnapshot();
