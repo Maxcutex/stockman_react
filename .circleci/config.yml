@@ -28,7 +28,7 @@ jobs:
                   name: Run frontend tests
                   command: |
                       npm test
-                      ./tmp/cc-test-reporter format-coverage -t lcov -o tmp/codeclimate.frontend.json coverage/lcov.info
+                      ./tmp/cc-test-reporter format-coverage -t lcov -o tmp/codeclimate.frontend.json .coverage/lcov.info
             - persist_to_workspace:
                   root: tmp
                   paths:
