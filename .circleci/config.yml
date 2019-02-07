@@ -21,6 +21,9 @@ jobs:
             - run:
                   name: run tests
                   command: npm test -- --coverage
+            - run:
+                  name: run upload
+                  command: npm run coveralls
 
 workflows:
     version: 2
