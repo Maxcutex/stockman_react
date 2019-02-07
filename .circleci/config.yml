@@ -20,7 +20,7 @@ jobs:
                   key: v1-dependencies-{{ checksum package.json" }}
             - run:
                   name: run tests
-                  command: npm test --coverage
+                  command: npm test -- --coverage
 
 workflows:
     version: 2
