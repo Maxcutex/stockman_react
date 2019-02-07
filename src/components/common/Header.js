@@ -75,6 +75,7 @@ class Header extends Component {
                                             width="266"
                                             height="54"
                                             alt=""
+                                            key={'mobile'}
                                         />
                                     </a>
                                 </div>
@@ -275,6 +276,7 @@ class Header extends Component {
                                             width="266"
                                             height="54"
                                             alt=""
+                                            key={'desktop'}
                                         />
                                     </a>
                                 </div>
