@@ -25,6 +25,10 @@ describe('WorldSection Component', () => {
         expect(component).toMatchSnapshot();
     });
 
+    it('has sub component world section details', () => {
+        const subComp = component.find(WorldSectionDetails);
+        expect(subComp.length).toBe(1);
+    });
     it('renders World Section Details without crashing', () => {
         let componentDetails = shallow(<WorldSectionDetails {...props} />);
     });

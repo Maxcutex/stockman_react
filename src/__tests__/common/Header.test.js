@@ -21,18 +21,5 @@ describe('Header Component', () => {
     it('should show a logo', () => {
         const logoImg = component.find('img');
         expect(logoImg.length).toEqual(2);
-        //const src = logoImg.props('src');
-        //expect(src).toBe('images/logo-dark-266x54.png');
-        // expect(
-        //     component
-        //         .find('img')
-        //         .find('[src]')
-        //         .props().src
-        // ).toEqual('images/logo-dark-266x54.png');
-        // expect(
-        //     component.find('img').filterWhere(item => {
-        //         return item.prop('src') === IMAGE_PATH;
-        //     })
-        // ).toHaveLength(1);
     });
 });
