@@ -86,7 +86,6 @@ ShallowWrapper {
                 <a
                   href="post.html"
                 >
-                  test
                    
                 </a>
               </li>
@@ -259,7 +258,6 @@ ShallowWrapper {
                   <a
                     href="post.html"
                   >
-                    test
                      
                   </a>
                 </li>
@@ -351,7 +349,6 @@ ShallowWrapper {
                     <a
                       href="post.html"
                     >
-                      test
                        
                     </a>
                   </li>
@@ -412,7 +409,6 @@ ShallowWrapper {
                       <a
                         href="post.html"
                       >
-                        test
                          
                       </a>
                     </li>,
@@ -438,7 +434,6 @@ ShallowWrapper {
                         <a
                           href="post.html"
                         >
-                          test
                            
                         </a>,
                       ],
@@ -452,14 +447,14 @@ ShallowWrapper {
                         "nodeType": "host",
                         "props": Object {
                           "children": Array [
-                            "test",
+                            undefined,
                             " ",
                           ],
                           "href": "post.html",
                         },
                         "ref": null,
                         "rendered": Array [
-                          "test",
+                          undefined,
                           " ",
                         ],
                         "type": "a",
@@ -705,7 +700,6 @@ ShallowWrapper {
                   <a
                     href="post.html"
                   >
-                    test
                      
                   </a>
                 </li>
@@ -878,7 +872,6 @@ ShallowWrapper {
                     <a
                       href="post.html"
                     >
-                      test
                        
                     </a>
                   </li>
@@ -970,7 +963,6 @@ ShallowWrapper {
                       <a
                         href="post.html"
                       >
-                        test
                          
                       </a>
                     </li>
@@ -1031,7 +1023,6 @@ ShallowWrapper {
                         <a
                           href="post.html"
                         >
-                          test
                            
                         </a>
                       </li>,
@@ -1057,7 +1048,6 @@ ShallowWrapper {
                           <a
                             href="post.html"
                           >
-                            test
                              
                           </a>,
                         ],
@@ -1071,14 +1061,14 @@ ShallowWrapper {
                           "nodeType": "host",
                           "props": Object {
                             "children": Array [
-                              "test",
+                              undefined,
                               " ",
                             ],
                             "href": "post.html",
                           },
                           "ref": null,
                           "rendered": Array [
-                            "test",
+                            undefined,
                             " ",
                           ],
                           "type": "a",

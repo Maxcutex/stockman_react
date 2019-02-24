@@ -1,10 +1,18 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 
 import FeaturedSection from '../../../components/Home/FeaturedSection';
+const setup = () => {
+    const props = {
+        fetchFeaturedNews: jest.fn(),
+    };
 
+    return shallow(<FeaturedSection {...props} />);
+};
+
+const wrapper = setup();
 describe('Featured Component', () => {
-    it('renders without crashing', () => {
-        let component = shallow(<FeaturedSection />);
+    it('expects the following methods to be defined', () => {
+        // wrapper.instance().componentDidMount();
     });
 });

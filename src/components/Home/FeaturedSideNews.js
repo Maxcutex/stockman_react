@@ -35,7 +35,7 @@ export default props => {
                 <div className="bottom-block">
                     <ul className="meta-list">
                         <li>
-                            by <a href="post.html">{author} </a>
+                            by <a href="post.html">{author.first_name} </a>
                         </li>
                         <li>
                             <a href="post.html">Aug 08, 2017 </a>
