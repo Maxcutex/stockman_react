@@ -8,3 +8,9 @@ export const initialNews = {
     isUpdating: false,
     news: [],
 };
+
+export const initialSearch = {
+    isLoading: false,
+    isUpdating: false,
+    searchList: [],
+};

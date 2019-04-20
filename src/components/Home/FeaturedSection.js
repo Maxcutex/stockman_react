@@ -25,7 +25,10 @@ class FeaturedSection extends Component {
                         <div className="cell-lg-4">
                             <div className="range range-center range-30">
                                 {featuredSideNews.map(sideNews => (
-                                    <div className="cell-xs-6 cell-sm-6 cell-lg-12">
+                                    <div
+                                        className="cell-xs-6 cell-sm-6 cell-lg-12"
+                                        key={`key-${sideNews.id}`}
+                                    >
                                         <FeaturedSideNews
                                             key={sideNews.id}
                                             featured={sideNews}

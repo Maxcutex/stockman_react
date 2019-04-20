@@ -19,7 +19,7 @@ ShallowWrapper {
     "props": Object {
       "children": <div>
         <PriceBar />
-        <Header />
+        <Connect(Header) />
         <Switch>
           <Route
             component={[Function]}
@@ -38,7 +38,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <PriceBar />,
-          <Header />,
+          <Connect(Header) />,
           <Switch>
             <Route
               component={[Function]}
@@ -118,7 +118,7 @@ ShallowWrapper {
       "props": Object {
         "children": <div>
           <PriceBar />
-          <Header />
+          <Connect(Header) />
           <Switch>
             <Route
               component={[Function]}
@@ -137,7 +137,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <PriceBar />,
-            <Header />,
+            <Connect(Header) />,
             <Switch>
               <Route
                 component={[Function]}

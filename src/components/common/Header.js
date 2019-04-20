@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 // import { NavLink } from 'react-router-dom';
-class Header extends Component {
+import { fetchSearchStock } from '../../actions/searchAction';
+export class Header extends Component {
     constructor() {
         super();
         this.state = {
@@ -12,9 +14,12 @@ class Header extends Component {
     }
 
     onChange = e => {
+        console.log('i have been called.', e);
         this.setState({ [e.target.name]: e.target.value });
+
         if (this.state.search.length > 0) {
             this.setState({ showSearch: true });
+            this.props.fetchSearchStock();
         }
     };
     showMenu = e => {
@@ -37,6 +42,9 @@ class Header extends Component {
             searchDivClass.push('active');
             searchLinkClass.push('active');
         }
+
+        console.log(this.props.searchList, 'this is my search list');
+        console.log(this.props.searchList.news, 'this is news');
         return (
             <header className="page-header header-home-1">
                 <div
@@ -218,7 +226,7 @@ class Header extends Component {
                                     >
                                         <div className="form-wrap">
                                             <input
-                                                className="rd-navbar-search-form-input form-input"
+                                                className="rd-navbar-search-form-input form-input mobile-input"
                                                 id="rd-navbar-search-form-input"
                                                 type="text"
                                                 name="search"
@@ -416,10 +424,10 @@ class Header extends Component {
                                     >
                                         <div className="form-wrap">
                                             <input
-                                                className="rd-navbar-search-form-input form-input"
+                                                className="rd-navbar-search-form-input form-input desktop-input"
                                                 id="rd-navbar-search-form-input"
                                                 type="text"
-                                                name="search"
+                                                name="searchDesktop"
                                                 value={this.state.search}
                                                 onChange={this.onChange}
                                                 placeholder=" I`m looking for..."
@@ -433,9 +441,20 @@ class Header extends Component {
                                                         id="rd-search-results-live"
                                                     >
                                                         <h5>Quick Search</h5>
-                                                        <p>
-                                                            No result to display
-                                                        </p>
+
+                                                        {this.props.searchList
+                                                            .news &&
+                                                            this.props.searchList.news.map(
+                                                                schResult1 => {
+                                                                    return (
+                                                                        <p>
+                                                                            This
+                                                                            is
+                                                                            news
+                                                                        </p>
+                                                                    );
+                                                                }
+                                                            )}
                                                     </div>
                                                 )}
                                         </div>
@@ -451,4 +470,10 @@ class Header extends Component {
     }
 }
 
-export default Header;
+const mapStateToProps = state => ({
+    searchList: state.searchList.searchList,
+});
+export default connect(
+    mapStateToProps,
+    { fetchSearchStock }
+)(Header);
