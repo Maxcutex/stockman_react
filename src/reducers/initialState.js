@@ -1,7 +1,7 @@
 export default {
-    isLoading: false,
-    activeUser: {},
-    menus: [],
+  isLoading: false,
+  activeUser: {},
+  menus: [],
 };
 export const initialNews = {
     isLoading: false,
@@ -13,3 +13,13 @@ export const initialNews = {
     insideBusinessLoading: false,
     insideBusiness: null,
 };
+
+export const initialNewsSearch = {
+  isLoading: false,
+  newsSearched: [],
+};
+
+export const initialStocksSearch = {
+  isLoading: false,
+  stocksSearched: [],
+}
