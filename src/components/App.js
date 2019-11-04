@@ -1,30 +1,29 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../assets/css/bootstrap.css';
 import '../assets/css/style.css';
 import '../App.css';
-
-import PriceBar from './common/PriceBar';
-import Header from './common/Header';
-import Footer from './common/Footer';
-import Home from './Home/Home';
+import routes from "./routes";
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import ApplicationTemplate from "./Template";
 
-class App extends Component {
-    render() {
+function App() {
+    const renderComponents = routes.map(route =>
+        <Route
+            path={route.path}
+            component={route.component}
+            exact={route.exact}
+            key={route.path}
+        />
+            );
         return (
             <BrowserRouter>
-                <div>
-                    <PriceBar />
-                    <Header />
+                <ApplicationTemplate>
                     <Switch>
-                        <Route exact path="/" component={Home} />
+                        {renderComponents}
                     </Switch>
-                    <Footer />
-                </div>
-            </BrowserRouter>
-        );
-    }
+                </ApplicationTemplate>
+            </BrowserRouter>);
 }
 
 export default App;
