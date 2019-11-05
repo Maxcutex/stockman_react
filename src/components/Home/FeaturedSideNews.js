@@ -7,7 +7,7 @@ export default props => {
     // );
     return (
         <div className="post-type-1">
-            {visual_news.map(vn => {
+            {visual_news.map((vn, i) => {
                 return (
                     vn.image_type === 'size450x330' && (
                         <img
@@ -15,7 +15,7 @@ export default props => {
                             width="450"
                             height="330"
                             alt=""
-                            key={vn.id}
+                            key={i}
                         />
                     )
                 );
