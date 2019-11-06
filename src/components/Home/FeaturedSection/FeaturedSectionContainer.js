@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import FeaturedMainNews from './FeaturedMainNews';
 import FeaturedSideNews from './FeaturedSideNews';
-import { fetchFeaturedNews } from '../../actions/newsAction';
+import { fetchFeaturedNews } from '../../../actions/newsAction';
 
-class FeaturedSection extends Component {
+class FeaturedSectionContainer extends Component {
     componentDidMount() {
         this.props.fetchFeaturedNews();
     }
@@ -41,7 +41,7 @@ class FeaturedSection extends Component {
     }
 }
 
-FeaturedSection.propTypes = {};
+FeaturedSectionContainer.propTypes = {};
 
 const mapStateToProps = state => {
     return {
@@ -52,4 +52,4 @@ const mapStateToProps = state => {
 export default connect(
     mapStateToProps,
     { fetchFeaturedNews }
-)(FeaturedSection);
+)(FeaturedSectionContainer);

@@ -1,5 +1,5 @@
 import React from 'react';
-import CarouselComponent from './Carousel'
+import CarouselComponent from '../Carousel'
 
 export default props => {
     return (
@@ -8,3 +8,4 @@ export default props => {
         </div>  
     );
 };
+

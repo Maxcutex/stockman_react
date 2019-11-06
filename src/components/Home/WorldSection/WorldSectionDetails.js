@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import WorldSectionShareBlock from "./WorldSectionShareBlock";
 
 const WorldSectionDetails = props => {
 
@@ -41,29 +41,7 @@ const WorldSectionDetails = props => {
                                         <a href="post.html">{date}</a>
                                     </li>
                                 </ul>
-                                <div className="share-block">
-                                    <div className="soc-icon">
-                                        <Link
-                                            className="icon fa-twitter"
-                                            to="/"
-                                        >
-                                            {' '}
-                                        </Link>
-                                        <Link
-                                            className="icon fa-facebook"
-                                            to="/"
-                                        />
-                                        <Link
-                                            className="icon fa-google-plus"
-                                            to="/"
-                                        />
-                                        <Link
-                                            className="icon fa-youtube-play"
-                                            to="/"
-                                        />
-                                    </div>
-                                    <span className="icon fa-share-alt" />
-                                </div>
+                                <WorldSectionShareBlock/>
                             </div>
                         </div>
                     </div>
