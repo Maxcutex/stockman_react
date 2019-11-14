@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import WorldSection from '../../../components/Home/WorldSection';
-import WorldSectionDetails from '../../../components/Home/WorldSectionDetails';
+import WorldSection from '../../../components/Home/WorldSection/WorldSection';
+import WorldSectionDetails from '../../../components/Home/WorldSection/WorldSectionDetails';
 describe('WorldSection Component', () => {
     let component;
     let props;
@@ -25,11 +25,4 @@ describe('WorldSection Component', () => {
         expect(component).toMatchSnapshot();
     });
 
-    it('has sub component world section details', () => {
-        const subComp = component.find(WorldSectionDetails);
-        expect(subComp.length).toBe(1);
-    });
-    it('renders World Section Details without crashing', () => {
-        let componentDetails = shallow(<WorldSectionDetails {...props} />);
-    });
 });
