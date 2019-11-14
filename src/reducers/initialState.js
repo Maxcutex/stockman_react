@@ -6,5 +6,10 @@ export default {
 export const initialNews = {
     isLoading: false,
     isUpdating: false,
-    news: [],
+    generalNews: null,
+    featuredNews: null,
+    generalNewsLoading: false,
+    featuredNewsLoading: false,
+    insideBusinessLoading: false,
+    insideBusiness: null,
 };

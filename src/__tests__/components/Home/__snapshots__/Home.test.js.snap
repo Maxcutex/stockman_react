@@ -19,7 +19,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Connect(FeaturedSectionContainer) />,
-        <WorldSection />,
+        <Connect(WorldSection) />,
         <OpinionSection />,
       ],
     },
@@ -63,7 +63,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Connect(FeaturedSectionContainer) />,
-          <WorldSection />,
+          <Connect(WorldSection) />,
           <OpinionSection />,
         ],
       },

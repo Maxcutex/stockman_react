@@ -1,8 +1,6 @@
 import React from 'react';
-import FeaturedSideNewsCaption from "./FeaturedSideNewsCaption";
-import FeaturedSideNewsTagList from "./FeaturedSideNewsTagList";
-
-
+import FeaturedSideNewsCaption from './FeaturedSideNewsCaption';
+import FeaturedSideNewsTagList from './FeaturedSideNewsTagList';
 
 export default props => {
     const { title, visual_news, author } = props.featured;
@@ -24,8 +22,8 @@ export default props => {
                     )
                 );
             })}
-            <FeaturedSideNewsTagList/>
-            <FeaturedSideNewsCaption title={title} author={author}/>
+            <FeaturedSideNewsTagList />
+            <FeaturedSideNewsCaption title={title} author={author} />
         </div>
     );
 };
