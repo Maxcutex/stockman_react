@@ -3,6 +3,8 @@ import { shallow } from 'enzyme';
 
 import WorldSection from '../../../components/Home/WorldSection/WorldSection';
 import WorldSectionDetails from '../../../components/Home/WorldSection/WorldSectionDetails';
+
+
 describe('WorldSection Component', () => {
     let component;
     let props;

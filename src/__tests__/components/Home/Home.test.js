@@ -17,10 +17,6 @@ describe('Home Test', () => {
         expect(featured.length).toBe(1);
     });
 
-    it('should render World Section correctly', () => {
-        const featured = wrapper.find('WorldSection');
-        expect(featured.length).toBe(1);
-    });
     it('should render Opinion Section correctly', () => {
         const featured = wrapper.find('OpinionSection');
         expect(featured.length).toBe(1);

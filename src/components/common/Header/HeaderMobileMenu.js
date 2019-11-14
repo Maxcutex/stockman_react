@@ -1,9 +1,18 @@
-import React from "react";
-import HeaderContactList from "./HeaderContactList";
-import HeaderSearchDiv from "./HeaderSearchDiv";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import HeaderContactList from './HeaderContactList';
+import HeaderSearchDiv from './HeaderSearchDiv';
 
-
-export default function HeaderMobileMenu({buttonClass, menuClass, searchLinkClass, search, showMobileSearch, onChange, searchDivClass, showMenu}) {
+export default function HeaderMobileMenu({
+    buttonClass,
+    menuClass,
+    searchLinkClass,
+    search,
+    showMobileSearch,
+    onChange,
+    searchDivClass,
+    showMenu,
+}) {
     return (
         <div
             key={'mobile'}
@@ -35,7 +44,7 @@ export default function HeaderMobileMenu({buttonClass, menuClass, searchLinkClas
                             <span />
                         </button>
                         <div className="rd-navbar-brand">
-                            <a className="brand-name" href="index.html">
+                            <Link className="brand-name" to="/">
                                 <img
                                     src="images/logo-dark-266x54.png"
                                     width="266"
@@ -43,7 +52,7 @@ export default function HeaderMobileMenu({buttonClass, menuClass, searchLinkClas
                                     alt=""
                                     key={'mobile'}
                                 />
-                            </a>
+                            </Link>
                         </div>
                         <div
                             className="rd-navbar-collapse-toggle toggle-original"
@@ -51,94 +60,76 @@ export default function HeaderMobileMenu({buttonClass, menuClass, searchLinkClas
                         >
                             <span />
                         </div>
-                        <HeaderContactList/>
+                        <HeaderContactList />
                     </div>
                     <div className="rd-navbar-aside-right">
                         <div className={menuClass.join(' ')}>
                             <ul className="rd-navbar-nav">
                                 <li className="active rd-navbar--has-dropdown rd-navbar-submenu">
-                                    <a href="..">Home</a>
+                                    <Link to="/">Home</Link>
                                     <span className="rd-navbar-submenu-toggle" />
                                     <ul
                                         className="rd-navbar-dropdown rd-navbar-open-right"
                                         style={{}}
                                     >
                                         <li>
-                                            <a href="home-2.html">
-                                                Home 2
-                                            </a>
+                                            <Link to="#">Homen2</Link>
                                         </li>
                                         <li>
-                                            <a href="home-3.html">
-                                                Home 3
-                                            </a>
+                                            <Link to="#">Home 3</Link>
                                         </li>
                                         <li>
-                                            <a href="landing.html">
-                                                Landing{' '}
-                                            </a>
+                                            <Link to="#">Landing</Link>
                                         </li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="about.html">About</a>
+                                    <Link to="#">About</Link>
                                 </li>
                                 <li className="rd-navbar--has-dropdown rd-navbar-submenu">
-                                    <a href="world.html">World</a>
+                                    <Link to="#">World</Link>
                                     <span className="rd-navbar-submenu-toggle" />
                                     <ul
                                         className="rd-navbar-dropdown rd-navbar-open-right"
                                         style={{}}
                                     >
                                         <li>
-                                            <a href="post.html">Post</a>
+                                            <Link to="#">Post</Link>
                                         </li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="contacts.html">
-                                        Contacts{' '}
-                                    </a>
+                                    <Link to="#">Contacts</Link>
                                 </li>
                                 <li className="rd-navbar--has-dropdown rd-navbar-submenu">
-                                    <a href="#">Pages</a>
+                                    <Link to="#">Pages</Link>
                                     <span className="rd-navbar-submenu-toggle" />
                                     <ul
                                         className="rd-navbar-dropdown rd-navbar-open-right"
                                         style={{}}
                                     >
                                         <li>
-                                            <a href="typography.html">
-                                                Typography
-                                            </a>
+                                            <Link to="#">Topography</Link>
                                         </li>
                                         <li>
-                                            <a href="tabs-and-accordions.html">
+                                            <Link to="#">
                                                 Tabs and accordions
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a href="progress-bars.html">
-                                                Progress Bars
-                                            </a>
+                                            <Link to="#">Progress Bars</Link>
                                         </li>
                                         <li>
-                                            <a href="forms.html">
-                                                Forms
-                                            </a>
+                                            <Link to="#">Forms</Link>
                                         </li>
                                         <li>
-                                            <a href="tables.html">
-                                                Tables
-                                            </a>
+                                            <Link to="#">Tables</Link>
                                         </li>
                                         <li>
-                                            <a href="grid.html">Grid</a>
+                                            <Link to="#">Grid</Link>
                                         </li>
                                         <li>
-                                            <a href="buttons.html">
-                                                Buttons
-                                            </a>
+                                            <Link to="#">Buttons</Link>
                                         </li>
                                     </ul>
                                 </li>
@@ -155,5 +146,5 @@ export default function HeaderMobileMenu({buttonClass, menuClass, searchLinkClas
                 </div>
             </nav>
         </div>
-    )
+    );
 }

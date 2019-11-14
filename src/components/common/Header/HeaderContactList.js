@@ -1,4 +1,5 @@
-import React from "react";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function HeaderContactList() {
     return (
@@ -6,23 +7,18 @@ export default function HeaderContactList() {
             <div className="rd-navbar-top-panel-inner">
                 <ul className="contact-list">
                     <li>
-                        <a href="#">Subscribe Now</a>
+                        <Link to="#">Subscribe Now</Link>
                     </li>
                     <li>
-                        <a
-                            data-toggle="modal"
-                            href="#myModal"
-                        >
+                        <Link data-toggle="modal" to="#myModal">
                             Sign In{' '}
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="contacts.html">
-                            Contacts
-                        </a>
+                        <Link to="#">Contacts</Link>
                     </li>
                 </ul>
             </div>
         </div>
-    )
+    );
 }
