@@ -1,7 +1,7 @@
 import React from "react";
 import PriceBar from "./common/PriceBar";
-import Header from "./common/Header/Header";
-import Footer from "./common/Footer";
+import Footer from "./common/Footer/Footer";
+import HeaderWrapper from "./common/Header/HeaderWrapper";
 
 
 
@@ -10,7 +10,7 @@ function ApplicationTemplate(props) {
     return (
         <div>
             <PriceBar />
-            <Header />
+            <HeaderWrapper />
             {props.children}
             <Footer />
         </div>

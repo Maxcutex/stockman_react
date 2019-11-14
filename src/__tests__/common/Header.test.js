@@ -9,17 +9,9 @@ describe('Header Component', () => {
         component = shallow(<Header />);
     });
 
-    it('has an nav tag', () => {
-        var node = component.find('nav');
-        expect(node.length).toEqual(2);
-    });
 
     it('is wrapped inside a page-header class', () => {
         expect(component.find('.page-header')).toBeDefined();
         expect(component.find('.page-header')).toHaveLength(1);
-    });
-    it('should show a logo', () => {
-        const logoImg = component.find('img');
-        expect(logoImg.length).toEqual(2);
     });
 });
