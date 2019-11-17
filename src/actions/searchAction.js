@@ -1,8 +1,10 @@
 import axios from 'axios';
+
 import {
   SEARCH_NEWS_SUCCESS, SEARCH_NEWS_FAILURE,
   SEARCH_STOCKS_SUCCESS, SEARCH_STOCKS_FAILURE,
 } from './actionTypes';
+
 import { config } from '../config';
 
 export const baseUrl = config.STOCKMAN_API_BASE_URL;
@@ -39,9 +41,11 @@ export const searchNewsAndStocks = (search) => dispatch => {
   return axios.all([searchNews(search), searchStocks(search)])
   .then((news, stocks) => {
     if (news) {
+      console.log('news is ==> ', news);
       dispatch(searchNewsSuccess(news.data.results));
     }
     if (stocks) {
+      console.log('stocks is ==> ', stocks);
       dispatch(searchNewsSuccess(stocks.data.results));
     }
   }).catch(error => {
