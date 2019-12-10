@@ -1,44 +1,21 @@
-import React from "react"
-import {Link} from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-
-export default function WorldSectionLinks({changeSection}) {
+export default function WorldSectionLinks({ changeSection }) {
     return (
-        <ul
-            className="isotope-filters-list"
-            id="isotope-filters"
-        >
+        <ul className="isotope-filters-list" id="isotope-filters">
             <li>
-                <Link
-                    to=""
-                    onClick={() =>
-                        changeSection('World')
-                    }
-                >
+                <Link to="" onClick={() => changeSection('World')}>
                     World{' '}
                 </Link>
             </li>
             <li>
-                <Link
-                    to=""
-                    onClick={() =>
-                        changeSection(
-                            'Business'
-                        )
-                    }
-                >
+                <Link to="" onClick={() => changeSection('Business')}>
                     Business{' '}
                 </Link>
             </li>
             <li>
-                <Link
-                    to=""
-                    onClick={() =>
-                        changeSection(
-                            'Politics'
-                        )
-                    }
-                >
+                <Link to="" onClick={() => changeSection('Politics')}>
                     Politics{' '}
                 </Link>
             </li>
@@ -79,5 +56,5 @@ export default function WorldSectionLinks({changeSection}) {
                 </a>
             </li>
         </ul>
-    )
+    );
 }

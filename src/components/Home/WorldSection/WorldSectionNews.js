@@ -1,8 +1,7 @@
-import React from "react"
-import WorldSectionDetails from "./WorldSectionDetails";
+import React from 'react';
+import WorldSectionDetails from './WorldSectionDetails';
 
-
-export default function WorldSectionNews({activeNews}) {
+export default function WorldSectionNews({ activeNews }) {
     return (
         <div className="cell-xs-12">
             <div
@@ -19,12 +18,10 @@ export default function WorldSectionNews({activeNews}) {
                     data-isotope-group="gallery"
                 >
                     <div className="row">
-                        <WorldSectionDetails
-                            activeNews={activeNews}
-                        />
+                        <WorldSectionDetails activeNews={activeNews} />
                     </div>
                 </div>
             </div>
         </div>
-    )
+    );
 }

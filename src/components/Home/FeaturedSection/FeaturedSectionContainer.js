@@ -3,16 +3,20 @@ import { connect } from 'react-redux';
 import FeaturedMainNews from './FeaturedMainNews';
 import FeaturedSideNews from './FeaturedSideNews';
 import { fetchFeaturedNews } from '../../../actions/newsAction';
+import Loader from '../../Loader/Loader';
 
 class FeaturedSectionContainer extends Component {
     componentDidMount() {
         this.props.fetchFeaturedNews();
     }
     render() {
-        const featuredMainNews = this.props.news.filter(
+        if (!this.props.featuredNews || this.props.isLoading) {
+            return <Loader />;
+        }
+        const featuredMainNews = this.props.featuredNews.results.filter(
             featured => featured.is_main
         )[0];
-        const featuredSideNews = this.props.news
+        const featuredSideNews = this.props.featuredNews.results
             .filter(featured => !featured.is_main)
             .splice(0, 2);
         return (
@@ -43,13 +47,11 @@ class FeaturedSectionContainer extends Component {
 
 FeaturedSectionContainer.propTypes = {};
 
-const mapStateToProps = state => {
-    return {
-        news: state.news.news,
-    };
-};
+const mapStateToProps = state => ({
+    featuredNews: state.news.featuredNews,
+    isLoading: state.news.featuredNewsLoading,
+});
 
-export default connect(
-    mapStateToProps,
-    { fetchFeaturedNews }
-)(FeaturedSectionContainer);
+export default connect(mapStateToProps, { fetchFeaturedNews })(
+    FeaturedSectionContainer
+);

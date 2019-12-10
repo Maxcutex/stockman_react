@@ -1,107 +1,87 @@
-import React from "react"
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-
-export default function HeaderNavbar({search, showSearch, onChange}) {
+export default function HeaderNavbar({ search, showSearch, onChange }) {
     return (
         <div className="rd-navbar-aside-right">
             <div className="rd-navbar-nav-wrap toggle-original-elements">
                 <ul className="rd-navbar-nav">
                     <li className="active rd-navbar--has-dropdown rd-navbar-submenu">
-                        <a href="..">Home</a>
+                        <Link to="/">Home</Link>
                         <span className="rd-navbar-submenu-toggle" />
                         <ul
                             className="rd-navbar-dropdown rd-navbar-open-right"
                             style={{}}
                         >
                             <li>
-                                <a href="home-2.html">
-                                    Home 2
-                                </a>
+                                <Link to="/">Home 2</Link>
                             </li>
                             <li>
-                                <a href="home-3.html">
-                                    Home 3
-                                </a>
+                                <Link to="/">Home 3</Link>
                             </li>
                             <li>
-                                <a href="landing.html">
-                                    Landing{' '}
-                                </a>
+                                <Link to="#">Landing</Link>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="about.html">About</a>
+                        <Link to="#">About</Link>
                     </li>
                     <li className="rd-navbar--has-dropdown rd-navbar-submenu">
-                        <a href="world.html">World</a>
+                        <Link to="#">Home</Link>
                         <span className="rd-navbar-submenu-toggle" />
                         <ul
                             className="rd-navbar-dropdown rd-navbar-open-right"
                             style={{}}
                         >
                             <li>
-                                <a href="post.html">Post</a>
+                                <Link to="#">Post</Link>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="contacts.html">
-                            Contacts{' '}
-                        </a>
+                        <a href="contacts.html">Contacts </a>
                     </li>
                     <li className="rd-navbar--has-dropdown rd-navbar-submenu">
-                        <a href="#">Pages</a>
+                        <Link to="#">Pages</Link>
                         <span className="rd-navbar-submenu-toggle" />
                         <ul
                             className="rd-navbar-dropdown rd-navbar-open-right"
                             style={{}}
                         >
                             <li>
-                                <a href="typography.html">
-                                    Typography
-                                </a>
+                                <a href="typography.html">Typography</a>
                             </li>
                             <li>
-                                <a href="tabs-and-accordions.html">
-                                    Tabs and accordions
-                                </a>
+                                <Link to="#">Tabs and accordions</Link>
                             </li>
                             <li>
-                                <a href="progress-bars.html">
-                                    Progress Bars
-                                </a>
+                                <Link to="#">Progress Bars</Link>
                             </li>
                             <li>
-                                <a href="forms.html">
-                                    Forms
-                                </a>
+                                <Link to="#">Forms</Link>
                             </li>
                             <li>
-                                <a href="tables.html">
-                                    Tables
-                                </a>
+                                <Link to="#">Tables</Link>
                             </li>
                             <li>
-                                <a href="grid.html">Grid</a>
+                                <Link to="#">Grid</Link>
                             </li>
                             <li>
-                                <a href="buttons.html">
-                                    Buttons
-                                </a>
+                                <Link to="#">Buttons</Link>
                             </li>
                         </ul>
                     </li>
                 </ul>
             </div>
             <div className="rd-navbar-search toggle-original-elements">
-                <a
+                <Link
+                    to="#"
                     className="rd-navbar-search-toggle toggle-original"
                     data-rd-navbar-toggle=".rd-navbar-search"
-                    href="#"
                 >
-                    <span />
-                </a>
+                    Pages
+                </Link>
                 <form
                     className="rd-search"
                     action="search-results.html"
@@ -119,17 +99,13 @@ export default function HeaderNavbar({search, showSearch, onChange}) {
                             placeholder=" I`m looking for..."
                             autoComplete="off"
                         />
-                        {showSearch &&
-                        search.length >
-                        0 && (
+                        {showSearch && search.length > 0 && (
                             <div
                                 className="rd-search-results-live"
                                 id="rd-search-results-live"
                             >
                                 <h5>Quick Search</h5>
-                                <p>
-                                    No result to display
-                                </p>
+                                <p>No result to display</p>
                             </div>
                         )}
                     </div>
@@ -137,5 +113,5 @@ export default function HeaderNavbar({search, showSearch, onChange}) {
                 </form>
             </div>
         </div>
-    )
+    );
 }

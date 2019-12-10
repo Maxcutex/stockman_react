@@ -1,17 +1,23 @@
-import React from "react";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-
-export default  function HeaderSearchDiv({searchDivClass, searchLinkClass, showMobileSearch, onChange, search}) {
+export default function HeaderSearchDiv({
+    searchDivClass,
+    searchLinkClass,
+    showMobileSearch,
+    onChange,
+    search,
+}) {
     return (
         <div className={searchDivClass.join(' ')}>
-            <a
+            <Link
                 className={searchLinkClass.join(' ')}
                 data-rd-navbar-toggle=".rd-navbar-search"
-                href="#"
+                to="#"
                 onClick={showMobileSearch}
             >
                 <span />
-            </a>
+            </Link>
             <form
                 className="rd-search"
                 action="search-results.html"
@@ -26,12 +32,9 @@ export default  function HeaderSearchDiv({searchDivClass, searchLinkClass, showM
                         name="search"
                         value={search}
                         onChange={onChange}
-                        onFocus={e =>
-                            (e.target.placeholder = '')
-                        }
+                        onFocus={e => (e.target.placeholder = '')}
                         onBlur={e =>
-                            (e.target.placeholder =
-                                ' I`m looking for...')
+                            (e.target.placeholder = ' I`m looking for...')
                         }
                         placeholder=" I`m looking for..."
                         autoComplete="off"
@@ -40,5 +43,5 @@ export default  function HeaderSearchDiv({searchDivClass, searchLinkClass, showM
                 <button className="rd-search-form-submit fa-search" />
             </form>
         </div>
-    )
+    );
 }

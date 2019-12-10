@@ -4,6 +4,10 @@ import {
     FETCH_GENERAL_NEWS_SUCCESS,
     FETCH_FEATURED_NEWS_FAILURE,
     FETCH_GENERAL_NEWS_FAILURE,
+    FETCH_FEATURED_NEWS_LOADING,
+    FETCH_GENERAL_NEWS_LOADING,
+    FETCH_INSIDE_BUSINESS_LOADING,
+    FETCH_INSIDE_BUSINESS_SUCCESS,
 } from './actionTypes';
 import { config } from '../config';
 
@@ -26,11 +30,42 @@ export const fetchFeaturedNewsFailure = error => ({
     type: FETCH_FEATURED_NEWS_FAILURE,
     payload: error,
 });
+
+const fetchFeaturedNewsLoading = () => ({
+    type: FETCH_FEATURED_NEWS_LOADING,
+});
+
+const fetchGeneralNewsLoading = () => ({
+    type: FETCH_GENERAL_NEWS_LOADING,
+});
+
+const fetchInsideBusinessSuccess = payload => ({
+    type: FETCH_INSIDE_BUSINESS_SUCCESS,
+    payload,
+});
+
+const fetchInsideBusinessLoading = () => ({
+    type: FETCH_INSIDE_BUSINESS_LOADING,
+});
+
+export const fetchInsideBusiness = () => dispatch => {
+    dispatch(fetchInsideBusinessLoading);
+    return axios
+        .get(`${baseUrl}/Analysis/`)
+        .then(res => {
+            dispatch(fetchInsideBusinessSuccess(res.data));
+        })
+        .catch(error => {
+            dispatch(fetchNewsFailure(error));
+        });
+};
+
 export const fetchNews = () => dispatch => {
+    dispatch(fetchGeneralNewsLoading);
     return axios
         .get(`${baseUrl}/News/`)
         .then(res => {
-            dispatch(fetchNewsSuccess(res.data.results));
+            dispatch(fetchNewsSuccess(res.data));
         })
         .catch(error => {
             dispatch(fetchNewsFailure(error));
@@ -38,10 +73,11 @@ export const fetchNews = () => dispatch => {
 };
 
 export const fetchFeaturedNews = () => dispatch => {
+    dispatch(fetchFeaturedNewsLoading);
     return axios
         .get(`${baseUrl}/News/?is_featured=true`)
         .then(res => {
-            dispatch(fetchFeaturedNewsSuccess(res.data.results));
+            dispatch(fetchFeaturedNewsSuccess(res.data));
         })
         .catch(error => {
             dispatch(fetchFeaturedNewsFailure(error));
