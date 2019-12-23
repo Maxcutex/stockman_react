@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import ShowSearchResults from '../NewsSearchResult';
 import { searchNewsAndStocks } from '../../actions/searchAction';
 
-class Header extends Component {
+export class Header extends Component {
   state = {
     search: '',
     showSearch: false,
@@ -19,7 +20,6 @@ class Header extends Component {
         await startSearch(search);
       }
     });
-      
   };
 
   showMenu = e => {
@@ -35,6 +35,7 @@ class Header extends Component {
     let buttonClass = ['rd-navbar-toggle', 'toggle-original'];
     let searchDivClass = ['rd-navbar-search', 'toggle-original-elements'];
     let searchLinkClass = ['rd-navbar-search-toggle', 'toggle-original'];
+    const { newsSearchedFor, stocksSearchedFor } = this.props;
     if (this.state.showMenu) {
       menuClass.push('active');
       buttonClass.push('active');
@@ -431,19 +432,26 @@ class Header extends Component {
                         placeholder=" I`m looking for..."
                         autoComplete="off"
                       />
-                      {this.state.showSearch &&
-                        this.state.search.length >
-                          0 && (
-                            <div
-                              className="rd-search-results-live"
-                              id="rd-search-results-live"
-                            >
-                              <h5>Quick Search</h5>
-                              <p>
-                                No result to display
-                              </p>
-                            </div>
-                          )}
+                      {this.state.showSearch && newsSearchedFor.length
+                        ? (
+                          <ShowSearchResults
+                            searchResults={newsSearchedFor}
+                            stocksResults={stocksSearchedFor}
+                          />
+                        ) : null
+                      }
+                      {this.state.showSearch && !newsSearchedFor.length ? (
+                        <div
+                          className="rd-search-results-live"
+                          id="rd-search-results-live"
+                        >
+                          <h5>Quick Search</h5>
+                          <p>
+                            No result to display
+                          </p>
+                        </div>
+                      ) : null
+                      }
                     </div>
                     <button className="rd-search-form-submit fa-search" />
                   </form>
@@ -457,7 +465,10 @@ class Header extends Component {
   }
 }
 
-const mapStateToProps = () => ({});
+const mapStateToProps = ({ newsSearchReducer, stocksSearchReducer }) => ({
+  newsSearchedFor: newsSearchReducer.newsSearched,
+  stocksSearchedFor: stocksSearchReducer.stocksSearched,
+});
 
 const mapDispatchToProps = (dispatch) => ({
   startSearch: (search) => dispatch(searchNewsAndStocks(search)), 

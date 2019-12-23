@@ -30,23 +30,22 @@ export const searchStocksFailure = error => ({
 });
 
 export const searchNews = (search) => {
-  return axios.get(`${baseUrl}/news/search?keyword=${search}`)
+  return axios.get(`${baseUrl}/search/news/?search=${search}`)
 };
 
 export const searchStocks = (search) => {
-  return axios.get(`${baseUrl}/stocks/search?keyword=${search}`)      
+  return axios.get(`${baseUrl}/stocks/search-like-name?stock_code=${search}`)      
 };
 
 export const searchNewsAndStocks = (search) => dispatch => {
-  return axios.all([searchNews(search), searchStocks(search)])
-  .then((news, stocks) => {
-    if (news) {
-      console.log('news is ==> ', news);
-      dispatch(searchNewsSuccess(news.data.results));
-    }
-    if (stocks) {
-      console.log('stocks is ==> ', stocks);
-      dispatch(searchNewsSuccess(stocks.data.results));
+  return axios.all([
+    searchNews(search),
+    searchStocks(search)
+  ])
+  .then((response) => {
+    if (response) {
+      dispatch(searchNewsSuccess(response[0].data.results));
+      dispatch(searchStocksSuccess(response[1].data.results));
     }
   }).catch(error => {
     dispatch(searchNewsFailure(error));
