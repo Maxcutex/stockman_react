@@ -1,7 +1,7 @@
 import React from "react";
-import PriceBar from "./common/PriceBar";
-import Footer from "./common/Footer/Footer";
-import HeaderWrapper from "./common/Header/HeaderWrapper";
+import PriceBar from "./components/common/PriceBar";
+import Footer from "./components/common/Footer/Footer";
+import HeaderWrapper from "./components/common/Header/HeaderWrapper";
 
 
 
