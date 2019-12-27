@@ -1,7 +1,7 @@
 import React from 'react';
-import '../assets/css/bootstrap.css';
-import '../assets/css/style.css';
-import '../App.css';
+import './assets/css/bootstrap.css';
+import './assets/css/style.css';
+import './App.css';
 import routes from "./routes";
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';

@@ -5,3 +5,4 @@ class PriceListPage extends React.Component {
         super(props);
     }
 }
+export default PriceListPage;
