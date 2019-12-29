@@ -2,10 +2,10 @@ import React from 'react';
 import './assets/css/bootstrap.css';
 import './assets/css/style.css';
 import './App.css';
-import routes from "./routes";
+import routes from './routes';
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import ApplicationTemplate from "./Template";
+import ApplicationTemplate from './Template';
 
 function App() {
     const renderComponents = routes.map(route =>

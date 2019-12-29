@@ -1,13 +1,13 @@
-import Home from "./components/Home/Home";
-import PriceListPage from "./pages/pricelist/pricelist"
+import Home from './components/Home/Home';
+import PriceListPage from './pages/pricelist/pricelist'
 
 
 const routes = [{
-    path: "/",
+    path: '/',
     component: Home,
     exact: true
 },{
-    path: "/pricelist",
+    path: '/pricelist',
     component: PriceListPage,
     exact: true
 }];
