@@ -1,7 +1,8 @@
 const allConfig = {
     development: {
         BASE_URL: 'http://localhost:3000',
-        STOCKMAN_API_BASE_URL: 'http://stockmanapi-env.fptfzc4bbf.us-east-2.elasticbeanstalk.com/api/v1',
+        STOCKMAN_API_BASE_URL2: 'http://stockmanapi-env.fptfzc4bbf.us-east-2.elasticbeanstalk.com/api/v1',
+        STOCKMAN_API_BASE_URL: 'http://localhost:8000/api/v1',
     },
 
     production: {

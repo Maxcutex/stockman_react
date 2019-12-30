@@ -13,3 +13,10 @@ export const initialNews = {
     insideBusinessLoading: false,
     insideBusiness: null,
 };
+
+export const initialPriceList = {
+    isLoading: false,
+    isUpdating: false,
+    priceList: null,
+    priceListLoading: false,
+};
