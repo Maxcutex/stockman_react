@@ -11,7 +11,7 @@ const WorldSectionDetails = props => {
             author: { first_name, last_name },
             date,
             id,
-            visual_news,
+            //visual_news,
         } = activeNew;
         return (
             <div

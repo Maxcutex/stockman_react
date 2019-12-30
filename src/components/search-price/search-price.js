@@ -1,27 +1,34 @@
 import React from 'react';
-import DatePicker from 'react-date-picker';
+import DatePicker from 'react-datepicker'
+import 'react-datepicker/dist/react-datepicker.css';
+import CustomButton from '../../components/custom-button/custom-button'
+import './search_price.styles.scss'
+
 
 
 class SearchPrice extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { 
-            date: props.date,
-         }
-    }
-    onChange = date => this.setState({ date })
+   
     render() { 
         return (  
-        <div>
-            <div>Search Price List By Date</div>
-            <div>
-                <div>Date: <DatePicker
-                                    onChange={this.onChange}
-                                    value={this.state.date}
-                                    /> 
-                </div>
+        <div className='search-container'>
+            <div className='search-content'>
+                <form onSubmit={this.props.handleSubmit}>
+                    <div>Search Price List By Date</div>
+
+                    <div>Date:  
+                 
+                        <DatePicker
+                            selected={this.props.date}
+                            onChange={this.props.handleChange}
+                            
+                            dateFormat="yyyy/MM/dd"
+                            />
+                        <CustomButton type="submit" value="Submit">Get Price List </CustomButton>
+
+                    </div>
+                </form>
             </div>
-            
+           
         </div>);
     }
 }

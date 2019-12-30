@@ -17,28 +17,42 @@
     display: table-row;
     width: auto;
     clear: both;
-    background-color: #eee;         
+    background-color: #f6c8a4;         
 
   }
   .div-table-sub-header {
     display: table-row;
     width: auto;
-    clear: both;
+    clear: both;background-color: #efefe1;
+    .td-column{
+        text-align: left;
+        padding-left: 10px;font-weight: bolder; 
+    }
   }
   .div-table-col-header {
     float: left; /* fix for  buggy browsers */
     display: table-column;         
     width: 9%;  
-    font-weight: bolder;       
+    font-weight: bolder;  background-color: #f6c8a4;  
+    padding:5px;     
   }
   .div-table-col {
     float: left; /* fix for  buggy browsers */
-    display: table-column;         
+    display: table-column; 
+    background-color: #9ebfdf;          
+    width: 9%;         
+  }
+  .div-table-col-close1 {
+    float: left; /* fix for  buggy browsers */
+    display: table-column;  font-weight: bolder;   
     width: 9%;         
   }
   .div-table-col-close {
     float: left; /* fix for  buggy browsers */
     display: table-column;    
-    background-color: #9ebfdf;     
+    background-color: #9ebfdf; font-weight: bolder;     
     width: 9%;         
   }
+.div-inner-table{
+    width: 100%;
+}
