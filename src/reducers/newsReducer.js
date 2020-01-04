@@ -11,6 +11,8 @@ import {
 
 import { initialNews } from './initialState';
 
+// let index;
+
 const newsReducer = (state = initialNews, action) => {
     switch (action.type) {
         case FETCH_GENERAL_NEWS_SUCCESS:
