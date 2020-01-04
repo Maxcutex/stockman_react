@@ -1,6 +1,6 @@
 import React from 'react';
-import HeaderMobileMenu from "./HeaderMobileMenu";
-import HeaderDesktopMenu from "./HeaderDesktopMenu";
+import HeaderMobileMenu from './HeaderMobileMenu';
+import HeaderDesktopMenu from './HeaderDesktopMenu';
 
 function Header ({buttonClass, showMobileSearch, onChange, search, showSearch, showMenu, menuClass, searchDivClass, searchLinkClass}) {
         return (
