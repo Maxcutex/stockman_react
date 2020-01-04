@@ -1,5 +1,5 @@
-import React from "react"
-import FeaturedNewsShareBlock from "./FeaturedNewShareBlock";
+import React from 'react'
+import FeaturedNewsShareBlock from './FeaturedNewShareBlock';
 
 
 export default function FeaturedSideNewsCaption({title, author}) {
