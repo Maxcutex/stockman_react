@@ -1,13 +1,13 @@
-import React from "react";
-import { shallow } from "enzyme";
-import App from "../components/App";
+import React from 'react';
+import { shallow } from 'enzyme';
+import App from '../App';
 
-describe("App", () => {
+describe('App', () => {
   let wrapper;
   beforeEach(() => {
     wrapper = shallow(<App />);
   });
-  it("should render App correctly", () => {
+  it('should render App correctly', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
