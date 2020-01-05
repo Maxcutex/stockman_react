@@ -40,7 +40,7 @@ export const searchStocks = (search) => {
 export const searchNewsAndStocks = (search) => dispatch => {
   return axios.all([
     searchNews(search),
-    searchStocks(search)
+    searchStocks(search),
   ])
   .then((response) => {
     if (response) {
