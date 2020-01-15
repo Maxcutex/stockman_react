@@ -4,7 +4,7 @@
     "private": true,
     "proxy": "http://localhost:8000",
     "dependencies": {
-        "axios": "^0.18.0",
+        "axios": "^0.18.1",
         "coveralls": "^3.0.2",
         "dateformat": "^3.0.3",
         "enzyme": "^3.8.0",
