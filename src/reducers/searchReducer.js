@@ -15,7 +15,7 @@ export const newsSearchReducer = (state = initialNewsSearch, action) => {
       };
     case SEARCH_NEWS_FAILURE:
       return {
-        ... state,
+        ...state,
         isLoading: false,
       };
     default:
