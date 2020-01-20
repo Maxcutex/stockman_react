@@ -65,6 +65,9 @@ export const fetchNews = () => dispatch => {
     return axios
         .get(`${baseUrl}/News/`)
         .then(res => {
+            console.log('base url is ==> ', baseUrl);
+            console.log('res.data is ==> ', res.data);
+            console.log('res.data is ==> ', res.data.results.length, [...res.data.results]);
             dispatch(fetchNewsSuccess(res.data));
         })
         .catch(error => {

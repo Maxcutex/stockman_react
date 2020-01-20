@@ -14,6 +14,8 @@ import { initialNews } from './initialState';
 const newsReducer = (state = initialNews, action) => {
     switch (action.type) {
         case FETCH_GENERAL_NEWS_SUCCESS:
+            console.log('action.payload is ==> ', action.payload);
+            console.log('action.payload is ==> ', action.payload.results);
             return {
                 ...state,
                 generalNews: action.payload,

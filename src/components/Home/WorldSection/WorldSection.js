@@ -13,17 +13,27 @@ class WorldSection extends Component {
     };
     componentDidMount() {
         this.props.fetchNews();
+        const {generalNews} = this.props;
         console.log('generalNews');
         console.log(generalNews);
     }
     changeSection = section => {
         const { results } = this.props.generalNews;
-        const activeNewsFilter = results.filter(nws => {
-            return nws.section === section;
-        });
-        console.log(activeNewsFilter);
+        console.log(section);
+        const newResultList = [];
+        results.forEach( result => {
+            const sectionName = result.category_news.filter(nws => 
+              (nws.section_category.section_name === section)
+            );
+            if (sectionName.length) newResultList.push(result);
+        })
+        console.log('new result list is ==> ', newResultList);
+        // const activeNewsFilter = results.filter(nws => {
+        //     return nws.category_news.section_category.section_name === section;
+        // });
+        // console.log(activeNewsFilter);
        
-        this.setState({ activeNews: activeNewsFilter });
+        // this.setState({ activeNews: activeNewsFilter });
     };
     render() {
         if (!this.props.generalNews || this.props.isLoading) {
