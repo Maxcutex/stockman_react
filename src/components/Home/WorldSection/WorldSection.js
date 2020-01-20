@@ -13,12 +13,16 @@ class WorldSection extends Component {
     };
     componentDidMount() {
         this.props.fetchNews();
+        console.log('generalNews');
+        console.log(generalNews);
     }
     changeSection = section => {
         const { results } = this.props.generalNews;
         const activeNewsFilter = results.filter(nws => {
             return nws.section === section;
         });
+        console.log(activeNewsFilter);
+       
         this.setState({ activeNews: activeNewsFilter });
     };
     render() {
