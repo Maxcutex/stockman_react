@@ -96,7 +96,7 @@ export class Header extends Component {
                             <div className="rd-navbar-top-panel-inner">
                                 <ul className="contact-list">
                                     <li>
-                                        <a href="#">Subscribe Now</a>
+                                        <a href="/">Subscribe Now</a>
                                     </li>
                                     <li>
                                         <a
@@ -163,7 +163,7 @@ export class Header extends Component {
                                     </a>
                                 </li>
                                 <li className="rd-navbar--has-dropdown rd-navbar-submenu">
-                                    <a href="#">Pages</a>
+                                    <a href="/">Pages</a>
                                     <span className="rd-navbar-submenu-toggle" />
                                     <ul
                                         className="rd-navbar-dropdown rd-navbar-open-right"
@@ -210,7 +210,7 @@ export class Header extends Component {
                             <a
                                 className={searchLinkClass.join(' ')}
                                 data-rd-navbar-toggle=".rd-navbar-search"
-                                href="#"
+                                href="/"
                                 onClick={this.showMobileSearch.bind(
                                     this
                                 )}
@@ -297,7 +297,7 @@ export class Header extends Component {
                           <div className="rd-navbar-top-panel-inner">
                               <ul className="contact-list">
                                   <li>
-                                      <a href="#">Subscribe Now</a>
+                                      <a href="/">Subscribe Now</a>
                                   </li>
                                   <li>
                                       <a
@@ -364,7 +364,7 @@ export class Header extends Component {
                       </a>
                     </li>
                     <li className="rd-navbar--has-dropdown rd-navbar-submenu">
-                        <a href="#">Pages</a>
+                        <a href="/">Pages</a>
                         <span className="rd-navbar-submenu-toggle" />
                         <ul
                           className="rd-navbar-dropdown rd-navbar-open-right"
@@ -411,7 +411,7 @@ export class Header extends Component {
                   <a
                     className="rd-navbar-search-toggle toggle-original"
                     data-rd-navbar-toggle=".rd-navbar-search"
-                    href="#"
+                    href="/"
                   >
                     <span />
                   </a>

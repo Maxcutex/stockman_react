@@ -51,7 +51,7 @@ const fetchInsideBusinessLoading = () => ({
 export const fetchInsideBusiness = () => dispatch => {
     dispatch(fetchInsideBusinessLoading);
     return axios
-        .get(`${baseUrl}/Analysis/`)
+        .get(`${baseUrl}/InsideBusiness/`)
         .then(res => {
             dispatch(fetchInsideBusinessSuccess(res.data));
         })
