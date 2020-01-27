@@ -18,6 +18,7 @@ export default function WorldSectionNews({ activeNews }) {
                     data-isotope-group="gallery"
                 >
                     <div className="row">
+                       
                         <WorldSectionDetails activeNews={activeNews} />
                     </div>
                 </div>

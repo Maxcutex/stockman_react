@@ -1,25 +1,23 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchNews } from '../../../actions/newsAction';
-import { news, activeNews } from './mock';
+import { fetchNews, fetchWorldNews } from '../../../actions/newsAction';
+
 import WorldSectionLinks from './WorldSectionLinks';
 import WorldSectionNews from './WorldSectionNews';
 import Loader from '../../Loader/Loader';
 
 class WorldSection extends Component {
-    state = {
-        news,
-        activeNews,
-    };
+   
     componentDidMount() {
         this.props.fetchNews();
-        const {generalNews} = this.props;
+        this.props.fetchWorldNews();
+        const {generalNews, worldNews} = this.props;
         console.log('generalNews');
-        console.log(generalNews);
+        console.log(worldNews);
     }
     changeSection = section => {
-        const { results } = this.props.generalNews;
-        console.log(section);
+        const results  = this.props.worldNews;
+        console.log(this.props.worldNews);
         const newResultList = [];
         results.forEach( result => {
             const sectionName = result.category_news.filter(nws => 
@@ -27,16 +25,12 @@ class WorldSection extends Component {
             );
             if (sectionName.length) newResultList.push(result);
         })
-        console.log('new result list is ==> ', newResultList);
-        // const activeNewsFilter = results.filter(nws => {
-        //     return nws.category_news.section_category.section_name === section;
-        // });
-        // console.log(activeNewsFilter);
+    
        
-        // this.setState({ activeNews: activeNewsFilter });
+        this.setState({ activeNews: newResultList });
     };
     render() {
-        if (!this.props.generalNews || this.props.isLoading) {
+        if (( !this.props.worldNews )|| this.props.isLoading) {
             return <Loader />;
         }
         return (
@@ -64,7 +58,7 @@ class WorldSection extends Component {
                             </div>
                         </div>
                         <WorldSectionNews
-                            activeNews={this.props.generalNews.results.splice(
+                            activeNews={this.props.worldNews.splice(
                                 0,
                                 4
                             )}
@@ -78,7 +72,8 @@ class WorldSection extends Component {
 
 const mapStateToProps = ({ news }) => ({
     generalNews: news.generalNews,
+    worldNews: news.worldNews,
     isLoading: news.generalNewsLoading,
 });
 
-export default connect(mapStateToProps, { fetchNews })(WorldSection);
+export default connect(mapStateToProps, { fetchNews, fetchWorldNews })(WorldSection);

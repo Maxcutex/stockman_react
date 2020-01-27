@@ -1,22 +1,29 @@
 import React from 'react';
 import WorldSectionShareBlock from './WorldSectionShareBlock';
 import image from '../../../assets/images/home-3-330x220.jpg';
+import dateFormat from 'dateformat'
+// import { activeNews } from './mock';
 
 const WorldSectionDetails = props => {
     return props.activeNews.map(activeNew => {
         const {
-            section,
+            
             title,
             description,
-            author: { first_name, last_name },
+           // author: { first_name, last_name },
             date,
+            category_news,
+            author,
+            news_date,
             id,
             //visual_news,
         } = activeNew;
+        const formattedDate =  dateFormat(new Date(news_date), 'mmmm dS, yyyy') 
+       
         return (
             <div
                 className="col-xs-12 col-sm-6 col-md-4 col-lg-3 isotope-item"
-                data-filter={section}
+                // data-filter={section}
                 key={id}
             >
                 <div className="post-type-2">
@@ -31,9 +38,14 @@ const WorldSectionDetails = props => {
                             />
                         </a>
                         <ul className="tag-list">
-                            <li>
-                                <a href="post.html">{section}</a>
-                            </li>
+                            
+                            {
+                                category_news.map(category => (
+                                <li key={category.section_category.id}>
+                                <a href="post.html">{category.section_category.section_name}</a>
+                                </li>
+                                ))
+                            }
                         </ul>
                     </div>
                     <div className="caption">
@@ -45,10 +57,14 @@ const WorldSectionDetails = props => {
                             <ul className="meta-list">
                                 <li>
                                     by{' '}
-                                    <a href="post.html">{`${first_name} ${last_name}`}</a>
+                                    {
+                                        author? 
+                                        <a href="post.html">{`${author.first_name} ${author.last_name} `}</a> :
+                                        ''
+                                    }
                                 </li>
-                                <li>
-                                    <a href="post.html">{date}</a>
+                                <li>{' '}
+                                    <a href="post.html">{formattedDate}</a>
                                 </li>
                             </ul>
                             <WorldSectionShareBlock />

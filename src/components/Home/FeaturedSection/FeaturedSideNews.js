@@ -4,7 +4,6 @@ import FeaturedSideNewsTagList from './FeaturedSideNewsTagList';
 
 export default props => {
     const { title, visual_news, author,category_news } = props.featured;
-    console.log(props.featured);
     // const visual_news_main = visual_news.filter(
     //     image => image.image_type === 'size450x330'
     // );

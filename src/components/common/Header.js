@@ -226,7 +226,7 @@ export class Header extends Component {
                                 <div className="form-wrap">
                                     <input
                                         className="rd-navbar-search-form-input form-input"
-                                        id="rd-navbar-search-form-input"
+                                        id="rd-navbar-search-form-input1"
                                         type="text"
                                         name="search"
                                         value={this.state.search}

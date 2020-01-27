@@ -20,40 +20,25 @@ export default function WorldSectionLinks({ changeSection }) {
                 </Link>
             </li>
             <li>
-                <a
-                    data-isotope-filter="Category 4"
-                    data-isotope-group="gallery"
-                    href="/"
-                >
+                <Link to="" onClick={() => changeSection('Economy')}>
                     Economy{' '}
-                </a>
+                </Link>
+               
             </li>
             <li>
-                <a
-                    data-isotope-filter="Category 5"
-                    data-isotope-group="gallery"
-                    href="/"
-                >
+                <Link to="" onClick={() => changeSection('Markets')}>
                     Markets{' '}
-                </a>
+                </Link>
             </li>
             <li>
-                <a
-                    data-isotope-filter="Category 6"
-                    data-isotope-group="gallery"
-                    href="/"
-                >
+                <Link to="" onClick={() => changeSection('Art')}>
                     Art{' '}
-                </a>
+                </Link>
             </li>
             <li>
-                <a
-                    data-isotope-filter="Category 7"
-                    data-isotope-group="gallery"
-                    href="/"
-                >
+                <Link to="" onClick={() => changeSection('Life')}>
                     Life{' '}
-                </a>
+                </Link>
             </li>
         </ul>
     );
