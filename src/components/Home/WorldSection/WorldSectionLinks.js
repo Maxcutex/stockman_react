@@ -5,38 +5,38 @@ export default function WorldSectionLinks({ changeSection }) {
     return (
         <ul className="isotope-filters-list" id="isotope-filters">
             <li>
-                <Link to="" onClick={() => changeSection('World')}>
+                <Link to="#" onClick={(e) => changeSection(e, 'World')}>
                     World{' '}
                 </Link>
             </li>
             <li>
-                <Link to="" onClick={() => changeSection('Business')}>
+                <Link to="#" onClick={(e) => changeSection(e, 'Business')}>
                     Business{' '}
                 </Link>
             </li>
             <li>
-                <Link to="" onClick={() => changeSection('Politics')}>
+                <Link to="#" onClick={(e) => changeSection(e, 'Politics')}>
                     Politics{' '}
                 </Link>
             </li>
             <li>
-                <Link to="" onClick={() => changeSection('Economy')}>
+                <Link to="#" onClick={(e) => changeSection(e, 'Economy')}>
                     Economy{' '}
                 </Link>
                
             </li>
             <li>
-                <Link to="" onClick={() => changeSection('Markets')}>
+                <Link to="#" onClick={(e) => changeSection(e, 'Markets')}>
                     Markets{' '}
                 </Link>
             </li>
             <li>
-                <Link to="" onClick={() => changeSection('Art')}>
+                <Link to="#" onClick={(e) => changeSection(e, 'Art')}>
                     Art{' '}
                 </Link>
             </li>
             <li>
-                <Link to="" onClick={() => changeSection('Life')}>
+                <Link to="#" onClick={(e) => changeSection(e, 'Life')}>
                     Life{' '}
                 </Link>
             </li>
