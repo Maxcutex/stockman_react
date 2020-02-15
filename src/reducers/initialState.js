@@ -33,3 +33,12 @@ export const initialStocksSearch = {
   isLoading: false,
   stocksSearched: [],
 }
+
+export const initialStocksFetched = {
+  stocksLoading: false,
+  stocksFetched: null,
+}
+export const initialPriceMovement= {
+  priceMovementLoading: false,
+  priceMovement: null,
+}
