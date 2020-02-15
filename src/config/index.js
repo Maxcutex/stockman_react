@@ -1,6 +1,6 @@
 const allConfig = {
     development: {
-        BASE_URL: 'http://localhost:3000',
+        BASE_URL: 'http://0.0.0.0:3000',
         STOCKMAN_API_BASE_URL_AWS: 'http://stockmanapi-env.fptfzc4bbf.us-east-2.elasticbeanstalk.com/api/v1',
         STOCKMAN_API_BASE_URL: 'https://stockman-api.herokuapp.com/api/v1',
     },
