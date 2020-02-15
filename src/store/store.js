@@ -5,6 +5,8 @@ import rootReducer from '../reducers/rootReducer';
 
 // import { tokenValidator } from '../helpers/tokenValidation';
 
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
 const initialState = {};
 /**
  * @export
@@ -16,11 +18,7 @@ const configureStore = () => {
     return createStore(
         rootReducer,
         initialState,
-        compose(
-            applyMiddleware(...middleware),
-            window.__REDUX_DEVTOOLS_EXTENSION__ &&
-                window.__REDUX_DEVTOOLS_EXTENSION__()
-        )
+        composeEnhancers(applyMiddleware(...middleware))
     );
 };
 export default configureStore;
