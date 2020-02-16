@@ -39,18 +39,18 @@ export const fetchAllStockList = () => dispatch => {
 
 
 export const fetchPriceMovementSuccess = stocklist => ({
-    type: FETCH_LIST_STOCKS_SUCCESS,
+    type: FETCH_MOVEMENT_STOCK_SUCCESS,
     payload: stocklist,
 });
 
 export const fetchPriceMovementFailure = error => ({
-    type: FETCH_LIST_STOCKS_FAILURE,
+    type: FETCH_MOVEMENT_STOCK_FAILURE,
     payload: error,
 });
  
 
 const fetchPriceMovementLoading = () => ({
-    type: FETCH_LIST_STOCKS_LOADING,
+    type: FETCH_MOVEMENT_STOCK_LOADING,
 });
 
 export const fetchPriceMovement = (stockid, startDate, endDate) => dispatch => {
@@ -58,7 +58,8 @@ export const fetchPriceMovement = (stockid, startDate, endDate) => dispatch => {
     return axios
         .get(`${baseUrl}/PriceLists/view-date-range/?stock=${stockid}&start_date=${startDate}&end_date=${endDate}`)
         .then(res => {
-            console.log(res)
+            console.log(`${baseUrl}/PriceLists/view-date-range/?stock=${stockid}&start_date=${startDate}&end_date=${endDate}`);
+            console.log(res.data)
             dispatch(fetchPriceMovementSuccess(res.data));
         })
         .catch(error => {

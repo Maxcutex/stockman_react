@@ -13,9 +13,9 @@ class SearchPrice extends React.Component {
         <div className='search-container'>
             <div className='search-content'>
                 <form onSubmit={this.props.handleSubmit}>
-                    <div>Search Price List By Date</div>
+                    <div className='col-sm-3'>Search Price List By Date</div>
 
-                    <div>Date:  
+                    <div className='col-sm-3'>Date:  
                  
                         <DatePicker
                             selected={this.props.date}
@@ -23,9 +23,10 @@ class SearchPrice extends React.Component {
                             
                             dateFormat="yyyy/MM/dd"
                             />
-                        <CustomButton type="submit" value="Submit">Get Price List </CustomButton>
+                        
 
                     </div>
+                    <div className='col-sm-3'><CustomButton type="submit" value="Submit">Get Price List </CustomButton></div>
                 </form>
             </div>
            

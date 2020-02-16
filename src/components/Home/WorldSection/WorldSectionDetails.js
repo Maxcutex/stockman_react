@@ -11,7 +11,7 @@ const WorldSectionDetails = props => {
             title,
             description,
            // author: { first_name, last_name },
-            date,
+            //date,
             category_news,
             author,
             news_date,

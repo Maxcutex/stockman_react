@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {getCurrentDate} from '../../utils/utils';
-import  PriceTable from '../../components/price-table/price-table';
-import  NotFound from '../../components/not-found/not-found';
+import SidePageOne from '../../components/side-page-one/side-page-one';
+
 import  SearchMovement from '../../components/search-movement/search-movement';
+import  PriceMovementChart from '../../components/charts/price-movement-chart/price-movement-chart';
 import { fetchAllStockList, fetchPriceMovement } from '../../actions/stockAction';
 import Loader from '../../components/Loader/Loader';
 import './pricemovement-styles.scss'
@@ -16,43 +17,92 @@ class PriceMovementPage extends Component {
             currentDate: getCurrentDate('-'),
             startDate: new Date(`${getCurrentDate('-')}`),
             endDate: new Date(`${getCurrentDate('-')}`),
-            selectedStockId: null
+            selectedStock: 0, isPriceMovementSubmitted: false,
          }
     }
 
     componentDidMount(){
-        this.props.fetchAllStockList(`${this.state.currentDate}`);
+        this.props.fetchAllStockList();
     }
     
 
     handleSubmit = event => {
         event.preventDefault();
-        const {selectedStockId, startDate, endDate} = this.state;
-        this.props.fetchPriceMovement(selectedStockId, startDate, endDate);
+        const {selectedStock, startDate, endDate} = this.state;
+        const formattedStartDate =  dateFormat(new Date(startDate), 'yyyy-mm-dd') 
+        const formattedEndDate =  dateFormat(new Date(endDate), 'yyyy-mm-dd') 
+        this.props.fetchPriceMovement(selectedStock, formattedStartDate, formattedEndDate);
+        this.setState( {isPriceMovementSubmitted: true } );
     }
     handleChange = event => {
-        const { value, name } = event.target;
-        this.setState({ dateFull: event });
-
+        //const { value, name } = event.target;
+        this.setState( {selectedStock: event.value } );
+        console.log(event.value);
+    }
+    handleStartChange = event => {
+        this.setState({ startDate: event });
+    }
+    handleEndChange = event => {
+        this.setState({ endDate: event });
     }
     render(){
          
         if (!this.props.stockList || this.props.stocksLoading) {
             return <Loader />;
         }
+        
         //const formattedDate = new Date(this.state.currentDate).toLocaleDateString();
         return (
-            <div>
-            <div className='price-movement-page-title-header'>Stock Price Movement</div>
-            <br />
-            <SearchMovement startDate={this.state.startDate} endDate={this.state.endDate} handleChange={this.handleChange}  handleSubmit={this.handleSubmit} />
-            <br />
-            {
-            //   this.props.priceList.length ?   <PriceTable priceList={this.props.priceList}/> : <NotFound />
-            }
             
-            <br/>
-            </div>
+            <div>
+            <section className='bg-white section-xs-type-1'>
+                <div className='shell'>
+                    <div className='range range-center range-50'>
+                        <div className='cell-md-9 cell-lg-9'>
+                          <ul className="breadcrumb-custom-type-1">
+                            <li><a href="/">Home  </a></li>
+                            <li> Stock Price Movement </li>
+                            
+                          </ul>
+                          <div className="post-content">
+            
+                            <h4>Stock Price Movement</h4>
+            
+                            {
+                                this.props.stockList.length ? 
+                                <SearchMovement 
+                                stockList={this.props.stockList} 
+                                startDate={this.state.startDate} 
+                                endDate={this.state.endDate} 
+                                handleChange={this.handleChange}  
+                                handleStartChange={this.handleStartChange}  
+                                handleEndChange={this.handleEndChange}  
+                                handleSubmit={this.handleSubmit} />
+                                : ''
+                            }
+                            <br />
+                            <div className='col-sm-12'>
+                              {
+                                this.state.isPriceMovementSubmitted ? 
+                                 this.props.priceMovementList.length ?  
+                                  <PriceMovementChart priceMovementList={this.props.priceMovementList}/> : ''
+                                 : ''
+                              }
+                            </div>
+                            
+                            
+                            <br/>
+                          </div>
+                        </div>
+                        <div className='cell-md-3'>
+                          <SidePageOne />
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+        
+        </div>
         );
         }
 }

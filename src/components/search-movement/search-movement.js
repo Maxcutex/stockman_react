@@ -17,33 +17,43 @@ class SearchMovement extends React.Component {
         //     { label: 'Amazon', value: 5 },
         //     { label: 'Alphabet', value: 6 },
         //   ];
+        
+            const stocks = this.props.stockList.map( stock => {
+                return { 
+                    'label':stock.stock_code,
+                    'value':stock.id,
+                }
+            })
+            
+      
         return (  
         <div className='search-container'>
             <div className='search-content'>
                 <form onSubmit={this.props.handleSubmit}>
                     <div>Get Price Movement of Stock</div>
-                    <div>
-                    <Select options={ this.props.stocks }  onChange={this.props.handleChange}/>
+                    <div className='col-sm-3'>
+                        Select Stock
+                    <Select options={ stocks }  name='selectedStock' onChange={this.props.handleChange} />
                     </div>
-                    <div>Start Date:  
+                    <div className='col-sm-3'>Start Date:  
                  
-                        <DatePicker
+                        <DatePicker 
                             selected={this.props.startDate}
-                            onChange={this.props.handleChange}
-                            dateFormat="yyyy/MM/dd"
+                            onChange={this.props.handleStartChange}
+                            dateFormat="yyyy/MM/dd" name='startDate'
                             />
 
                     </div>
-                    <div>End Date:  
+                    <div className='col-sm-3'>End Date:  
                  
                         <DatePicker
                             selected={this.props.endDate}
-                            onChange={this.props.handleChange}
-                            dateFormat="yyyy/MM/dd"
+                            onChange={this.props.handleEndChange}
+                            dateFormat="yyyy/MM/dd" name='endDate'
                             />
 
-                    </div>
-                    <div>
+                    </div >
+                    <div className='col-sm-3'>
                         <CustomButton type="submit" value="Submit">Get Price Movement </CustomButton>
 
                     </div>

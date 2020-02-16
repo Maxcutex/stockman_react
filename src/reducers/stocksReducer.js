@@ -17,7 +17,7 @@ export const stocksReducer = (state = initialStocksFetched, action) => {
         return {
           ...state,
           stocksLoading: false,
-          stocksFetched: action.payload,
+          stockList: action.payload,
         };
     case FETCH_LIST_STOCKS_FAILURE:
       return {

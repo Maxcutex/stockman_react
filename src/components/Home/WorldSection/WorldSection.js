@@ -19,7 +19,7 @@ class WorldSection extends Component {
             this.props.fetchWorldNews();
         }
 
-        if (this.props != prevProps && this.props.worldNews) {
+        if (this.props !== prevProps && this.props.worldNews) {
             this.setState({ activeNews: this.filterSection('World') });
         }
     }
