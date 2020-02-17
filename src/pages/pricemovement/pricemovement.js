@@ -26,18 +26,18 @@ class PriceMovementPage extends Component {
     }
     
 
-    handleSubmit = event => {
+    handleSubmit = async event => {
         event.preventDefault();
         const {selectedStock, startDate, endDate} = this.state;
         const formattedStartDate =  dateFormat(new Date(startDate), 'yyyy-mm-dd') 
         const formattedEndDate =  dateFormat(new Date(endDate), 'yyyy-mm-dd') 
-        this.props.fetchPriceMovement(selectedStock, formattedStartDate, formattedEndDate);
-        this.setState( {isPriceMovementSubmitted: true } );
+        await this.props.fetchPriceMovement(selectedStock, formattedStartDate, formattedEndDate);
+        
+        this.setState( {isPriceMovementSubmitted: !this.props.priceMovementLoading } );
     }
     handleChange = event => {
         //const { value, name } = event.target;
         this.setState( {selectedStock: event.value } );
-        console.log(event.value);
     }
     handleStartChange = event => {
         this.setState({ startDate: event });
@@ -85,7 +85,8 @@ class PriceMovementPage extends Component {
                               {
                                 this.state.isPriceMovementSubmitted ? 
                                  this.props.priceMovementList.length ?  
-                                  <PriceMovementChart priceMovementList={this.props.priceMovementList}/> : ''
+                                  <PriceMovementChart startDate={this.state.startDate} 
+                                  endDate={this.state.endDate}  priceMovementList={this.props.priceMovementList}/> : ''
                                  : ''
                               }
                             </div>

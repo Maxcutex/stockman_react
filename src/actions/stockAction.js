@@ -27,7 +27,6 @@ export const fetchAllStockList = () => dispatch => {
     return axios
         .get(`${baseUrl}/stocks/all`)
         .then(res => {
-            console.log(res)
             dispatch(fetchAllStockListSuccess(res.data));
         })
         .catch(error => {
@@ -38,9 +37,9 @@ export const fetchAllStockList = () => dispatch => {
 
 
 
-export const fetchPriceMovementSuccess = stocklist => ({
+export const fetchPriceMovementSuccess = movementlist => ({
     type: FETCH_MOVEMENT_STOCK_SUCCESS,
-    payload: stocklist,
+    payload: movementlist,
 });
 
 export const fetchPriceMovementFailure = error => ({

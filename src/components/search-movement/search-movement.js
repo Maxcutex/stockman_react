@@ -30,7 +30,6 @@ class SearchMovement extends React.Component {
         <div className='search-container'>
             <div className='search-content'>
                 <form onSubmit={this.props.handleSubmit}>
-                    <div>Get Price Movement of Stock</div>
                     <div className='col-sm-3'>
                         Select Stock
                     <Select options={ stocks }  name='selectedStock' onChange={this.props.handleChange} />
@@ -54,7 +53,7 @@ class SearchMovement extends React.Component {
 
                     </div >
                     <div className='col-sm-3'>
-                        <CustomButton type="submit" value="Submit">Get Price Movement </CustomButton>
+                        <CustomButton type="submit" value="Submit">Get Chart </CustomButton>
 
                     </div>
 

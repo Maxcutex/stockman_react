@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import dateFormat from 'dateformat';
 
 import ReactFC from 'react-fusioncharts';
 
@@ -12,16 +12,17 @@ import FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
 ReactFC.fcRoot(FusionCharts, Column2D, FusionTheme);
 
 
-const PriceMovementChart = ({priceMovementList}) => {
+const PriceMovementChart = ({priceMovementList, startDate, endDate}) => {
     const chartData = priceMovementList.map( price => {
         return {
             'label': price.price_date, 
             'value': price.price
         }
     });
-    console.log(chartData);
+    const formattedStartDate =  dateFormat(new Date(startDate), 'mmmm  d, yyyy') 
+    const formattedEndDate =  dateFormat(new Date(endDate), 'mmmm  d, yyyy') 
     const chartConfigs = {
-        type: 'column2d', // The chart type
+        type: 'line', // The chart type
         width: '700', // Width of the chart
         height: '400', // Height of the chart
         dataFormat: 'json', // Data type
@@ -29,14 +30,14 @@ const PriceMovementChart = ({priceMovementList}) => {
           // Chart Configuration
           chart: {
             //Set the chart caption
-            caption: 'Price Movement Chart from [] to []',
+            caption: `Price Movement Chart from [${formattedStartDate}] to [${formattedEndDate}]`,
             //Set the chart subcaption
-            subCaption: 'In MMbbl = One Million barrels',
+            subCaption: 'In Naira with Kobo',
             //Set the x-axis name
-            xAxisName: 'Country',
+            xAxisName: 'Dates',
             //Set the y-axis name
-            yAxisName: 'Reserves (MMbbl)',
-            numberSuffix: 'K',
+            yAxisName: 'Price (Naira)',
+            numberPreffix: 'N',
             //Set the theme for your chart
             theme: 'fusion'
           },
