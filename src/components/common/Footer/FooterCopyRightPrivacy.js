@@ -8,7 +8,7 @@ export default function FooterCopyRightPrivacy() {
             <div className="cell-sm-6 text-sm-left">
                 <a href="..">
                     <img
-                        src="images/logo-dark-266x54.png"
+                        src="/images/logo-dark-266x54.png"
                         width="266"
                         height="54"
                         alt=""

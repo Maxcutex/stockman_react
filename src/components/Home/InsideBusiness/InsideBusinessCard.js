@@ -1,7 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import InsideBusinessCardShareBlock from './InsideBusinessCardShareBlock';
 
 export default function InsideBusinessCard({ insideBusiness }) {
+    let image = insideBusiness.visual_inside_business.find(y => y.image_type=='size158x158');
+    //{`${this.state.image1}`}
     return (
         <div className="cell-xs-6 cell-sm-12 cell-lg-6">
             <div className="post-type-3">
@@ -9,8 +12,9 @@ export default function InsideBusinessCard({ insideBusiness }) {
                     <div className="unit__left">
                         <div className="img-block">
                             <a href="post.html">
+                               
                                 <img
-                                    src="images/home-11-158x158.jpg"
+                                    src={ image ? `${image.image_file}`: 'images/home-11-158x158.jpg'}
                                     width="158"
                                     height="158"
                                     alt=""
@@ -25,7 +29,7 @@ export default function InsideBusinessCard({ insideBusiness }) {
                     </div>
                     <div className="unit__body">
                         <h5 className="title">
-                            <a href="post.html">{insideBusiness.title}</a>
+                            <Link to={`/content-page/insidebusiness/${insideBusiness.id}`}>{insideBusiness.title}</Link>
                         </h5>
                         <div className="bottom-block">
                             <ul className="meta-list">

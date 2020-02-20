@@ -10,16 +10,26 @@ class InsideBusiness extends Component {
     componentDidMount() {
         this.props.fetchInsideBusiness();
     }
+    // componentDidUpdate() {
+    //     if (!this.props.insideBusiness.length) {
+    //         this.props.fetchInsideBusiness();
+    //     }
+
+       
+    // }
     render() {
+        console.log(this.props.isLoading, 'this.props.isLoading')
         if (!this.props.insideBusiness || this.props.isLoading) {
             return <Loader />;
-        }
+        }  
+        console.log(this.props.insideBusiness, 'this.props.insideBusiness');
+        
         return (
             <div className="section-xs">
                 <InsideBusinessHeader />
                 <div className="range range-20">
                     {this.props.insideBusiness.results
-                        .splice(0, 6)
+                        .slice(0, 6)
                         .map(elem => (
                             <InsideBusinessCard
                                 key={elem.id}

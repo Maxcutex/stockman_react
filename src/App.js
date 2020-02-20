@@ -3,7 +3,7 @@ import './assets/css/bootstrap.css';
 import './assets/css/style.css';
 import './App.css';
 import routes from './routes';
-
+import { PersistGate } from 'redux-persist/integration/react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import ApplicationTemplate from './Template';
 

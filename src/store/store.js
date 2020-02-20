@@ -2,6 +2,8 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 // import reduxImmutableStateInvariant from 'redux-immutable-state-invariant'
 import rootReducer from '../reducers/rootReducer';
+import { persistStore, persistReducer } from 'redux-persist'
+import storage from 'redux-persist/lib/storage' 
 
 // import { tokenValidator } from '../helpers/tokenValidation';
 
@@ -13,12 +15,29 @@ const initialState = {};
  * @param {any} {}
  * @returns {object} object
  */
-const configureStore = () => {
-    const middleware = [thunk];
-    return createStore(
-        rootReducer,
-        initialState,
-        composeEnhancers(applyMiddleware(...middleware))
-    );
-};
-export default configureStore;
+
+const persistConfig = {
+    key: 'root',
+    storage,
+  }
+const middleware = [thunk];  
+const persistedReducer = persistReducer(persistConfig, rootReducer)
+// const configureStore = () => {
+    
+//     return createStore(
+//         persistedReducer,
+//         initialState,
+//         composeEnhancers(applyMiddleware(...middleware))
+//     );
+// };
+
+    let store = createStore(
+            persistedReducer,
+            initialState,
+            composeEnhancers(applyMiddleware(...middleware))
+        );
+   
+    let persistor = persistStore(store)
+    
+
+export  { store, persistor };

@@ -9,14 +9,7 @@ import Select from 'react-select';
 class SearchMovement extends React.Component {
    
     render() { 
-        // const techCompanies = [
-        //     { label: 'Apple', value: 1 },
-        //     { label: 'Facebook', value: 2 },
-        //     { label: 'Netflix', value: 3 },
-        //     { label: 'Tesla', value: 4 },
-        //     { label: 'Amazon', value: 5 },
-        //     { label: 'Alphabet', value: 6 },
-        //   ];
+       
         
             const stocks = this.props.stockList.map( stock => {
                 return { 
@@ -25,20 +18,20 @@ class SearchMovement extends React.Component {
                 }
             })
             
-      
+        const {handleChange}= this.props;
         return (  
         <div className='search-container'>
             <div className='search-content'>
                 <form onSubmit={this.props.handleSubmit}>
                     <div className='col-sm-3'>
                         Select Stock
-                    <Select options={ stocks }  name='selectedStock' onChange={this.props.handleChange} />
+                    <Select options={ stocks }  name='selectedStock' onChange={(e) => handleChange(e, 'stockName')} />
                     </div>
                     <div className='col-sm-3'>Start Date:  
                  
                         <DatePicker 
                             selected={this.props.startDate}
-                            onChange={this.props.handleStartChange}
+                            onChange={(e) => handleChange(e, 'startDate')}
                             dateFormat="yyyy/MM/dd" name='startDate'
                             />
 
@@ -47,7 +40,7 @@ class SearchMovement extends React.Component {
                  
                         <DatePicker
                             selected={this.props.endDate}
-                            onChange={this.props.handleEndChange}
+                            onChange={(e) => handleChange(e, 'endDate')}
                             dateFormat="yyyy/MM/dd" name='endDate'
                             />
 

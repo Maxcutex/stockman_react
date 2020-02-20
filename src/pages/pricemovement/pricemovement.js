@@ -35,15 +35,21 @@ class PriceMovementPage extends Component {
         
         this.setState( {isPriceMovementSubmitted: !this.props.priceMovementLoading } );
     }
-    handleChange = event => {
-        //const { value, name } = event.target;
-        this.setState( {selectedStock: event.value } );
-    }
-    handleStartChange = event => {
-        this.setState({ startDate: event });
-    }
-    handleEndChange = event => {
-        this.setState({ endDate: event });
+    
+    handleChange = (e, element) => {
+        switch (element) {
+            case 'startDate':
+                this.setState({ startDate: e });
+                break;
+            case 'endDate':
+                this.setState({ endDate: e });
+                break;
+            case 'stockName':
+                this.setState({ selectedStock: e.value});
+                break;
+            default:
+                break;
+        }
     }
     render(){
          
@@ -75,8 +81,6 @@ class PriceMovementPage extends Component {
                                 startDate={this.state.startDate} 
                                 endDate={this.state.endDate} 
                                 handleChange={this.handleChange}  
-                                handleStartChange={this.handleStartChange}  
-                                handleEndChange={this.handleEndChange}  
                                 handleSubmit={this.handleSubmit} />
                                 : ''
                             }

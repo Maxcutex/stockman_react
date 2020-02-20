@@ -4,7 +4,7 @@ import { Header }  from '../../components/common/Header';
 
 describe('Header Component', () => {
     let component;
-    let IMAGE_PATH = 'images/logo-dark-266x54.png';
+    let IMAGE_PATH = '/images/logo-dark-266x54.png';
     beforeEach(() => {
         component = shallow(<Header />);
     });

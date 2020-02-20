@@ -78,7 +78,7 @@ export class Header extends Component {
                         <div className="rd-navbar-brand">
                             <a className="brand-name" href="index.html">
                                 <img
-                                    src="images/logo-dark-266x54.png"
+                                    src="/images/logo-dark-266x54.png"
                                     width="266"
                                     height="54"
                                     alt=""
@@ -279,7 +279,7 @@ export class Header extends Component {
                       <div className="rd-navbar-brand">
                           <a className="brand-name" href="index.html">
                               <img
-                                  src="images/logo-dark-266x54.png"
+                                  src="/images/logo-dark-266x54.png"
                                   width="266"
                                   height="54"
                                   alt=""

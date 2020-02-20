@@ -67,6 +67,7 @@ const newsReducer = (state = initialNews, action) => {
             return {
                 ...state,
                 insideBusiness: action.payload,
+                insideBusinessLoading: false,
             };
         default:
             return state;
