@@ -84,17 +84,7 @@ export const fetchInsideBusiness = () => dispatch => {
         });
 };
 
-export const fetchInsideBusinessById = (id) => dispatch => {
-    dispatch(fetchInsideBusinessLoading);
-    return axios
-        .get(`${baseUrl}/InsideBusiness/${id}`)
-        .then(res => {
-            dispatch(fetchInsideBusinessSuccess(res.data));
-        })
-        .catch(error => {
-            dispatch(fetchInsideBusinessFailure(error));
-        });
-};
+
 
 export const fetchNews = () => dispatch => {
     dispatch(fetchGeneralNewsLoading);
@@ -111,20 +101,7 @@ export const fetchNews = () => dispatch => {
         });
 };
 
-export const fetchNewsById = (id) => dispatch => {
-    dispatch(fetchGeneralNewsLoading);
-    return axios
-        .get(`${baseUrl}/News/${id}`)
-        .then(res => {
-            // console.log('base url is ==> ', baseUrl);
-            // console.log('res.data is ==> ', res.data);
-            // console.log('res.data is ==> ', res.data.results.length, [...res.data.results]);
-            dispatch(fetchNewsSuccess(res.data));
-        })
-        .catch(error => {
-            dispatch(fetchNewsFailure(error));
-        });
-};
+
 
 export const fetchFeaturedNews = () => dispatch => {
     dispatch(fetchFeaturedNewsLoading);

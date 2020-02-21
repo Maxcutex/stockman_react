@@ -32,6 +32,7 @@ class FeaturedSectionContainer extends Component {
                                     <div key={`div-holder${sideNews.id}`} className="cell-xs-6 cell-sm-6 cell-lg-12">
                                         <FeaturedSideNews
                                             key={sideNews.id}
+                                            id={sideNews.id}
                                             featured={sideNews}
                                         />
                                     </div>

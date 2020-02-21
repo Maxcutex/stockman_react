@@ -22,7 +22,7 @@ class InsideBusiness extends Component {
         if (!this.props.insideBusiness || this.props.isLoading) {
             return <Loader />;
         }  
-        console.log(this.props.insideBusiness, 'this.props.insideBusiness');
+        
         
         return (
             <div className="section-xs">

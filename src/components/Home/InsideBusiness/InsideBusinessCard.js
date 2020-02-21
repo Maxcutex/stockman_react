@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import InsideBusinessCardShareBlock from './InsideBusinessCardShareBlock';
 
 export default function InsideBusinessCard({ insideBusiness }) {
-    let image = insideBusiness.visual_inside_business.find(y => y.image_type=='size158x158');
+    let image = insideBusiness.visual_inside_business.find(y => y.image_type==='size158x158');
     //{`${this.state.image1}`}
     return (
         <div className="cell-xs-6 cell-sm-12 cell-lg-6">
@@ -21,9 +21,13 @@ export default function InsideBusinessCard({ insideBusiness }) {
                                 />
                             </a>
                             <ul className="tag-list">
-                                <li>
-                                    <a href="post.html">Economy</a>
+                            {
+                                insideBusiness.category_inside_business && insideBusiness.category_inside_business.map(category => (
+                                <li key={category.section_category.id}>
+                                <a href="/">{category.section_category.section_name}</a>
                                 </li>
+                                ))
+                            }
                             </ul>
                         </div>
                     </div>
@@ -34,10 +38,10 @@ export default function InsideBusinessCard({ insideBusiness }) {
                         <div className="bottom-block">
                             <ul className="meta-list">
                                 <li>
-                                    by <a href="post.html">Jon Snow</a>
+                                    by <a href="/">{insideBusiness.author.first_name} {insideBusiness.author.last_name}</a>
                                 </li>
                                 <li>
-                                    <a href="post.html">
+                                    <a href="/">
                                         {insideBusiness.entry_date}{' '}
                                     </a>
                                 </li>

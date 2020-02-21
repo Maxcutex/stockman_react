@@ -64,6 +64,7 @@ const newsReducer = (state = initialNews, action) => {
                 insideBusinessLoading: true,
             };
         case FETCH_INSIDE_BUSINESS_SUCCESS:
+            console.log('i got logged inn general business');
             return {
                 ...state,
                 insideBusiness: action.payload,

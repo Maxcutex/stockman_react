@@ -1,20 +1,21 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import FeaturedNewsShareBlock from './FeaturedNewShareBlock';
 
 
-export default function FeaturedSideNewsCaption({title, author}) {
+export default function FeaturedSideNewsCaption({title, author, id}) {
     return (
         <div className="caption">
             <h4 className="title">
-                <a href="post.html">{title}</a>
+                <Link to={`/content-page/news/${id}`}>{title}</Link>
             </h4>
             <div className="bottom-block">
                 <ul className="meta-list">
                     <li>
-                        by <a href="post.html">{author.first_name} </a>
+                        by <a href="/">{author.first_name} </a>
                     </li>
                     <li>
-                        <a href="post.html">Aug 08, 2017 </a>
+                        <a href="/">Aug 08, 2017 </a>
                     </li>
                 </ul>
                 <FeaturedNewsShareBlock/>

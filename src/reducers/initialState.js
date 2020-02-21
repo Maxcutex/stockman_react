@@ -15,9 +15,15 @@ export const initialNews = {
   featuredNewsLoading: false,
   insideBusinessLoading: false,
   insideBusiness: null,
-  insideBusinnesSingle:null, 
-  newsSingle:null,
+  
 };
+
+export const intialNewsSingle = {
+  insideBusinesSingle:null, 
+  newsSingle:null,
+  newsSingleLoading: true,
+  insideBusinessSingleLoading: true,
+}
 
 export const initialPriceList = {
   isLoading: false,

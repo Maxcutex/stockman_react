@@ -320,7 +320,7 @@ export class Header extends Component {
                 <div className="rd-navbar-nav-wrap toggle-original-elements">
                   <ul className="rd-navbar-nav">
                     <li className="active rd-navbar--has-dropdown rd-navbar-submenu">
-                      <a href="./">Home</a>
+                      <a href="/">Home</a>
                       <span className="rd-navbar-submenu-toggle" />
                       <ul
                         className="rd-navbar-dropdown rd-navbar-open-right"
