@@ -6,8 +6,6 @@ import { PersistGate } from 'redux-persist/integration/react'
 import App from './App';
 // import * as serviceWorker from './serviceWorker';
 
-console.log('this is state');
-console.log(store.getState());
 ReactDOM.render(
     <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>

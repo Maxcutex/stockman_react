@@ -1,9 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function WorldSectionLinks({ changeSection }) {
+export default function WorldSectionLinks({ changeSection,showInMobileForm }) {
+    let menuListClass = ['isotope-filters-list'];
+    if (showInMobileForm) {
+        menuListClass.push('active');
+      }
     return (
-        <ul className="isotope-filters-list" id="isotope-filters">
+        <ul className={menuListClass.join(' ')} id="isotope-filters">
             <li>
                 <Link to="#" onClick={(e) => changeSection(e, 'World')}>
                     World{' '}

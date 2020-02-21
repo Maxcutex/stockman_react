@@ -9,6 +9,7 @@ import Loader from '../../Loader/Loader';
 class WorldSection extends Component {
     state = {
         activeNews: [],
+        showInMobileForm: false
     };
     componentDidMount() {
         this.props.fetchWorldNews();
@@ -23,7 +24,9 @@ class WorldSection extends Component {
             this.setState({ activeNews: this.filterSection('World') });
         }
     }
-
+    showMobileForm = e => {
+        this.setState({ showInMobileForm: !this.state.showInMobileForm });
+      };
     filterSection = section => {
         const results = this.props.worldNews;
         const newResultList = [];
@@ -40,13 +43,18 @@ class WorldSection extends Component {
     changeSection = (e, section) => {
         e.preventDefault();
         const newResultList = this.filterSection(section);
-        this.setState({ activeNews: newResultList });
+        this.setState({ activeNews: newResultList,showInMobileForm: !this.state.showInMobileForm  });
     };
 
     render() {
         if (this.props.isLoading) {
             return <Loader />;
         }
+        let menuButtonClass = ['isotope-filters-toggle', 'isotope-filters-toggle-1', 'button'];
+        if (this.state.showInMobileForm) {
+            menuButtonClass.push('active');
+          }
+        
         return (
             <section className="section-sm bg-white">
                 <div className="shell">
@@ -56,14 +64,16 @@ class WorldSection extends Component {
                                 <h3>World</h3>
                                 <div className="isotope-filters isotope-filters-horizontal">
                                     <button
-                                        className="isotope-filters-toggle isotope-filters-toggle-1 button"
+                                        className={menuButtonClass.join(' ')}
                                         data-custom-toggle="#isotope-filters"
-                                        data-custom-toggle-disable-on-blur="true"
+                                        data-custom-toggle-disable-on-blur="true" onClick={this.showMobileForm.bind(
+                                            this
+                                        )}
                                     >
                                         Filter
                                         <span className="caret" />
                                     </button>
-                                    <WorldSectionLinks
+                                    <WorldSectionLinks showInMobileForm={this.state.showInMobileForm}
                                         changeSection={(e, section) =>
                                             this.changeSection(e, section)
                                         }
