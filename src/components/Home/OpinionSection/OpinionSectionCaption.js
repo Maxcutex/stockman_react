@@ -1,15 +1,14 @@
-import React from "react"
-import OpinionShareBlock from "./OpinionShareBlock";
+import React from 'react'
+import OpinionShareBlock from './OpinionShareBlock';
 
 
 
-export default function OpinionSectionCaption() {
+export default function OpinionSectionCaption({title, id, author}) {
     return (
         <div className="caption">
             <h4 className="title">
                 <a href="post.html">
-                    European equities a global laggard on
-                    political risk
+                    {title}
                 </a>
             </h4>
             <div className="bottom-block">

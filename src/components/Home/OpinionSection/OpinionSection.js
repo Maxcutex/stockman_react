@@ -1,8 +1,8 @@
 import React from 'react';
 import OpinionAnalysis from './OpinionAnalysis';
 import OpinionMarket from './OpinionMarket';
-import InsideBusiness from "../InsideBusiness/InsideBusiness";
-import OpinionSectionSideBar from "./OpinionSectionSideBar/OpinionSectionSideBar";
+import InsideBusiness from '../InsideBusiness/InsideBusiness';
+import OpinionSectionSideBar from './OpinionSectionSideBar/OpinionSectionSideBar';
 
 const OpinionSection = () => {
     return (

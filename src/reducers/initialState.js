@@ -50,3 +50,8 @@ export const initialPriceMovement= {
   priceMovementLoading: false,
   priceMovement: null,
 }
+
+export const initialOpinionAnalysis= {
+  opinionAnalysisLoading: false,
+  opinionAnalysis: null,
+}

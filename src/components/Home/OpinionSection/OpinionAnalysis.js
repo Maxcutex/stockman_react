@@ -1,47 +1,51 @@
-import React from 'react';
-import OpinionAnalysisHeader from "./OpinionAnalysisHeader";
-import OpinionSectionCard from "./OpinionSectionCard";
+import React, { Component} from 'react';
+import { connect } from 'react-redux';
+import OpinionAnalysisHeader from './OpinionAnalysisHeader';
+import OpinionSectionCard from './OpinionSectionCard';
+import { fetchOpinionAnalysis } from '../../../actions/opinionAction';
+import Loader from '../../Loader/Loader';
 
-const OpinionAnalysis = () => {
-    return (
-        <div className="section-xs">
-            <OpinionAnalysisHeader/>
-            <div className="range range-center range-30">
-                <OpinionSectionCard imgSrc={"images/home-7-450x330.jpg"}>
-                    <ul className="tag-list">
-                        <li>
-                            <a href="post.html">Economy</a>
-                        </li>
-                    </ul>
 
-                </OpinionSectionCard>
-                <OpinionSectionCard imgSrc={"images/home-8-450x330.jpg"}>
-                    <ul className="tag-list">
-                        <li>
-                            <a href="post.html">Business</a>
-                        </li>
-                    </ul>
-                </OpinionSectionCard>
-                <OpinionSectionCard imgSrc={"images/home-9-450x330.jpg"}>
-                    <ul className="tag-list">
-                        <li>
-                            <a href="post.html">Life</a>
-                        </li>
-                        <li>
-                            <a href="post.html">Business</a>
-                        </li>
-                    </ul>
-                </OpinionSectionCard>
-                <OpinionSectionCard imgSrc={"images/home-10-450x330.jpg"} >
-                    <ul className="tag-list">
-                        <li>
-                            <a href="post.html">Economy</a>
-                        </li>
-                    </ul>
-                </OpinionSectionCard>
+class OpinionAnalysis extends Component {
+
+    componentDidMount(){
+        console.log('componnent mountingn')
+         this.props.fetchOpinionAnalysis();
+    }
+    render() {
+        const { opinionAnalysisLoading, opinionAnalysis } = this.props;
+        if (!this.props.opinionAnalysis || this.props.opinionAnalysisLoading) {
+            return <Loader />;
+        } 
+        return (
+            <div>
+               
+                    <div className='section-xs'>
+                    <OpinionAnalysisHeader/>
+                    <div className='range range-center range-30'>
+                        {
+                            opinionAnalysis.results
+                            .slice(0, 4)
+                            .map( opinionItem => (
+                                <OpinionSectionCard opinion={opinionItem} />
+                            ))
+                        }
+                        
+                        
+                    </div>
+                </div>
+                
+                
             </div>
-        </div>
-    );
+        
+    )};
 };
 
-export default OpinionAnalysis;
+const mapStateToProps = ({ opinion }) => ({
+    opinionAnalysis: opinion.opinionAnalysis,
+    opinionAnalysisLoading: opinion.opinionAnalysisLoading,
+});
+
+export default connect(mapStateToProps, { fetchOpinionAnalysis })(
+    OpinionAnalysis
+);
