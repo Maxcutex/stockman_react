@@ -40,12 +40,10 @@ const fetchSingleInsideBusinessFailure = error => ({
 
 
 export const fetchInsideBusinessById = (id) => dispatch => {
-    console.log('am in fetch single business action');
-    //dispatch(fetchSingleInsideBusinessLoading);
+    dispatch(fetchSingleInsideBusinessLoading);
     return axios
         .get(`${baseUrl}/InsideBusiness/${id}`)
         .then(res => {
-            console.log(res.data)
             dispatch(fetchSingleInsideBusinessSuccess(res.data));
             return true;
         })

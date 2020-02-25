@@ -9,12 +9,11 @@ import Loader from '../../Loader/Loader';
 class OpinionAnalysis extends Component {
 
     componentDidMount(){
-        console.log('componnent mountingn')
          this.props.fetchOpinionAnalysis();
     }
     render() {
         const { opinionAnalysisLoading, opinionAnalysis } = this.props;
-        if (!this.props.opinionAnalysis || this.props.opinionAnalysisLoading) {
+        if (!opinionAnalysis || opinionAnalysisLoading) {
             return <Loader />;
         } 
         return (
@@ -27,7 +26,7 @@ class OpinionAnalysis extends Component {
                             opinionAnalysis.results
                             .slice(0, 4)
                             .map( opinionItem => (
-                                <OpinionSectionCard opinion={opinionItem} />
+                                <OpinionSectionCard opinion={opinionItem} key={opinionItem.id} />
                             ))
                         }
                         

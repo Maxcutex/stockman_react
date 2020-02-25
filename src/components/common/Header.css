@@ -1,0 +1,6 @@
+li.rd-navbar.rd-navbar-submenu:hover > ul
+li.rd-navbar.rd-navbar-submenu:focus-within > ul
+    {
+    opacity: 1 !important;
+    visibility: visible !important;
+}

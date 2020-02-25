@@ -7650,6 +7650,7 @@ html:not(.lt-ie10) .not-animated {
 .rd-navbar-static .rd-navbar-nav > li > .rd-navbar-dropdown,
 .rd-navbar-fullwidth .rd-navbar-nav > li > .rd-navbar-dropdown {
   position: absolute;
+  top:35px;
   left: 0;
   width: 270px;
   background: #fff;
@@ -7832,7 +7833,11 @@ html:not(.lt-ie10) .not-animated {
   z-index: 999;
   background: #fff;
 }
-
+.rd-navbar-submenu:hover > ul,.rd-navbar-submenu:focus-within  > ul
+{
+    opacity: 1 !important;
+    visibility: visible !important;
+}
 .rd-navbar-static.rd-navbar--is-stuck .rd-navbar-top-panel, .rd-navbar-static.rd-navbar--is-clone .rd-navbar-top-panel,
 .rd-navbar-fullwidth.rd-navbar--is-stuck .rd-navbar-top-panel,
 .rd-navbar-fullwidth.rd-navbar--is-clone .rd-navbar-top-panel {

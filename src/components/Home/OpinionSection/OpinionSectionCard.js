@@ -23,7 +23,7 @@ export default function OpinionSectionCard({opinion}) {
                 <ul className='tag-list'>
                     {
                         opinion.category_analysis && opinion.category_analysis.map(category => (
-                        <li key={category.section_category.id}>
+                        <li key={`${category.section_category.id}`}>
                         <a href="/">{category.section_category.section_name}</a>
                         </li>
                         ))

@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import './Header.css'
 import { connect } from 'react-redux';
 import ShowSearchResults from '../NewsSearchResult';
 import { searchNewsAndStocks } from '../../actions/searchAction';
@@ -118,49 +120,52 @@ export class Header extends Component {
                     <div className="rd-navbar-aside-right">
                         <div className={menuClass.join(' ')}>
                             <ul className="rd-navbar-nav">
-                                <li className="active rd-navbar--has-dropdown rd-navbar-submenu">
+                                <li className="active rd-navbar-submenu">
                                     <a href="./">Home</a>
+                                    
+                                </li>
+                                 
+                                <li className="rd-navbar--has-dropdown rd-navbar-submenu">
+                                      <Link to='/pricelist'>Market</Link>
                                     <span className="rd-navbar-submenu-toggle" />
                                     <ul
                                         className="rd-navbar-dropdown rd-navbar-open-right"
                                         style={{}}
                                     >
                                         <li>
-                                            <a href="home-2.html">
-                                                Home 2
-                                            </a>
+                                            <Link to='/pricelist'>Price List</Link>
                                         </li>
                                         <li>
-                                            <a href="home-3.html">
-                                                Home 3
-                                            </a>
+                                            <Link to='/'>Price Analysis</Link>
                                         </li>
                                         <li>
-                                            <a href="landing.html">
-                                                Landing{' '}
-                                            </a>
+                                            <Link to='/'>Daily Market Summary</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'>Market Announcements</Link>
                                         </li>
                                     </ul>
-                                </li>
-                                <li>
-                                    <a href="about.html">About</a>
                                 </li>
                                 <li className="rd-navbar--has-dropdown rd-navbar-submenu">
-                                    <a href="world.html">World</a>
+                                      <Link to='/pricelist'>Analytics</Link>
                                     <span className="rd-navbar-submenu-toggle" />
                                     <ul
                                         className="rd-navbar-dropdown rd-navbar-open-right"
                                         style={{}}
                                     >
                                         <li>
-                                            <a href="post.html">Post</a>
+                                            <Link to='/'>Trend Analytics</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'>ASI Movement</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'>ASI vs Stocks</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'>Market Announcements</Link>
                                         </li>
                                     </ul>
-                                </li>
-                                <li>
-                                    <a href="contacts.html">
-                                        Contacts{' '}
-                                    </a>
                                 </li>
                                 <li className="rd-navbar--has-dropdown rd-navbar-submenu">
                                     <a href="/">Pages</a>
@@ -319,93 +324,58 @@ export class Header extends Component {
               <div className="rd-navbar-aside-right">
                 <div className="rd-navbar-nav-wrap toggle-original-elements">
                   <ul className="rd-navbar-nav">
-                    <li className="active rd-navbar--has-dropdown rd-navbar-submenu">
+                    <li className="active  rd-navbar-submenu">
                       <a href="/">Home</a>
                       <span className="rd-navbar-submenu-toggle" />
-                      <ul
-                        className="rd-navbar-dropdown rd-navbar-open-right"
-                        style={{}}
-                      >
-                        <li>
-                          <a href="home-2.html">
-                            Home 2
-                          </a>
-                        </li>
-                        <li>
-                          <a href="home-3.html">
-                            Home 3
-                          </a>
-                        </li>
-                        <li>
-                          <a href="landing.html">
-                            Landing{' '}
-                          </a>
-                        </li>
-                      </ul>
+                     
                     </li>
                     <li>
                       <a href="about.html">About</a>
                     </li>
                     <li className="rd-navbar--has-dropdown rd-navbar-submenu">
-                      <a href="world.html">World</a>
-                      <span className="rd-navbar-submenu-toggle" />
-                      <ul
-                        className="rd-navbar-dropdown rd-navbar-open-right"
-                        style={{}}
-                      >
-                        <li>
-                          <a href="post.html">Post</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="contacts.html">
-                        Contacts{' '}
-                      </a>
-                    </li>
-                    <li className="rd-navbar--has-dropdown rd-navbar-submenu">
-                        <a href="/">Pages</a>
-                        <span className="rd-navbar-submenu-toggle" />
-                        <ul
-                          className="rd-navbar-dropdown rd-navbar-open-right"
-                          style={{}}
-                        >
-                          <li>
-                            <a href="typography.html">
-                              Typography
-                            </a>
-                          </li>
-                          <li>
-                            <a href="tabs-and-accordions.html">
-                              Tabs and accordions
-                            </a>
-                          </li>
-                          <li>
-                            <a href="progress-bars.html">
-                              Progress Bars
-                            </a>
-                          </li>
-                          <li>
-                            <a href="forms.html">
-                              Forms
-                            </a>
-                          </li>
-                          <li>
-                            <a href="tables.html">
-                              Tables
-                            </a>
-                          </li>
-                          <li>
-                            <a href="grid.html">Grid</a>
-                          </li>
-                          <li>
-                            <a href="buttons.html">
-                              Buttons
-                            </a>
-                          </li>
-                        </ul>
-                      </li>
-                  </ul>
+                                      <Link to='/pricelist'>Market</Link>
+                                    <span className="rd-navbar-submenu-toggle" />
+                                    <ul
+                                        className="rd-navbar-dropdown rd-navbar-open-right"
+                                        style={{}}
+                                    >
+                                        <li>
+                                            <Link to='/pricelist'>Price List</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/pricemovement'>Price Analysis</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'>Daily Market Summary</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'>Market Announcements</Link>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li className="rd-navbar--has-dropdown rd-navbar-submenu">
+                                      <Link to='/pricelist'>Analytics</Link>
+                                    <span className="rd-navbar-submenu-toggle" />
+                                    <ul
+                                        className="rd-navbar-dropdown rd-navbar-open-right"
+                                        style={{}}
+                                    >
+                                        <li>
+                                            <Link to='/'>Trend Analytics</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'>ASI Movement</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'>ASI vs Stocks</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'>Market Announcements</Link>
+                                        </li>
+                                    </ul>
+                                </li>
+                               
+                       </ul>
                 </div>
                 <div className="rd-navbar-search toggle-original-elements">
                   <a

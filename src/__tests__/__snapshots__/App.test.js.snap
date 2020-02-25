@@ -30,6 +30,16 @@ ShallowWrapper {
             exact={true}
             path="/pricelist"
           />
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/pricemovement"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/content-page/:pageType/:id"
+          />
         </Switch>
       </ApplicationTemplate>,
     },
@@ -50,6 +60,16 @@ ShallowWrapper {
             exact={true}
             path="/pricelist"
           />
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/pricemovement"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/content-page/:pageType/:id"
+          />
         </Switch>,
       },
       "ref": null,
@@ -68,6 +88,16 @@ ShallowWrapper {
               component={[Function]}
               exact={true}
               path="/pricelist"
+            />,
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/pricemovement"
+            />,
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/content-page/:pageType/:id"
             />,
           ],
         },
@@ -99,6 +129,32 @@ ShallowWrapper {
             "rendered": null,
             "type": [Function],
           },
+          Object {
+            "instance": null,
+            "key": "/pricemovement",
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
+              "exact": true,
+              "path": "/pricemovement",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "/content-page/:pageType/:id",
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
+              "exact": true,
+              "path": "/content-page/:pageType/:id",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
         ],
         "type": [Function],
       },
@@ -124,6 +180,16 @@ ShallowWrapper {
               exact={true}
               path="/pricelist"
             />
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/pricemovement"
+            />
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/content-page/:pageType/:id"
+            />
           </Switch>
         </ApplicationTemplate>,
       },
@@ -144,6 +210,16 @@ ShallowWrapper {
               exact={true}
               path="/pricelist"
             />
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/pricemovement"
+            />
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/content-page/:pageType/:id"
+            />
           </Switch>,
         },
         "ref": null,
@@ -162,6 +238,16 @@ ShallowWrapper {
                 component={[Function]}
                 exact={true}
                 path="/pricelist"
+              />,
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/pricemovement"
+              />,
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/content-page/:pageType/:id"
               />,
             ],
           },
@@ -188,6 +274,32 @@ ShallowWrapper {
                 "component": [Function],
                 "exact": true,
                 "path": "/pricelist",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "/pricemovement",
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
+                "exact": true,
+                "path": "/pricemovement",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "/content-page/:pageType/:id",
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
+                "exact": true,
+                "path": "/content-page/:pageType/:id",
               },
               "ref": null,
               "rendered": null,
