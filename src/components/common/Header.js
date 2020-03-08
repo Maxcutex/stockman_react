@@ -80,7 +80,7 @@ export class Header extends Component {
                         <div className="rd-navbar-brand">
                             <a className="brand-name" href="index.html">
                                 <img
-                                    src="/images/logo-dark-266x54.png"
+                                    src="/images/STOCKMAN-WEB-LOGO.png"
                                     width="266"
                                     height="54"
                                     alt=""
@@ -284,7 +284,7 @@ export class Header extends Component {
                       <div className="rd-navbar-brand">
                           <a className="brand-name" href="index.html">
                               <img
-                                  src="/images/logo-dark-266x54.png"
+                                  src="/images/STOCKMAN-WEB-LOGO.png"
                                   width="266"
                                   height="54"
                                   alt=""
@@ -355,7 +355,8 @@ export class Header extends Component {
                                 </li>
                                 <li className="rd-navbar--has-dropdown rd-navbar-submenu">
                                       <Link to='/pricelist'>Analytics</Link>
-                                    <span className="rd-navbar-submenu-toggle" />
+                                    <span className="rd-navbar-submenu-toggle" 
+                                    />
                                     <ul
                                         className="rd-navbar-dropdown rd-navbar-open-right"
                                         style={{}}
