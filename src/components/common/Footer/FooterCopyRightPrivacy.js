@@ -8,14 +8,14 @@ export default function FooterCopyRightPrivacy() {
             <div className="cell-sm-6 text-sm-left">
                 <a href="..">
                     <img
-                        src="/images/logo-dark-266x54.png"
+                        src="/images/STOCKMAN-WEB-LOGO.png.png"
                         width="266"
                         height="54"
                         alt=""
                     />
                 </a>
                 <p className="privacy">
-                    MoneyWise &#169; <span id="copyright-year" />.
+                    StockMan &#169; <span id="copyright-year" />2020
                     <a href="privacy-policy.html">Privacy Policy</a>
                 </p>
             </div>
