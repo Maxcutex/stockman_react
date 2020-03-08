@@ -1,14 +1,14 @@
-import React from "react"
-import {Link} from "react-router-dom";
+import React from 'react'
+import {Link} from 'react-router-dom';
 
 
 export default function FooterCopyRightPrivacy() {
     return (
         <div className="range range-center range-xs-30 range-sm-0 footer-bottom-section">
             <div className="cell-sm-6 text-sm-left">
-                <a href="..">
+                <a href="/">
                     <img
-                        src="/images/STOCKMAN-WEB-LOGO.png.png"
+                        src="/images/STOCKMAN-WEB-LOGO.png"
                         width="266"
                         height="54"
                         alt=""

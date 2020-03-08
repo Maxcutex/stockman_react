@@ -18,7 +18,7 @@ class FeaturedSectionContainer extends Component {
         )[0];
         const featuredSideNews = this.props.featuredNews.results
             .filter(featured => !featured.is_main)
-            .splice(0, 2);
+            .slice(0, 2);
         return (
             <section className="section-xs bg-white">
                 <div className="shell">
