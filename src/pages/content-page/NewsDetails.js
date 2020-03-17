@@ -12,7 +12,6 @@ class NewsDetails extends Component {
     }
     async componentDidMount(){
         const {id} = this.props;
-        console.log('mounting')
 
         await this.props.fetchNewsById(id);
     }

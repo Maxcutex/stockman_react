@@ -136,14 +136,12 @@ export class Header extends Component {
                                             <Link to='/pricelist'>Price List</Link>
                                         </li>
                                         <li>
-                                            <Link to='/'>Price Analysis</Link>
+                                            <Link to='/pricemovement'>Price Analysis</Link>
                                         </li>
                                         <li>
                                             <Link to='/'>Daily Market Summary</Link>
                                         </li>
-                                        <li>
-                                            <Link to='/'>Market Announcements</Link>
-                                        </li>
+                                        
                                     </ul>
                                 </li>
                                 <li className="rd-navbar--has-dropdown rd-navbar-submenu">
@@ -163,7 +161,7 @@ export class Header extends Component {
                                             <Link to='/'>ASI vs Stocks</Link>
                                         </li>
                                         <li>
-                                            <Link to='/'>Market Announcements</Link>
+                                            <Link to='/'>Screened Stock</Link>
                                         </li>
                                     </ul>
                                 </li>
@@ -348,9 +346,7 @@ export class Header extends Component {
                                         <li>
                                             <Link to='/'>Daily Market Summary</Link>
                                         </li>
-                                        <li>
-                                            <Link to='/'>Market Announcements</Link>
-                                        </li>
+                                      
                                     </ul>
                                 </li>
                                 <li className="rd-navbar--has-dropdown rd-navbar-submenu">
@@ -371,7 +367,7 @@ export class Header extends Component {
                                             <Link to='/'>ASI vs Stocks</Link>
                                         </li>
                                         <li>
-                                            <Link to='/'>Market Announcements</Link>
+                                            <Link to='/'>Screened Stock</Link>
                                         </li>
                                     </ul>
                                 </li>

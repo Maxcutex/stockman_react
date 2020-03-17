@@ -6,6 +6,9 @@ import {
     FETCH_SINGLE_GENERAL_NEWS_FAILURE, 
     FETCH_SINGLE_INSIDE_BUSINESS_FAILURE, 
     FETCH_SINGLE_INSIDE_BUSINESS_SUCCESS,
+    FETCH_SINGLE_OPINION_FAILURE,
+    FETCH_SINGLE_OPINION_SUCCESS,
+    FETCH_SINGLE_OPINION_LOADING
     
 } from './actionTypes';
 import { config } from '../config';
@@ -39,8 +42,37 @@ const fetchSingleInsideBusinessFailure = error => ({
 });
 
 
-export const fetchInsideBusinessById = (id) => dispatch => {
+const fetchSingleOpinionSuccess = payload => ({
+    type: FETCH_SINGLE_OPINION_SUCCESS,
+    payload,
+});
+
+const fetchSingleOpinionLoading = () => ({
+    type: FETCH_SINGLE_OPINION_LOADING,
+});
+const fetchSingleOpinionFailure = error => ({
+    type: FETCH_SINGLE_OPINION_FAILURE,
+    payload: error,
+});
+
+
+export const fetchOpinionById= (id) => dispatch => {
     dispatch(fetchSingleInsideBusinessLoading);
+    return axios
+        .get(`${baseUrl}/Analysis/${id}`)
+        .then(res => {
+            console.log('res.data is ==> ', res.data);
+            dispatch(fetchSingleOpinionSuccess(res.data));
+            return true;
+        })
+        .catch(error => {
+            dispatch(fetchSingleOpinionFailure(error));
+        });
+};
+
+export const fetchInsideBusinessById  = (id) => dispatch => {
+     
+    dispatch(fetchSingleOpinionLoading);
     return axios
         .get(`${baseUrl}/InsideBusiness/${id}`)
         .then(res => {
@@ -51,6 +83,7 @@ export const fetchInsideBusinessById = (id) => dispatch => {
             dispatch(fetchSingleInsideBusinessFailure(error));
         });
 };
+
 export const fetchNewsById = (id) => dispatch => {
     console.log('about to dispatch loading....')
     dispatch(fetchSingleGeneralNewsLoading);

@@ -22,14 +22,14 @@ export default function OpinionSectionCard({opinion}) {
                 />`
                 <ul className='tag-list'>
                     {
-                        opinion.category_analysis && opinion.category_analysis.map(category => (
+                        opinion.category_analysis.length > 0 && opinion.category_analysis.map(category => (
                         <li key={`${category.section_category.id}`}>
                         <a href="/">{category.section_category.section_name}</a>
                         </li>
                         ))
                     }
                 </ul>
-                <OpinionSectionCaption id={opinion.id} title={opinion.title} author={opinion.author}/>
+                <OpinionSectionCaption id={opinion.id} title={opinion.title} author={opinion.author} date={opinion.entry_date}/>
             </div>
         </div>
     )

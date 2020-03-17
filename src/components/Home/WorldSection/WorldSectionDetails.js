@@ -3,7 +3,7 @@ import WorldSectionShareBlock from './WorldSectionShareBlock';
 import image from '../../../assets/images/home-3-330x220.jpg';
 import dateFormat from 'dateformat'
 // import { activeNews } from './mock';
-
+import { Link } from 'react-router-dom';
 const WorldSectionDetails = props => {
     return props.activeNews.map(activeNew => {
         const {
@@ -28,15 +28,16 @@ const WorldSectionDetails = props => {
             >
                 <div className="post-type-2">
                     <div className="img-block">
-                        <a href="post.html">
-                            <img
+                        <Link to={`/content-page/news/${id}`}>
+                        <img
                                 // src={visual_news[0].image_file || image}
                                 src={image}
                                 width="330"
                                 height="220"
                                 alt=""
                             />
-                        </a>
+                        </Link>
+                         
                         <ul className="tag-list">
                             
                             {
@@ -50,7 +51,7 @@ const WorldSectionDetails = props => {
                     </div>
                     <div className="caption">
                         <h5>
-                            <a href="post.html">{title}</a>
+                        <Link to={`/content-page/news/${id}`}>{title}</Link>
                         </h5>
                         <p>{description}</p>
                         <div className="bottom-block">

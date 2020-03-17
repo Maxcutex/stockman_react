@@ -2,6 +2,9 @@ import {
     FETCH_SINGLE_INSIDE_BUSINESS_FAILURE,
     FETCH_SINGLE_INSIDE_BUSINESS_SUCCESS,
     FETCH_SINGLE_INSIDE_BUSINESS_LOADING,
+    FETCH_SINGLE_OPINION_FAILURE,
+    FETCH_SINGLE_OPINION_SUCCESS,
+    FETCH_SINGLE_OPINION_LOADING,
     FETCH_SINGLE_GENERAL_NEWS_FAILURE, 
     FETCH_SINGLE_GENERAL_NEWS_SUCCESS, 
     FETCH_SINGLE_GENERAL_NEWS_LOADING,
@@ -12,14 +15,19 @@ const newsSingleReducer = (state = intialNewsSingle, action) => {
 
     switch (action.type) {
         case FETCH_SINGLE_INSIDE_BUSINESS_SUCCESS:
-            console.log('logged in single business');
             return {
                 ...state,
                 insideBusinessSingle: action.payload,
                 insideBusinessSingleLoading: false,
             };
+        case FETCH_SINGLE_OPINION_SUCCESS:
+            return {
+                ...state,
+                opinionSingle: action.payload,
+                opinionSingleLoading: false,
+            };
        
-       
+        case FETCH_SINGLE_OPINION_FAILURE:
         case FETCH_SINGLE_INSIDE_BUSINESS_FAILURE:
         case FETCH_SINGLE_GENERAL_NEWS_FAILURE:
             return state;
@@ -34,7 +42,11 @@ const newsSingleReducer = (state = intialNewsSingle, action) => {
                 ...state,
                 newsSingleLoading: true,
             };
-        
+        case FETCH_SINGLE_OPINION_LOADING:
+            return {
+                ...state,
+                opinionSingleLoading: true,
+            };
         case FETCH_SINGLE_GENERAL_NEWS_SUCCESS:
         
             return {

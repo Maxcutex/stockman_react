@@ -1,23 +1,21 @@
 import React from 'react'
 import OpinionShareBlock from './OpinionShareBlock';
+import { Link } from 'react-router-dom';
 
 
-
-export default function OpinionSectionCaption({title, id, author}) {
+export default function OpinionSectionCaption({title, id, author, date}) {
     return (
         <div className="caption">
             <h4 className="title">
-                <a href="post.html">
-                    {title}
-                </a>
+            <Link to={`/content-page/opinions/${id}`}>{title}</Link>
             </h4>
             <div className="bottom-block">
                 <ul className="meta-list">
                     <li>
-                        by <a href="post.html">Jon Snow</a>
+                        by <a href="/">{author.first_name} {author.last_name}</a>
                     </li>
                     <li>
-                        <a href="post.html">Aug 08, 2017 </a>
+                        <a href="/">{date} </a>
                     </li>
                 </ul>
                 <OpinionShareBlock/>

@@ -23,6 +23,8 @@ export const intialNewsSingle = {
   newsSingle:null,
   newsSingleLoading: true,
   insideBusinessSingleLoading: true,
+  opinionSingle:null,
+  opinionSingleLoading: true,
 }
 
 export const initialPriceList = {
