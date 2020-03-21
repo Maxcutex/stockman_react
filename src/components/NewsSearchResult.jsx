@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const NewsSearchResult = ({ searchResults, stocksResults }) => (
   <div className="rd-search-results-live" id="rd-search-results-live">
@@ -6,15 +7,13 @@ const NewsSearchResult = ({ searchResults, stocksResults }) => (
       {
         stocksResults && (
           <>
-          <div className="search-quick-result">Stock Search Results</div>
+          <div className="search-quick-result">QUOTES</div>
           <ol className="search_list">
             {
               stocksResults.map(result => (
                 <li className="result-item" key={result.id}>
                   <h3 className="search_title">
-                    <a target="_top" href="grid.html" className="search_link">
-                      {result.title}
-                    </a>
+                    <Link to={`/quote-page/${result.stock_code}`} className='search_link'>{result.stock_code}</Link>
                   </h3>
                 </li>
               ))
@@ -23,15 +22,13 @@ const NewsSearchResult = ({ searchResults, stocksResults }) => (
           </>
         )
       } 
-      <div className="search-quick-result">News Search Results</div>
+      <div className="search-quick-result">NEWS Results</div>
       <ol className="search_list">
         {
           searchResults.map(result => (
             <li className="result-item" key={result.id}>
               <h3 className="search_title">
-                <a target="_top" href="grid.html" className="search_link">
-                  {result.title}
-                </a>
+                <Link to={`/content-page/news/${result.id}`}  className='search_link'>{result.title}</Link>
               </h3>
             </li>
           ))

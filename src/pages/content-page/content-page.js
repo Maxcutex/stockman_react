@@ -15,7 +15,7 @@ class ContentPage extends Component {
         if (pageType === 'insidebusiness') {
             return ( 
                 <InsideBusinessDetails id={id} pageType={pageType} />
-            ); 
+            );
         }
         if (pageType === 'opinions') {
             return ( 

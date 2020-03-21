@@ -34,7 +34,9 @@ export const searchNews = (search) => {
 };
 
 export const searchStocks = (search) => {
-  return axios.get(`${baseUrl}/stocks/search-like-name?stock_code=${search}`)      
+  console.log('this is the uppervalue');
+  console.log(`${baseUrl}/stocks/search-like-name/?stock_code=${search.toUpperCase()}`);
+  return axios.get(`${baseUrl}/stocks/search-like-name/?stock_code=${search.toUpperCase()}`)      
 };
 
 export const searchNewsAndStocks = (search) => dispatch => {
@@ -44,8 +46,11 @@ export const searchNewsAndStocks = (search) => dispatch => {
   ])
   .then((response) => {
     if (response) {
+                
+      console.log(response[0].data.results);
+      console.log(response[1].data);
       dispatch(searchNewsSuccess(response[0].data.results));
-      dispatch(searchStocksSuccess(response[1].data.results));
+      dispatch(searchStocksSuccess(response[1].data));
     }
   }).catch(error => {
     dispatch(searchNewsFailure(error));
