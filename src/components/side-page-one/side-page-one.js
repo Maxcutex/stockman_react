@@ -1,4 +1,5 @@
 import React from 'react';
+import NewsLetterForm from '../forms/NewsletterForm';
 
 const SidePageOne = () => {
     return ( 
@@ -9,13 +10,7 @@ const SidePageOne = () => {
                         <div className="sidebar-form-block">
                         <h3>Get latest market news delivered daily!</h3>
                         <p>We will send you breaking news right to your inbox</p>
-                        <form className="rd-mailform text-left rd-mailform-inline" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="bat/rd-mailform.php">
-                            <div className="form-wrap">
-                            <label className="form-label rd-input-label" htmlFor="contact-email">Your Email Here</label>
-                            <input className="form-input form-control-has-validation form-control-last-child" id="contact-email" type="email" name="email" data-constraints="@Email @Required" /><span className="form-validation"></span>
-                            </div>
-                            <button className="button button-primary" type="submit">Subscribe</button>
-                        </form>
+                        <NewsLetterForm />
                         <div className="section-subscribe">
                             <h3>Follow us</h3>
                             <p>Read our latest news on any of these social networks!</p>
