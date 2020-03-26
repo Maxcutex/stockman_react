@@ -47,69 +47,69 @@ export class Header extends Component {
       searchLinkClass.push('active');
     }
     return (
-      <header className="page-header header-home-1">
+      <header className='page-header header-home-1'>
         <div
             key={'mobile'}
-            className="rd-navbar-wrap mobile-menu"
+            className='rd-navbar-wrap mobile-menu'
             style={{ height: '0px' }}
         >
             <nav
-                className="rd-navbar rd-navbar-default rd-navbar-original rd-navbar-fixed"
-                data-layout="rd-navbar-fixed"
-                data-sm-layout="rd-navbar-fixed"
-                data-md-layout="rd-navbar-fullwidth"
-                data-md-device-layout="rd-navbar-fullwidth"
-                data-lg-layout="rd-navbar-fullwidth"
-                data-lg-device-layout="rd-navbar-fullwidth"
-                data-md-stick-up-offset="180px"
-                data-lg-stick-up-offset="180px"
-                data-stick-up="true"
-                data-sm-stick-up="true"
-                data-md-stick-up="true"
-                data-lg-stick-up="true"
+                className='rd-navbar rd-navbar-default rd-navbar-original rd-navbar-fixed'
+                data-layout='rd-navbar-fixed'
+                data-sm-layout='rd-navbar-fixed'
+                data-md-layout='rd-navbar-fullwidth'
+                data-md-device-layout='rd-navbar-fullwidth'
+                data-lg-layout='rd-navbar-fullwidth'
+                data-lg-device-layout='rd-navbar-fullwidth'
+                data-md-stick-up-offset='180px'
+                data-lg-stick-up-offset='180px'
+                data-stick-up='true'
+                data-sm-stick-up='true'
+                data-md-stick-up='true'
+                data-lg-stick-up='true'
             >
-                <div className="rd-navbar-inner">
-                    <div className="rd-navbar-panel">
+                <div className='rd-navbar-inner'>
+                    <div className='rd-navbar-panel'>
                         <button
                             className={buttonClass.join(' ')}
-                            data-rd-navbar-toggle=".rd-navbar-nav-wrap"
+                            data-rd-navbar-toggle='.rd-navbar-nav-wrap'
                             onClick={this.showMenu.bind(this)}
                         >
                             <span />
                         </button>
-                        <div className="rd-navbar-brand">
-                            <a className="brand-name" href="index.html">
+                        <div className='rd-navbar-brand'>
+                            <a className='brand-name' href='index.html'>
                                 <img
-                                    src="/images/STOCKMAN-WEB-LOGO.png"
-                                    width="266"
-                                    height="54"
-                                    alt=""
+                                    src='/images/STOCKMAN-WEB-LOGO.png'
+                                    width='266'
+                                    height='54'
+                                    alt=''
                                     key={'mobile'}
                                 />
                             </a>
                         </div>
                         <div
-                            className="rd-navbar-collapse-toggle toggle-original"
-                            data-rd-navbar-toggle=".rd-navbar-collapse"
+                            className='rd-navbar-collapse-toggle toggle-original'
+                            data-rd-navbar-toggle='.rd-navbar-collapse'
                         >
                             <span />
                         </div>
-                        <div className="rd-navbar-top-panel rd-navbar-collapse toggle-original-elements">
-                            <div className="rd-navbar-top-panel-inner">
-                                <ul className="contact-list">
+                        <div className='rd-navbar-top-panel rd-navbar-collapse toggle-original-elements'>
+                            <div className='rd-navbar-top-panel-inner'>
+                                <ul className='contact-list'>
                                     <li>
-                                        <a href="/">Subscribe Now</a>
+                                        <a href='/'>Subscribe Now</a>
                                     </li>
                                     <li>
                                         <a
-                                            data-toggle="modal"
-                                            href="#myModal"
+                                            data-toggle='modal'
+                                            href='#myModal'
                                         >
                                             Sign In{' '}
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="contacts.html">
+                                        <a href='contacts.html'>
                                             Contacts
                                         </a>
                                     </li>
@@ -117,91 +117,91 @@ export class Header extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className="rd-navbar-aside-right">
+                    <div className='rd-navbar-aside-right'>
                         <div className={menuClass.join(' ')}>
-                            <ul className="rd-navbar-nav">
-                                <li className="active rd-navbar-submenu">
-                                    <a href="./">Home</a>
+                            <ul className='rd-navbar-nav'>
+                                <li className='active rd-navbar-submenu'>
+                                    <a href='./'>Home</a>
                                     
                                 </li>
                                  
-                                <li className="rd-navbar--has-dropdown rd-navbar-submenu">
+                                <li className='rd-navbar--has-dropdown rd-navbar-submenu'>
                                       <Link to='/pricelist'>Market</Link>
-                                    <span className="rd-navbar-submenu-toggle" />
+                                    <span className='rd-navbar-submenu-toggle' />
                                     <ul
-                                        className="rd-navbar-dropdown rd-navbar-open-right"
+                                        className='rd-navbar-dropdown rd-navbar-open-right'
                                         style={{}}
                                     >
                                         <li>
                                             <Link to='/pricelist'>Price List</Link>
                                         </li>
                                         <li>
-                                            <Link to='/pricemovement'>Price Analysis</Link>
+                                            <Link to='/price_analysis'>Price Analysis</Link>
                                         </li>
                                         <li>
-                                            <Link to='/'>Daily Market Summary</Link>
+                                            <Link to='/daily_market_summary'>Daily Market Summary</Link>
                                         </li>
                                         
                                     </ul>
                                 </li>
-                                <li className="rd-navbar--has-dropdown rd-navbar-submenu">
+                                <li className='rd-navbar--has-dropdown rd-navbar-submenu'>
                                       <Link to='/pricelist'>Analytics</Link>
-                                    <span className="rd-navbar-submenu-toggle" />
+                                    <span className='rd-navbar-submenu-toggle' />
                                     <ul
-                                        className="rd-navbar-dropdown rd-navbar-open-right"
+                                        className='rd-navbar-dropdown rd-navbar-open-right'
                                         style={{}}
                                     >
                                         <li>
-                                            <Link to='/'>Trend Analytics</Link>
+                                            <Link to='/pricemovement'>Trend Analytics</Link>
                                         </li>
                                         <li>
-                                            <Link to='/'>ASI Movement</Link>
+                                            <Link to='/asi_movement'>ASI Movement</Link>
                                         </li>
                                         <li>
-                                            <Link to='/'>ASI vs Stocks</Link>
+                                            <Link to='/asi_vs_stocks'>ASI vs Stocks</Link>
                                         </li>
                                         <li>
-                                            <Link to='/'>Screened Stock</Link>
+                                            <Link to='/screend_stocks'>Screened Stock</Link>
                                         </li>
                                     </ul>
                                 </li>
-                                <li className="rd-navbar--has-dropdown rd-navbar-submenu">
-                                    <a href="/">Pages</a>
-                                    <span className="rd-navbar-submenu-toggle" />
+                                <li className='rd-navbar--has-dropdown rd-navbar-submenu'>
+                                    <a href='/'>Pages</a>
+                                    <span className='rd-navbar-submenu-toggle' />
                                     <ul
-                                        className="rd-navbar-dropdown rd-navbar-open-right"
+                                        className='rd-navbar-dropdown rd-navbar-open-right'
                                         style={{}}
                                     >
                                         <li>
-                                            <a href="typography.html">
+                                            <a href='typography.html'>
                                                 Typography
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="tabs-and-accordions.html">
+                                            <a href='tabs-and-accordions.html'>
                                                 Tabs and accordions
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="progress-bars.html">
+                                            <a href='progress-bars.html'>
                                                 Progress Bars
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="forms.html">
+                                            <a href='forms.html'>
                                                 Forms
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="tables.html">
+                                            <a href='tables.html'>
                                                 Tables
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="grid.html">Grid</a>
+                                            <a href='grid.html'>Grid</a>
                                         </li>
                                         <li>
-                                            <a href="buttons.html">
+                                            <a href='buttons.html'>
                                                 Buttons
                                             </a>
                                         </li>
@@ -212,8 +212,8 @@ export class Header extends Component {
                         <div className={searchDivClass.join(' ')}>
                             <a
                                 className={searchLinkClass.join(' ')}
-                                data-rd-navbar-toggle=".rd-navbar-search"
-                                href="/"
+                                data-rd-navbar-toggle='.rd-navbar-search'
+                                href='/'
                                 onClick={this.showMobileSearch.bind(
                                     this
                                 )}
@@ -221,17 +221,17 @@ export class Header extends Component {
                                 <span />
                             </a>
                             <form
-                                className="rd-search"
-                                action="search-results.html"
-                                data-search-live="rd-search-results-live"
-                                method="GET"
+                                className='rd-search'
+                                action='search-results.html'
+                                data-search-live='rd-search-results-live'
+                                method='GET'
                             >
-                                <div className="form-wrap">
+                                <div className='form-wrap'>
                                     <input
-                                        className="rd-navbar-search-form-input form-input"
-                                        id="rd-navbar-search-form-input1"
-                                        type="text"
-                                        name="search"
+                                        className='rd-navbar-search-form-input form-input'
+                                        id='rd-navbar-search-form-input1'
+                                        type='text'
+                                        name='search'
                                         value={this.state.search}
                                         onChange={this.onChange}
                                         onFocus={e =>
@@ -241,11 +241,11 @@ export class Header extends Component {
                                             (e.target.placeholder =
                                                 ' I`m looking for...')
                                         }
-                                        placeholder=" I`m looking for..."
-                                        autoComplete="off"
+                                        placeholder=' I`m looking for...'
+                                        autoComplete='off'
                                     />
                                 </div>
-                                <button className="rd-search-form-submit fa-search" />
+                                <button className='rd-search-form-submit fa-search' />
                             </form>
                         </div>
                     </div>
@@ -253,65 +253,65 @@ export class Header extends Component {
             </nav>
         </div>
         <div
-          className="rd-navbar-wrap desktop-menu"
+          className='rd-navbar-wrap desktop-menu'
           style={{ height: '176px' }}
         >
           <nav
-            className="rd-navbar rd-navbar-default rd-navbar-original rd-navbar-fullwidth"
-              data-layout="rd-navbar-fixed"
-              data-sm-layout="rd-navbar-fixed"
-              data-md-layout="rd-navbar-fullwidth"
-              data-md-device-layout="rd-navbar-fullwidth"
-              data-lg-layout="rd-navbar-fullwidth"
-              data-lg-device-layout="rd-navbar-fullwidth"
-              data-md-stick-up-offset="180px"
-              data-lg-stick-up-offset="180px"
-              data-stick-up="true"
-              data-sm-stick-up="true"
-              data-md-stick-up="true"
-              data-lg-stick-up="true"
+            className='rd-navbar rd-navbar-default rd-navbar-original rd-navbar-fullwidth'
+              data-layout='rd-navbar-fixed'
+              data-sm-layout='rd-navbar-fixed'
+              data-md-layout='rd-navbar-fullwidth'
+              data-md-device-layout='rd-navbar-fullwidth'
+              data-lg-layout='rd-navbar-fullwidth'
+              data-lg-device-layout='rd-navbar-fullwidth'
+              data-md-stick-up-offset='180px'
+              data-lg-stick-up-offset='180px'
+              data-stick-up='true'
+              data-sm-stick-up='true'
+              data-md-stick-up='true'
+              data-lg-stick-up='true'
           >
-            <div className="rd-navbar-inner">
-              <div className="rd-navbar-panel">
+            <div className='rd-navbar-inner'>
+              <div className='rd-navbar-panel'>
                       <button
-                          className="rd-navbar-toggle toggle-original"
-                          data-rd-navbar-toggle=".rd-navbar-nav-wrap"
+                          className='rd-navbar-toggle toggle-original'
+                          data-rd-navbar-toggle='.rd-navbar-nav-wrap'
                       >
                           <span />
                       </button>
-                      <div className="rd-navbar-brand">
-                          <a className="brand-name" href="index.html">
+                      <div className='rd-navbar-brand'>
+                          <a className='brand-name' href='index.html'>
                               <img
-                                  src="/images/STOCKMAN-WEB-LOGO.png"
-                                  width="266"
-                                  height="54"
-                                  alt=""
+                                  src='/images/STOCKMAN-WEB-LOGO.png'
+                                  width='266'
+                                  height='54'
+                                  alt=''
                                   key={'desktop'}
                               />
                           </a>
                       </div>
                       <div
-                          className="rd-navbar-collapse-toggle toggle-original"
-                          data-rd-navbar-toggle=".rd-navbar-collapse"
+                          className='rd-navbar-collapse-toggle toggle-original'
+                          data-rd-navbar-toggle='.rd-navbar-collapse'
                       >
                           <span />
                       </div>
-                      <div className="rd-navbar-top-panel rd-navbar-collapse toggle-original-elements">
-                          <div className="rd-navbar-top-panel-inner">
-                              <ul className="contact-list">
+                      <div className='rd-navbar-top-panel rd-navbar-collapse toggle-original-elements'>
+                          <div className='rd-navbar-top-panel-inner'>
+                              <ul className='contact-list'>
                                   <li>
-                                      <a href="/">Subscribe Now</a>
+                                      <a href='/'>Subscribe Now</a>
                                   </li>
                                   <li>
                                       <a
-                                          data-toggle="modal"
-                                          href="#myModal"
+                                          data-toggle='modal'
+                                          href='#myModal'
                                       >
                                           Sign In{' '}
                                       </a>
                                   </li>
                                   <li>
-                                      <a href="contacts.html">
+                                      <a href='contacts.html'>
                                           Contacts
                                       </a>
                                   </li>
@@ -319,85 +319,85 @@ export class Header extends Component {
                           </div>
                       </div>
                   </div>
-              <div className="rd-navbar-aside-right">
-                <div className="rd-navbar-nav-wrap toggle-original-elements">
-                  <ul className="rd-navbar-nav">
-                    <li className="active  rd-navbar-submenu">
-                      <a href="/">Home</a>
-                      <span className="rd-navbar-submenu-toggle" />
+              <div className='rd-navbar-aside-right'>
+                <div className='rd-navbar-nav-wrap toggle-original-elements'>
+                  <ul className='rd-navbar-nav'>
+                    <li className='active  rd-navbar-submenu'>
+                      <a href='/'>Home</a>
+                      <span className='rd-navbar-submenu-toggle' />
                      
                     </li>
                     <li>
-                      <a href="about.html">About</a>
+                      <a href='about.html'>About</a>
                     </li>
-                    <li className="rd-navbar--has-dropdown rd-navbar-submenu">
+                    <li className='rd-navbar--has-dropdown rd-navbar-submenu'>
                                       <Link to='/pricelist'>Market</Link>
-                                    <span className="rd-navbar-submenu-toggle" />
+                                    <span className='rd-navbar-submenu-toggle' />
                                     <ul
-                                        className="rd-navbar-dropdown rd-navbar-open-right"
+                                        className='rd-navbar-dropdown rd-navbar-open-right'
                                         style={{}}
                                     >
                                         <li>
                                             <Link to='/pricelist'>Price List</Link>
                                         </li>
                                         <li>
-                                            <Link to='/pricemovement'>Price Analysis</Link>
+                                            <Link to='/market_price_analysis'>Price Analysis</Link>
                                         </li>
                                         <li>
-                                            <Link to='/'>Daily Market Summary</Link>
+                                            <Link to='/daily_market_summary'>Daily Market Summary</Link>
                                         </li>
                                       
                                     </ul>
                                 </li>
-                                <li className="rd-navbar--has-dropdown rd-navbar-submenu">
+                                <li className='rd-navbar--has-dropdown rd-navbar-submenu'>
                                       <Link to='/pricelist'>Analytics</Link>
-                                    <span className="rd-navbar-submenu-toggle" 
+                                    <span className='rd-navbar-submenu-toggle' 
                                     />
                                     <ul
-                                        className="rd-navbar-dropdown rd-navbar-open-right"
+                                        className='rd-navbar-dropdown rd-navbar-open-right'
                                         style={{}}
                                     >
                                         <li>
-                                            <Link to='/'>Trend Analytics</Link>
+                                            <Link to='/pricemovement'>Trend Analytics</Link>
                                         </li>
                                         <li>
-                                            <Link to='/'>ASI Movement</Link>
+                                            <Link to='/asi_movement'>ASI Movement</Link>
                                         </li>
                                         <li>
-                                            <Link to='/'>ASI vs Stocks</Link>
+                                            <Link to='/asi_vs_stocks'>ASI vs Stocks</Link>
                                         </li>
                                         <li>
-                                            <Link to='/'>Screened Stock</Link>
+                                            <Link to='/screen_stock'>Screened Stock</Link>
                                         </li>
                                     </ul>
                                 </li>
                                
                        </ul>
                 </div>
-                <div className="rd-navbar-search toggle-original-elements">
+                <div className='rd-navbar-search toggle-original-elements'>
                   <a
-                    className="rd-navbar-search-toggle toggle-original"
-                    data-rd-navbar-toggle=".rd-navbar-search"
-                    href="/"
+                    className='rd-navbar-search-toggle toggle-original'
+                    data-rd-navbar-toggle='.rd-navbar-search'
+                    href='/'
                   >
                     <span />
                   </a>
                   <form
-                    className="rd-search"
-                    action="search-results.html"
-                    data-search-live="rd-search-results-live"
-                    method="GET"
+                    className='rd-search'
+                    action='search-results.html'
+                    data-search-live='rd-search-results-live'
+                    method='GET'
                   >
-                    <div className="form-wrap">
+                    <div className='form-wrap'>
                       <input
-                        className="rd-navbar-search-form-input form-input"
-                        id="rd-navbar-search-form-input"
-                        type="text"
-                        name="search"
+                        className='rd-navbar-search-form-input form-input'
+                        id='rd-navbar-search-form-input'
+                        type='text'
+                        name='search'
                         value={this.state.search}
                         onChange={this.onChange}
-                        placeholder=" I`m looking for..."
-                        autoComplete="off"
+                        placeholder=' I`m looking for...'
+                        autoComplete='off'
                       />
                       {this.state.showSearch && newsSearchedFor.length
                         ? (
@@ -409,8 +409,8 @@ export class Header extends Component {
                       }
                       {this.state.showSearch && !newsSearchedFor.length ? (
                         <div
-                          className="rd-search-results-live"
-                          id="rd-search-results-live"
+                          className='rd-search-results-live'
+                          id='rd-search-results-live'
                         >
                           <h5>Quick Search</h5>
                           <p>
@@ -420,7 +420,7 @@ export class Header extends Component {
                       ) : null
                       }
                     </div>
-                    <button className="rd-search-form-submit fa-search" />
+                    <button className='rd-search-form-submit fa-search' />
                   </form>
                 </div>
               </div>
