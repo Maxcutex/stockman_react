@@ -38,7 +38,37 @@ ShallowWrapper {
           <Route
             component={[Function]}
             exact={true}
+            path="/market_price_analysis"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/daily_market_summary"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/asi_movement"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/asi_vs_stocks"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/screened_stocks"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
             path="/content-page/:pageType/:id"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/quote-page/:stock_code"
           />
         </Switch>
       </ApplicationTemplate>,
@@ -68,7 +98,37 @@ ShallowWrapper {
           <Route
             component={[Function]}
             exact={true}
+            path="/market_price_analysis"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/daily_market_summary"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/asi_movement"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/asi_vs_stocks"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/screened_stocks"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
             path="/content-page/:pageType/:id"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/quote-page/:stock_code"
           />
         </Switch>,
       },
@@ -97,7 +157,37 @@ ShallowWrapper {
             <Route
               component={[Function]}
               exact={true}
+              path="/market_price_analysis"
+            />,
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/daily_market_summary"
+            />,
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/asi_movement"
+            />,
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/asi_vs_stocks"
+            />,
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/screened_stocks"
+            />,
+            <Route
+              component={[Function]}
+              exact={true}
               path="/content-page/:pageType/:id"
+            />,
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/quote-page/:stock_code"
             />,
           ],
         },
@@ -144,12 +234,90 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
+            "key": "/market_price_analysis",
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
+              "exact": true,
+              "path": "/market_price_analysis",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "/daily_market_summary",
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
+              "exact": true,
+              "path": "/daily_market_summary",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "/asi_movement",
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
+              "exact": true,
+              "path": "/asi_movement",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "/asi_vs_stocks",
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
+              "exact": true,
+              "path": "/asi_vs_stocks",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "/screened_stocks",
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
+              "exact": true,
+              "path": "/screened_stocks",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
             "key": "/content-page/:pageType/:id",
             "nodeType": "class",
             "props": Object {
               "component": [Function],
               "exact": true,
               "path": "/content-page/:pageType/:id",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "/quote-page/:stock_code",
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
+              "exact": true,
+              "path": "/quote-page/:stock_code",
             },
             "ref": null,
             "rendered": null,
@@ -188,7 +356,37 @@ ShallowWrapper {
             <Route
               component={[Function]}
               exact={true}
+              path="/market_price_analysis"
+            />
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/daily_market_summary"
+            />
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/asi_movement"
+            />
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/asi_vs_stocks"
+            />
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/screened_stocks"
+            />
+            <Route
+              component={[Function]}
+              exact={true}
               path="/content-page/:pageType/:id"
+            />
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/quote-page/:stock_code"
             />
           </Switch>
         </ApplicationTemplate>,
@@ -218,7 +416,37 @@ ShallowWrapper {
             <Route
               component={[Function]}
               exact={true}
+              path="/market_price_analysis"
+            />
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/daily_market_summary"
+            />
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/asi_movement"
+            />
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/asi_vs_stocks"
+            />
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/screened_stocks"
+            />
+            <Route
+              component={[Function]}
+              exact={true}
               path="/content-page/:pageType/:id"
+            />
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/quote-page/:stock_code"
             />
           </Switch>,
         },
@@ -247,7 +475,37 @@ ShallowWrapper {
               <Route
                 component={[Function]}
                 exact={true}
+                path="/market_price_analysis"
+              />,
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/daily_market_summary"
+              />,
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/asi_movement"
+              />,
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/asi_vs_stocks"
+              />,
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/screened_stocks"
+              />,
+              <Route
+                component={[Function]}
+                exact={true}
                 path="/content-page/:pageType/:id"
+              />,
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/quote-page/:stock_code"
               />,
             ],
           },
@@ -294,12 +552,90 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
+              "key": "/market_price_analysis",
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
+                "exact": true,
+                "path": "/market_price_analysis",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "/daily_market_summary",
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
+                "exact": true,
+                "path": "/daily_market_summary",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "/asi_movement",
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
+                "exact": true,
+                "path": "/asi_movement",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "/asi_vs_stocks",
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
+                "exact": true,
+                "path": "/asi_vs_stocks",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "/screened_stocks",
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
+                "exact": true,
+                "path": "/screened_stocks",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
               "key": "/content-page/:pageType/:id",
               "nodeType": "class",
               "props": Object {
                 "component": [Function],
                 "exact": true,
                 "path": "/content-page/:pageType/:id",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "/quote-page/:stock_code",
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
+                "exact": true,
+                "path": "/quote-page/:stock_code",
               },
               "ref": null,
               "rendered": null,

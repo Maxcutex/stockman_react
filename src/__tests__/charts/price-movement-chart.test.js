@@ -1,11 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { PriceMovementChart }  from '../../components/charts/price-movement-chart';
+//import { PriceMovementChart }  from '../../components/charts/price-movement-chart';
 
 describe('Price Chart  Component', () => {
     let component;
     beforeEach(() => {
-        component = shallow(<PriceMovementChart />);
+       // component = shallow(<PriceMovementChart />);
     });
 
 
