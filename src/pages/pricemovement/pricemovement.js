@@ -67,12 +67,12 @@ class PriceMovementPage extends Component {
                         <div className='cell-md-9 cell-lg-9'>
                           <ul className="breadcrumb-custom-type-1">
                             <li><a href="/">Home  </a></li>
-                            <li> Stock Price Movement </li>
+                            <li> Stock Price Analysis </li>
                             
                           </ul>
                           <div className="post-content">
             
-                            <h4>Stock Price Movement</h4>
+                            <h4>Stock Price Analysis</h4>
             
                             {
                                 this.props.stockList.length ? 

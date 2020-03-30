@@ -6,7 +6,6 @@ export const baseUrl = config.STOCKMAN_API_BASE_URL;
 
 const NewsLetterForm = (props) => {
     const [labelEmail, setLabelEmail] = useState('Your Email Here');
-    const [email, setEmail] = useState('');
     const { handleSubmit, register, errors } = useForm();
     const [form, setFormState] = useState({
         email: '',
