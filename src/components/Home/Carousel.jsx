@@ -19,21 +19,31 @@ class CarouselComponent extends Component {
             .slice(0, 2);
         return (
             <Carousel autoPlay interval={3500} infiniteLoop showThumbs={false}>
-           {/* //  <Carousel activeIndex={index} direction={direction} onSelect={handleSelect}> */}
-                {
-                allNews.map(news => {
-                    const image = news.visual_news[0];
+                {/* //  <Carousel activeIndex={index} direction={direction} onSelect={handleSelect}> */}
+                {allNews.map(news => {
+                    let imagelist = news.visual_news.filter(
+                        image => image.image_type === 'size930x620'
+                    );
+                    let image = imagelist[0];
+                    if (imagelist.length == 0) {
+                        image = {
+                            id: 5,
+                            image_file: '',
+                            image_type: 'size930x620',
+                            is_main: false,
+                            name: 'Petro Price',
+                            news: news.id,
+                        };
+                    }
                     const categories = news.category_news;
                     return (
-                                    
                         <div key={news.id} id={news.id}>
-                            <img src={image.image_file}alt="image1" />
+                            <img src={image.image_file} alt="image1" />
                             <ul className="tag-list" />
                             <p className="legend">{news.title}</p>
                         </div>
-                    )})
-                }
-                
+                    );
+                })}
             </Carousel>
         );
     }
@@ -43,6 +53,4 @@ const mapStateToProps = state => ({
     isLoading: state.news.isLoading,
 });
 
-export default connect(mapStateToProps, { fetchNews })(
-    CarouselComponent
-);
+export default connect(mapStateToProps, { fetchNews })(CarouselComponent);
