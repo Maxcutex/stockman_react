@@ -16,10 +16,31 @@ class NewsDetails extends Component {
         await this.props.fetchNewsById(id);
     }
     render() { 
-        let images = {};
+        let images = {}; let image = {}; let image1={}
         const { newsSingleLoading, newsSingle } = this.props;
         if(!newsSingleLoading){
-         images = newsSingle.visual_news.filter(y => y.image_type==='size930x620');
+            images = newsSingle.visual_news.filter(y => y.image_type==='size930x620');
+        
+            image = images[0];
+            image1 = images[1];
+            if (images.length == 0) {
+                image = {
+                    id: 0,
+                    image_file: '',
+                    image_type: 'size930x620',
+                    is_main: false,
+                    name: 'Petro Price',
+                    news: newsSingle.id,
+                };
+                image1 = {
+                    id: 1,
+                    image_file: '',
+                    image_type: 'size930x620',
+                    is_main: false,
+                    name: 'Petro Price',
+                    news: newsSingle.id,
+                };
+            }
         }
         
         return ( 
@@ -53,12 +74,12 @@ class NewsDetails extends Component {
                                     </ul>
                                     
                                     <br />
-                                    <img src={`${images[0].image_file}`} alt=""></img>
+                                    <img src={`${image.image_file}`} alt=""></img>
                                     <br />
                                     
                                     {parse(`${newsSingle.content}`)}
                                     {
-                                        images[1] ? `<img src=${images[1].image_file} alt=""></img>` : ''
+                                        image1 ? `<img src=${image1.image_file} alt=""></img>` : ''
                                     }
                                     
                                     
