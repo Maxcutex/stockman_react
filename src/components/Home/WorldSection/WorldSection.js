@@ -16,7 +16,7 @@ class WorldSection extends Component {
     }
 
     componentDidUpdate(prevProps) {
-        if (!this.props.worldNews.length) {
+        if (this.props.worldNews==null || !this.props.worldNews.length) {
             this.props.fetchWorldNews();
         }
 
@@ -54,7 +54,7 @@ class WorldSection extends Component {
         if (this.state.showInMobileForm) {
             menuButtonClass.push('active');
           }
-        
+
         return (
             <section className="section-sm bg-white">
                 <div className="shell">
