@@ -5,6 +5,7 @@ import dateFormat from 'dateformat'
 // import { activeNews } from './mock';
 import { Link } from 'react-router-dom';
 const WorldSectionDetails = props => {
+    let image1 = ''
     return props.activeNews.map(activeNew => {
         const {
             
@@ -16,10 +17,20 @@ const WorldSectionDetails = props => {
             author,
             news_date,
             id,
-            //visual_news,
+            visual_news,
         } = activeNew;
         const formattedDate =  dateFormat(new Date(news_date), 'mmmm dS, yyyy') 
-       
+        let image_visual = {}
+        
+        let imagelist = visual_news.filter(
+            image => image.image_type === 'size330x220'
+        );
+        image_visual = imagelist[0];
+        if (imagelist.length != 0) {
+            image1 = image_visual.image_file
+        } else {
+            image1 = image
+        }
         return (
             <div
                 className="col-xs-12 col-sm-6 col-md-4 col-lg-3 isotope-item"
@@ -31,7 +42,7 @@ const WorldSectionDetails = props => {
                         <Link to={`/content-page/news/${id}`}>
                         <img
                                 // src={visual_news[0].image_file || image}
-                                src={image}
+                                src={image1}
                                 width="330"
                                 height="220"
                                 alt=""
