@@ -126,7 +126,7 @@ export class Header extends Component {
                                 </li>
                                  
                                 <li className='rd-navbar--has-dropdown rd-navbar-submenu'>
-                                      <Link to='/pricelist'>Market</Link>
+                                      <Link to='/pricelist'>Market Data</Link>
                                     <span className='rd-navbar-submenu-toggle' />
                                     <ul
                                         className='rd-navbar-dropdown rd-navbar-open-right'
@@ -331,7 +331,7 @@ export class Header extends Component {
                       <a href='about.html'>About</a>
                     </li>
                     <li className='rd-navbar--has-dropdown rd-navbar-submenu'>
-                                      <Link to='/pricelist'>Market</Link>
+                                      <Link to='/pricelist'>Market Data</Link>
                                     <span className='rd-navbar-submenu-toggle' />
                                     <ul
                                         className='rd-navbar-dropdown rd-navbar-open-right'
@@ -399,7 +399,7 @@ export class Header extends Component {
                         placeholder=' I`m looking for...'
                         autoComplete='off'
                       />
-                      {this.state.showSearch && newsSearchedFor.length
+                      {this.state.showSearch && (newsSearchedFor.length || stocksSearchedFor.length)
                         ? (
                           <ShowSearchResults
                             searchResults={newsSearchedFor}
@@ -407,7 +407,7 @@ export class Header extends Component {
                           />
                         ) : null
                       }
-                      {this.state.showSearch && !newsSearchedFor.length ? (
+                      {this.state.showSearch && (!newsSearchedFor.length && !stocksSearchedFor.length )? (
                         <div
                           className='rd-search-results-live'
                           id='rd-search-results-live'

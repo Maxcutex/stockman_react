@@ -61,7 +61,7 @@ class WorldSection extends Component {
                     <div className="range">
                         <div className="cell-xs-12">
                             <div className="section-title">
-                                <h3>World</h3>
+                                <h3>Investing</h3>
                                 <div className="isotope-filters isotope-filters-horizontal">
                                     <button
                                         className={menuButtonClass.join(' ')}

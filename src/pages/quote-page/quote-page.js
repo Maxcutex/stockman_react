@@ -66,7 +66,12 @@ const QuotePage = (props) => {
                                         ) : (
                                             data && <div>
                                                 <h2>{myData.stock_code} </h2>
+                                                <div></div>
                                                 {parse(`${myData.description}`)}
+                                                <div>
+                                                  Website: {myData.website} <br />
+                                                  Email: {myData.email}
+                                                </div>
                                             </div>
                                         )
                                 }
