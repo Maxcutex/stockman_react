@@ -37,7 +37,7 @@ class WorldSection extends Component {
             if (sectionName.length) newResultList.push(result);
         });
 
-        return newResultList;
+        return newResultList.slice(0, 4);
     };
 
     changeSection = (e, section) => {
