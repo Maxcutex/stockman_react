@@ -63,7 +63,8 @@ class PriceListPage extends Component {
                                 <br />
                                 <SearchPrice date={this.state.dateFull}  handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
                                 <br />
-                                <div className='col-sm-12'>
+                                <br/>
+                                <div className='col-sm-12' styleName="padding-bottom: 5px;">
                                   {
                                     this.state.firstSearch ? 
                                     this.props.priceList.length ?   <PriceTable priceList={this.props.priceList}/> : <NotFound />

@@ -10,7 +10,7 @@ class PriceTable  extends Component{
                 <td className='div-table-col-header'>OPEN</td>
                 <td className='div-table-col-header'>HIGH</td>
                 <td className='div-table-col-header'>LOW</td>
-                <td className='div-table-col-header'>CLOSE PRICE</td>
+                <td className='div-table-col-header'>CLOSE </td>
                 <td className='div-table-col-header'>CHANGE</td>
                 <td className='div-table-col-header'>%CHANGE</td>
                 <td className='div-table-col-header'>TRADE</td>
@@ -25,7 +25,7 @@ class PriceTable  extends Component{
                 <td colSpan='11'>
                     <table className='div-inner-table'>
                         <tbody>
-                            <tr className='div-table-sub-header'><td colSpan='11' className='td-column'> Main Sector: {main_sector_name} Sub Sector: {sub_sector_name}</td></tr>
+                            <tr className='div-table-sub-header'><td colSpan='11' className='td-column'> <strong>Main Sector</strong>: {main_sector_name} <strong>Sub Sector</strong>: {sub_sector_name}</td></tr>
                             {
                                 price_list.map(({id, sec_code, price_date, price_close, x_open, x_high, x_low, price, 
                                 offer_bid_sign, x_change, num_of_deals, volume, x_value, rpt, source, sync_flag, stock}) => {
@@ -34,18 +34,18 @@ class PriceTable  extends Component{
                                 //<tr className='div-table-sub-header'><td> Main Sector: {main_sector_name} Sub Sector: {sub_sector_name}</td></tr>
                                 //
                                 return(
-                                <tr key={id}>
+                                <tr className='alternating' key={id}>
                                     <td className='div-table-col-close1'>{sec_code}</td>
-                                    <td className='div-table-col-close1'>{price_close}</td>
-                                    <td className='div-table-col-close1'>{x_open}</td>
-                                    <td className='div-table-col-close1'>{x_high}</td>
-                                    <td className='div-table-col-close1'>{x_low}</td>
+                                    <td className='div-table-col-close'>{price_close}</td>
+                                    <td className='div-table-col-close'>{x_open}</td>
+                                    <td className='div-table-col-close'>{x_high}</td>
+                                    <td className='div-table-col-close'>{x_low}</td>
                                     <td className='div-table-col-close'>{price}</td>
-                                    <td className='div-table-col-close1'>{format_x_change}</td>
-                                    <td className='div-table-col-close1'>{format_x_change}</td>
-                                    <td className='div-table-col-close1'>{num_of_deals}</td>
-                                    <td className='div-table-col-close1'>{volume}</td>
-                                    <td className='div-table-col-close1'>{x_value}</td>
+                                    <td className='div-table-col-close'>{format_x_change}</td>
+                                    <td className='div-table-col-close'>{format_x_change}</td>
+                                    <td className='div-table-col-close'>{num_of_deals}</td>
+                                    <td className='div-table-col-close'>{volume}</td>
+                                    <td className='div-table-col-close'>{x_value}</td>
                                 </tr> 
                                 )
                                 
