@@ -30,7 +30,7 @@ class PriceTable  extends Component{
                                 price_list.map(({id, sec_code, price_date, price_close, x_open, x_high, x_low, price, 
                                 offer_bid_sign, x_change, num_of_deals, volume, x_value, rpt, source, sync_flag, stock}) => {
                             //const { id, name, age, email } = student //destructuring
-                            var format_x_change = parseFloat(yourString).toFixed(2);
+                            var format_x_change = parseFloat(x_change).toFixed(2);
                                 //<tr className='div-table-sub-header'><td> Main Sector: {main_sector_name} Sub Sector: {sub_sector_name}</td></tr>
                                 //
                                 return(
