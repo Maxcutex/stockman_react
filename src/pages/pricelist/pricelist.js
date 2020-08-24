@@ -27,16 +27,18 @@ class PriceListPage extends Component {
 
     handleSubmit = event => {
         event.preventDefault();
-        console.log('we are here now');
+        // console.log('we are here now');
         const formattedDate =  dateFormat(new Date(this.state.dateFull), 'yyyy-mm-dd') 
-        console.log(formattedDate);
+        // console.log(formattedDate);
         this.props.fetchPriceList(formattedDate);
         this.setState({ firstSearch: true });
+        this.setState({ currentDate: formattedDate });
     }
     handleChange = event => {
         //const { value, name } = event.target;
         this.setState({ dateFull: event });
-        console.log(event);
+        //this.setState({ currentDate: dateFormat(new Date(event), 'yyyy-mm-dd') });
+         
 
     }
     render(){
