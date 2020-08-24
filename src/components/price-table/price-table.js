@@ -41,16 +41,16 @@ class PriceTable  extends Component{
                                 return(
                                 <tr className='alternating' key={id}>
                                     <td className='div-table-col-close1'>{sec_code}</td>
-                                    <td className='div-table-col-close'>{price_close}</td>
-                                    <td className='div-table-col-close'>{x_open}</td>
-                                    <td className='div-table-col-close'>{x_high}</td>
-                                    <td className='div-table-col-close'>{x_low}</td>
-                                    <td className={gain_loss}>{price}</td>
+                                    <td className='div-table-col-close'>{ (Math.round(parseFloat(price_close) * 100) / 100).toFixed(2)}</td>
+                                    <td className='div-table-col-close'>{ parseFloat(x_open).toFixed(2)}</td>
+                                    <td className='div-table-col-close'>{parseFloat(x_high).toFixed(2)}</td>
+                                    <td className='div-table-col-close'>{parseFloat(x_low).toFixed(2)}</td>
+                                    <td className={gain_loss}>{parseFloat(price).toFixed(2)}</td>
                                     <td className='div-table-col-close'>{format_x_change}</td>
                                     <td className='div-table-col-close'>{format_x_change}</td>
                                     <td className='div-table-col-close'>{num_of_deals}</td>
-                                    <td className='div-table-col-close'>{numberWithCommas(volume)}</td>
-                                    <td className='div-table-col-close'>{numberWithCommas(x_value)}</td>
+                                    <td className='div-table-col-close' style={{ textAlign: 'right', paddingRight: '5px'}}>{numberWithCommas(volume)}</td>
+                                    <td className='div-table-col-close' style={{ textAlign: 'right', paddingRight: '5px'}}>{numberWithCommas(x_value)}</td>
                                 </tr> 
                                 )
                                 

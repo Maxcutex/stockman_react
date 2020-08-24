@@ -40,7 +40,10 @@ class PriceListPage extends Component {
 
     }
     render(){
-         
+        const container = {
+            
+            paddingTop: '10px', marginLeft:'-10px', fontSize:'12px',
+          };
         if (!this.props.priceList || this.props.isLoading) {
             return <Loader />;
         }
@@ -64,7 +67,7 @@ class PriceListPage extends Component {
                                 <SearchPrice date={this.state.dateFull}  handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
                                 <br />
                                 <br/>
-                                <div className='col-sm-12' styleName="padding-bottom: 5px;">
+                                <div className='col-sm-12' style={container}>
                                   {
                                     this.state.firstSearch ? 
                                     this.props.priceList.length ?   <PriceTable priceList={this.props.priceList}/> : <NotFound />

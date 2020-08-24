@@ -1,63 +1,98 @@
 .div-table {
-    display: table;         
-    width: 98%;   
-    text-align: center;      
-    border: 1px solid #666666;         
-    border-spacing: 2px; /* cellspacing:poor IE support for  this */
-    
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .div-table-row {
-    display: table-row;
-    width: 100%;
-    clear: both;
-  }
-  .div-table-header {
-    display: table-row;
-    width: auto;
-    clear: both;
-    background-color: #ccd8e5;         
+  display: table;
+  width: 98%;
+  text-align: center;
+  border: 1px solid #666666;
+  border-spacing: 2px;
+  /* cellspacing:poor IE support for  this */
 
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.div-table-row {
+  display: table-row;
+  width: 100%;
+  clear: both;
+}
+
+.div-table-header {
+  display: table-row;
+  width: auto;
+  clear: both;
+  background-color: #ccd8e5;
+
+}
+
+.gain {
+  color: green;
+  font-weight: bold;
+}
+
+.loss {
+  color: red;
+  font-weight: bold;
+}
+
+tr.alternating:nth-child(even) {
+  background: #f6f6f6;
+}
+
+tr.alternating:nth-child(odd) {
+  background: #FFF
+}
+
+.div-table-sub-header {
+  display: table-row;
+  width: auto;
+  clear: both;
+  background-color: #f2efef;
+  color: bold;
+
+  .td-column {
+    text-align: left;
+    padding-left: 10px;
   }
-  .gain{ color: green; font-weight: bold;}
-  .loss{ color: red;font-weight: bold;}
-   tr.alternating:nth-child(even) {background: #f6f6f6;}
-   tr.alternating:nth-child(odd) {background: #FFF}
-  .div-table-sub-header {
-    display: table-row;
-    width: auto;
-    clear: both; background-color: #f2efef;         
-    color: bold;
-    .td-column{
-        text-align: left;
-        padding-left: 10px; 
-    }
-  }
-  .div-table-col-header {
-    float: left; /* fix for  buggy browsers */
-    display: table-column;         
-    width: 9%;  
-    font-weight: bolder;  background-color:#f6f6f6;  
-    padding:5px;     
-  }
-  .div-table-col {
-    float: left; /* fix for  buggy browsers */
-    display: table-column; 
-    background-color: #9ebfdf;          
-    width: 9%;         
-  }
-  .div-table-col-close1 {
-    float: left; /* fix for  buggy browsers */
-    display: table-column;  font-weight: bolder;   
-    width: 9%;   text-align: left;   padding:8px;  color: #70a6e0;   
-  }
-  .div-table-col-close {
-    float: left; /* fix for  buggy browsers */
-    display: table-column;    
-       
-    width: 9%;         
-  }
-.div-inner-table{
-    width: 100%;
+}
+
+.div-table-col-header {
+  float: left;
+  /* fix for  buggy browsers */
+  display: table-column;
+  width: 9%;
+  font-weight: bolder;
+  background-color: #f6f6f6;
+  padding: 5px;
+}
+
+.div-table-col {
+  float: left;
+  /* fix for  buggy browsers */
+  display: table-column;
+  background-color: #9ebfdf;
+  width: 9%;
+}
+
+.div-table-col-close1 {
+  float: left;
+  /* fix for  buggy browsers */
+  display: table-column;
+  font-weight: bolder;
+  width: 9%;
+  text-align: left;
+  padding: 8px;
+  color: #70a6e0;
+}
+
+.div-table-col-close {
+  float: left;
+  /* fix for  buggy browsers */
+  display: table-column;
+
+  width: 9%;
+}
+
+.div-inner-table {
+  width: 100%;
 }
