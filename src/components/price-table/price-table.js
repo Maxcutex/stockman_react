@@ -20,6 +20,9 @@ class PriceTable  extends Component{
         )
      }
       renderTableData = () => {
+        function numberWithCommas(x) {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
           return this.props.priceList.map( ({id, main_sector_name, sub_sector_name, price_list}) => (
             <tr key={id} >
                 <td colSpan='11'>
@@ -31,6 +34,8 @@ class PriceTable  extends Component{
                                 offer_bid_sign, x_change, num_of_deals, volume, x_value, rpt, source, sync_flag, stock}) => {
                             //const { id, name, age, email } = student //destructuring
                             var format_x_change = parseFloat(x_change).toFixed(2);
+                            var gain_loss = offer_bid_sign == '+' ? 'gain': 'loss';
+                            gain_loss = 'div-table-col-close ' + gain_loss;
                                 //<tr className='div-table-sub-header'><td> Main Sector: {main_sector_name} Sub Sector: {sub_sector_name}</td></tr>
                                 //
                                 return(
@@ -40,12 +45,12 @@ class PriceTable  extends Component{
                                     <td className='div-table-col-close'>{x_open}</td>
                                     <td className='div-table-col-close'>{x_high}</td>
                                     <td className='div-table-col-close'>{x_low}</td>
-                                    <td className='div-table-col-close'>{price}</td>
+                                    <td className={gain_loss}>{price}</td>
                                     <td className='div-table-col-close'>{format_x_change}</td>
                                     <td className='div-table-col-close'>{format_x_change}</td>
                                     <td className='div-table-col-close'>{num_of_deals}</td>
-                                    <td className='div-table-col-close'>{volume}</td>
-                                    <td className='div-table-col-close'>{x_value}</td>
+                                    <td className='div-table-col-close'>{numberWithCommas(volume)}</td>
+                                    <td className='div-table-col-close'>{numberWithCommas(x_value)}</td>
                                 </tr> 
                                 )
                                 

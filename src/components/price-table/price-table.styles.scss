@@ -20,6 +20,8 @@
     background-color: #ccd8e5;         
 
   }
+  .gain{ color: green; font-weight: bold;}
+  .loss{ color: red;font-weight: bold;}
    tr.alternating:nth-child(even) {background: #f6f6f6;}
    tr.alternating:nth-child(odd) {background: #FFF}
   .div-table-sub-header {
