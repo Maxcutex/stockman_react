@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import FeaturedNewsShareBlock from './FeaturedNewShareBlock';
 
 
-export default function FeaturedSideNewsCaption({title, author, id}) {
+export default function FeaturedSideNewsCaption({title, author, id, news_date}) {
+    var mydate = new Date(news_date);
     return (
         <div className="caption">
             <h4 className="title">
@@ -14,8 +15,8 @@ export default function FeaturedSideNewsCaption({title, author, id}) {
                     <li>
                         by <a href="/">{author.first_name} </a>
                     </li>
-                    <li>
-                        <a href="/">Aug 08, 2017 </a>
+                    <li> 
+    <a href="/">{'  ' + mydate.toDateString()} </a>
                     </li>
                 </ul>
                 <FeaturedNewsShareBlock/>

@@ -3,7 +3,7 @@ import FeaturedSideNewsCaption from './FeaturedSideNewsCaption';
 import FeaturedSideNewsTagList from './FeaturedSideNewsTagList';
 
 export default props => {
-    const { title, visual_news, author,category_news, id } = props.featured;
+    const { title, visual_news, author,category_news, id, news_date } = props.featured;
     // const visual_news_main = visual_news.filter(
     //     image => image.image_type === 'size450x330'
     // );
@@ -23,7 +23,7 @@ export default props => {
                 );
             })}
             <FeaturedSideNewsTagList category_news={category_news} />
-            <FeaturedSideNewsCaption title={title} author={author} id={id} />
+            <FeaturedSideNewsCaption title={title} author={author} id={id} news_date={news_date} />
         </div>
     );
 };
