@@ -15,7 +15,7 @@
         "fusioncharts": "^3.15.0-sr.1",
         "html-react-parser": "^0.10.1",
         "jwt-decode": "^2.2.0",
-        "node-sass": "^4.13.0",
+        "node-sass": "^4.13.1",
         "npm": "^6.13.4",
         "react": "^16.6.3",
         "react-animation": "^1.2.2",
