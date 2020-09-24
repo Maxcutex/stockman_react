@@ -121,7 +121,7 @@ export class Header extends Component {
                         <div className={menuClass.join(' ')}>
                             <ul className='rd-navbar-nav'>
                                 <li className='active rd-navbar-submenu'>
-                                    <a href='./'>Home</a>
+                                    <a href='./'>News</a>
                                     
                                 </li>
                                  
