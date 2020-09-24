@@ -323,12 +323,12 @@ export class Header extends Component {
                 <div className='rd-navbar-nav-wrap toggle-original-elements'>
                   <ul className='rd-navbar-nav'>
                     <li className='active  rd-navbar-submenu'>
-                      <a href='/'>Home</a>
+                      <a href='/'>News</a>
                       <span className='rd-navbar-submenu-toggle' />
                      
                     </li>
                     <li>
-                      <a href='about.html'>About</a>
+                      <a href='about.html'>Brokers</a>
                     </li>
                     <li className='rd-navbar--has-dropdown rd-navbar-submenu'>
                                       <Link to='/pricelist'>Market Data</Link>
