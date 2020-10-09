@@ -56,12 +56,12 @@ class PriceListPage extends Component {
                     <div className='shell'>
                         <div className='range range-center range-50'>
                             <div className='cell-md-9 cell-lg-9'>
-                              <ul class="breadcrumb-custom-type-1">
+                              <ul className="breadcrumb-custom-type-1">
                                 <li><a href="/">Home  </a></li>
                                 <li> PriceList </li>
                                 
                               </ul>
-                              <div class="post-content">
+                              <div className="post-content">
                 
                                 <h4>Price List as at {this.state.currentDate}</h4>
                 

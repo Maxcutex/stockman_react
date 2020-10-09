@@ -22,7 +22,7 @@ class SearchPrice extends React.Component {
                             
                             dateFormat="yyyy/MM/dd"
                             /></div>
-                        <div style={{float:'left', marginRight: '5px;'}}><button type="submit" value="Submit">Get Price List </button></div>
+                        <div style={{float:'left', marginRight: '5px'}}><button type="submit" value="Submit">Get Price List </button></div>
                         
 
                     </div>
