@@ -15,7 +15,7 @@ const NewsLetterForm = (props) => {
     }
     const handleOnBlur= (e) => {
         const email = e.target.value;
-        if(email.length ==0 ){
+        if(email.length ===0 ){
             setLabelEmail('Your Email Here');
         } 
         

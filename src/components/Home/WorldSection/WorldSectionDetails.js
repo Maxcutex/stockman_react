@@ -26,7 +26,7 @@ const WorldSectionDetails = props => {
             image => image.image_type === 'size330x220'
         );
         image_visual = imagelist[0];
-        if (imagelist.length != 0) {
+        if (imagelist.length !== 0) {
             image1 = image_visual.image_file
         } else {
             image1 = image

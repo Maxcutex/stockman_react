@@ -34,7 +34,7 @@ export const baseUrl = config.STOCKMAN_API_BASE_URL;
 export default function FooterCategories() {
     
     
-    const [{ data, isLoading, isError }, doFetch] = useDataApi(
+    const [{ data, isLoading, isError }] = useDataApi(
         `${baseUrl}/categories/`,
         initialState,
       );

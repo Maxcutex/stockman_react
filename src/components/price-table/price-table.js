@@ -33,31 +33,30 @@ class PriceTable  extends Component{
                                 price_list.map(({id, sec_code, price_date, price_close, x_open, x_high, x_low, price, 
                                 offer_bid_sign, x_change, num_of_deals, volume, x_value, rpt, source, sync_flag, stock}) => {
                             //const { id, name, age, email } = student //destructuring
-                                var format_x_change = parseFloat(x_change).toFixed(2);
                                 var gain_loss = '';
                                 var change_calc = 0.0
                                 var x_pclose_formatted = (Math.round(parseFloat(price_close) * 100) / 100).toFixed(2)
                                 var x_close_formatted = parseFloat(price).toFixed(2)
-                                if (x_close_formatted >= x_pclose_formatted){
+                                if (x_pclose_formatted >= x_close_formatted ){
                                     gain_loss = 'gain'
 
                                 } else {
                                     gain_loss = 'loss'
                                 }
-                                change_calc = parseFloat(x_close_formatted - x_pclose_formatted).toFixed(2);
+                                change_calc = parseFloat(x_pclose_formatted - x_close_formatted).toFixed(2);
                                 gain_loss = 'div-table-col-close ' + gain_loss;
-                                var percent = parseFloat((change_calc/x_pclose_formatted)*  100).toFixed(2);
+                                var percent = parseFloat((change_calc/x_close_formatted)*  100).toFixed(2);
 
                                 //<tr className='div-table-sub-header'><td> Main Sector: {main_sector_name} Sub Sector: {sub_sector_name}</td></tr>
                                 //
                                 return(
                                 <tr className='alternating' key={id}>
                                     <td className='div-table-col-close1'>{sec_code}</td>
-                                    <td className='div-table-col-close'>{ x_pclose_formatted}</td>
+                                    <td className='div-table-col-close'>{ x_close_formatted }</td>
                                     <td className='div-table-col-close'>{ parseFloat(x_open).toFixed(2)}</td>
                                     <td className='div-table-col-close'>{parseFloat(x_high).toFixed(2)}</td>
                                     <td className='div-table-col-close'>{parseFloat(x_low).toFixed(2)}</td>
-                                    <td className={gain_loss}>{x_close_formatted}</td>
+                                    <td className={gain_loss}>{x_pclose_formatted}</td>
                                     <td className='div-table-col-close'>{change_calc}</td>
                                     <td className='div-table-col-close'>{percent}%</td>
                                     <td className='div-table-col-close'>{num_of_deals}</td>

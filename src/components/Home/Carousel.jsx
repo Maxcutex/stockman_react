@@ -25,7 +25,7 @@ class CarouselComponent extends Component {
                         image => image.image_type === 'size930x620'
                     );
                     let image = imagelist[0];
-                    if (imagelist.length == 0) {
+                    if (imagelist.length === 0) {
                         image = {
                             id: 5,
                             image_file: '',
@@ -35,7 +35,7 @@ class CarouselComponent extends Component {
                             news: news.id,
                         };
                     }
-                    const categories = news.category_news;
+                    // const categories = news.category_news;
                     return (
                         <div key={news.id} id={news.id}>
                             <img src={image.image_file} alt="image1" />

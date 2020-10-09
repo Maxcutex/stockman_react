@@ -23,7 +23,7 @@ class NewsDetails extends Component {
         
             image = images[0];
             image1 = images[1];
-            if (images.length == 0) {
+            if (images.length === 0) {
                 image = {
                     id: 0,
                     image_file: '',

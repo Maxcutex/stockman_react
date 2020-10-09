@@ -7,7 +7,7 @@ const initialState = {
 }
 const useDataApi = (initialUrl, initialData) => {
     const [data, setData] = useState(initialData);
-    const [url, setUrl] = useState(initialUrl);
+    // const [url, setUrl] = useState(initialUrl);
     const [isLoading, setIsLoading] = useState(false);
     const [isError, setIsError] = useState(false);
     useEffect(() => {
@@ -15,7 +15,7 @@ const useDataApi = (initialUrl, initialData) => {
         setIsError(false);
         setIsLoading(true);
         try {
-          const result = await axios(url);
+          const result = await axios(initialUrl);
           setData(result.data);
           //console.log(result.data);
         } catch (error) {
@@ -24,14 +24,14 @@ const useDataApi = (initialUrl, initialData) => {
         setIsLoading(false);
       };
       fetchData();
-    }, [url]);
-    return [{ data, isLoading, isError }, setUrl];
+    }, [initialUrl]);
+    return [{ data, isLoading, isError }];
   };
 
 export const baseUrl = config.STOCKMAN_API_BASE_URL; 
 
 const PriceAnalysisTable = () => {
-    const [{ data, isLoading, isError }, doFetch] = useDataApi(
+    const [{ data, isLoading, isError }] = useDataApi(
         `${baseUrl}/PriceLists/market-analysis/`,
         initialState,
       );

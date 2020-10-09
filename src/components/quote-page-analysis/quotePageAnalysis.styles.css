@@ -1,0 +1,22 @@
+.ngn {
+    font-size: 11px;
+    color: #3e3e3d;
+}
+.priceValue {
+    font-size:30px;
+    color: black;
+    font-weight: bold;
+}
+.col-xas{
+    width: 20% !important;
+    float: left;
+    
+}
+.col-xas1:last-child{
+    width: 20% !important;
+    float: left;
+}
+.loading-top {
+    border: 1px solid #cecece;
+    height: 128px;
+}
