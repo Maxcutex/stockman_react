@@ -31,10 +31,48 @@ export enum REQUEST_STATUSES {
     previous_price: number,
     current_price: number,
     today_change: number,
+    year_change: number,
     today_volume: number,
     today_sign: string,
     today_day_range: string,
     today_52_week_range: string
+  }
+
+  export type Probability = {
+    pat_margin: number,
+    roe: number,
+    dps: number,
+    period: number,
+  }
+  export type Valuation = {
+    pe_ratio: number,
+    net_asset_per_share: number,
+    eps: number,
+    dividend_yield: number,
+  }
+  export type CompanyStatistics = {
+    registrars: string,
+    listing_date: number,
+    year_end: number,
+    share_outstanding: number,
+  }
+  export type Kpi = {
+    turnover_growth: number,
+    pat_growth: number,
+    net_assets_growth: number,
+    assets_growth: number,
+  }
+  export type StockStatistics = {
+    probability: Probability,
+    valuation: Valuation,
+    company_statistics: CompanyStatistics  ,
+    kpi: Kpi,
+  }
+  export type StockInfoTypeWithPrice = {
+    price: number,
+    stock_code: string,
+    change_data: string,
+    market_data: number,
   }
   export type StockInfoType = {
     id: number,

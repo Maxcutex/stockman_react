@@ -1,0 +1,13 @@
+.valuationContainer{
+    width: 50%;
+    float:left;
+
+}
+.keyCompetitorsContainer{
+    width: 50%;
+    float:left;
+    
+}
+.statisticsFont{
+    font-size: 13px;
+}

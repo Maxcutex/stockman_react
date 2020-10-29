@@ -109,13 +109,17 @@ const QuotePageAnalysis: React.FC<IStock> = ({ Stock }) => {
                                 </td>
                                 <td className="col-xas">
                                     <QuotePageComponentLower
-                                        mainText={'-33.44%'}
+                                        mainText={stockAnalysis
+                                            ? stockAnalysis.year_change 
+                                            : undefined}
                                         lowerText={'1 year Change'}
                                     />
                                 </td>
                                 <td className="col-xas">
                                     <QuotePageComponentLower
-                                        mainText={'+1.4%'}
+                                        mainText={stockAnalysis
+                                            ? stockAnalysis.price_year_to_date_cent + '%'
+                                            : undefined}
                                         lowerText={'YTD'}
                                     />
                                 </td>

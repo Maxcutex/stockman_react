@@ -37,8 +37,11 @@ const QuotePage: React.FC<QuotePageProps> = ({match}) => {
                         </ul>
                         <div className="post-content">
                             <QuotePageAnalysis Stock={stock_code}/>
+                            <div style={{clear: "both"}}></div>
                             <QuotePageChart Stock={stock_code}/>
+                            <div style={{clear: "both"}}></div>
                             <QuotePageStatistics Stock={stock_code}/>
+                            <div style={{clear: "both"}}></div>
                             <QuotePageDescription Stock={stock_code}/>
                             <br/>
                         </div>
