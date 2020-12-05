@@ -16,6 +16,7 @@ import QuotePageDescription from '../../components/quote-page-description/quoteP
 import { match } from 'react-router-dom';
 import { RouteComponentProps, withRouter } from 'react-router';
 import { TParams } from '../../types';
+import QuotePageManagement from '../../components/quote-page-management/quotePageManagement';
 const initialState = {
     quote: null
 }
@@ -43,6 +44,8 @@ const QuotePage: React.FC<QuotePageProps> = ({match}) => {
                             <QuotePageStatistics Stock={stock_code}/>
                             <div style={{clear: "both"}}></div>
                             <QuotePageDescription Stock={stock_code}/>
+                            <div style={{clear: "both"}}></div>
+                            <QuotePageManagement Stock={stock_code}/>
                             <br/>
                         </div>
                     </div>

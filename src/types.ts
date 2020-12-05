@@ -7,6 +7,10 @@ export enum REQUEST_STATUSES {
   export interface IStock {
     Stock: string
   }
+  export interface IStockManagement {
+    Stock: string,
+    ManagementType: string
+  }
   export type stockAnalysisType = {
     id: number,
     sec_code: string,
@@ -126,3 +130,10 @@ export enum REQUEST_STATUSES {
     main_sector: MainSectorType
   }
   export type TParams = {stock_code: string}
+
+  export type StockManagementType = {
+    id: number,
+    name: string,
+    position: string,
+    management_type: string
+  }

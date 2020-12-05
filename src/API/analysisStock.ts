@@ -1,4 +1,4 @@
-import { StockStatistics } from './../types';
+import { StockManagementType, StockStatistics } from './../types';
 import axios from 'axios'
 
 import { stockAnalysisType , StockInfoType, StockInfoTypeWithPrice  } from '../types'
@@ -57,6 +57,23 @@ export const getCurrentAnalysis = async (
   ): Promise<StockInfoType> => {
     try {
         const url = `${baseUrl}/stocks/by-code/?stock_code=${stock}`
+        const { data }  = await axios(url);
+        return data
+    } catch (error) {
+    //   if (error?.response?.data?.message) {
+    //     throw new Error(error.response.data.message)
+    //   }
+      throw new Error(
+        error.message || `Oops! That's awkward. We messed up.`
+      )
+    }
+  }
+
+  export const getStockManagement = async (
+    stock: string, managementtype: string
+  ): Promise<StockManagementType[]> => {
+    try {
+        const url = `${baseUrl}/tock-management/by-management-type/?stock_code=${stock}&query_type=${managementtype}`
         const { data }  = await axios(url);
         return data
     } catch (error) {
