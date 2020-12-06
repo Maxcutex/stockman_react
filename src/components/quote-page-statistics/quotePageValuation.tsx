@@ -1,5 +1,7 @@
 import React from 'react'
 import { StockStatistics } from '../../types';
+import './quotePageStatistics.styles.css'
+import { SectionHeader } from './quotestatistics.styles';
 export interface QuotePageValuationStatsProps {
     Statistics: StockStatistics
 }
@@ -7,12 +9,15 @@ export interface QuotePageValuationStatsProps {
 const QuotePageValuationStats: React.FC<QuotePageValuationStatsProps> = ({Statistics}) => {
     
     return ( <div>
-         <table>
+        <SectionHeader>Key Statistics</SectionHeader>
+         <table style={{
+             'width': '100%'
+         }}>
              <tbody>
                  
             <tr>
                 <td>
-                    <table>
+                    <table className="tableClass">
                         <thead>
                         <tr>
                             <th colSpan={2}>Valuation</th>
@@ -39,7 +44,7 @@ const QuotePageValuationStats: React.FC<QuotePageValuationStatsProps> = ({Statis
                     </table>
                 </td>
                 <td>
-                <table>
+                <table className="tableClass">
                         <thead>
                             <tr>
                                 <th colSpan={2}>Probability</th>

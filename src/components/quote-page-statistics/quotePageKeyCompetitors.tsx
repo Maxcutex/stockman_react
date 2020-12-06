@@ -2,6 +2,7 @@ import React, { useEffect, useState }  from 'react'
 import './quotePageStatistics.styles.css'
 import {   REQUEST_STATUSES, IStock, StockInfoTypeWithPrice } from '../../types'
 import { getCompetitors } from '../../API/analysisStock';
+import { SectionHeader } from './quotestatistics.styles';
 
  
 const QuotePageKeyCompetitors: React.FC<IStock> = ({Stock}) => {
@@ -42,15 +43,15 @@ const QuotePageKeyCompetitors: React.FC<IStock> = ({Stock}) => {
       if (status === REQUEST_STATUSES.SUCCESS) {
         return ( 
             <div>
-                <div>Key Competitors</div>
+                <SectionHeader>Key Competitors</SectionHeader>
                 <div>
-                    <table>
+                    <table className="tableClass">
                         <thead>
                             <tr>
-                                <td>Stock</td>
-                                <td>Price</td>
-                                <td>%Change</td>
-                                <td>Market Cap</td>
+                                <th>Stock</th>
+                                <th>Price</th>
+                                <th>%Change</th>
+                                <th>Market Cap</th>
                             </tr>
                         </thead>
                         <tbody>

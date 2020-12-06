@@ -6,11 +6,13 @@ export interface QuotePageCompanyStatisticsProps {
  
 const QuotePageCompanyStatistics: React.FC<QuotePageCompanyStatisticsProps> = ({Statistic}) => {
     return ( <div>
-        <table>
+        <table  style={{
+             'width': '100%'
+         }}>
             <tbody>
             <tr>
                 <td>
-                    <table>
+                    <table className="tableClass">
                         <thead>
                          <tr>
                             <th colSpan={2}>Company Statistics</th>
@@ -38,7 +40,7 @@ const QuotePageCompanyStatistics: React.FC<QuotePageCompanyStatisticsProps> = ({
                     </table>
                 </td>
                 <td>
-                <table>
+                <table className="tableClass">
                         
                        <thead>
                             <tr>

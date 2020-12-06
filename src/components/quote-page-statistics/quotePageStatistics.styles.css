@@ -11,3 +11,13 @@
 .statisticsFont{
     font-size: 13px;
 }
+.tableClass {
+    width: 90%;
+} 
+table.tableClass, table.tableClass th, table.tableClass td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  table.tableClass th, table.tableClass td {
+    padding: 7px;
+  }
