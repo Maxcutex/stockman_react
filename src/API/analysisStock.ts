@@ -73,7 +73,7 @@ export const getCurrentAnalysis = async (
     stock: string, managementtype: string
   ): Promise<StockManagementType[]> => {
     try {
-        const url = `${baseUrl}/tock-management/by-management-type/?stock_code=${stock}&query_type=${managementtype}`
+        const url = `${baseUrl}/stock-management/by-management-type/?stock_code=${stock}&query_type=${managementtype}`
         const { data }  = await axios(url);
         return data
     } catch (error) {

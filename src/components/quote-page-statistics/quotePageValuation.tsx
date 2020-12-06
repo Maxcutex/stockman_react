@@ -8,6 +8,8 @@ const QuotePageValuationStats: React.FC<QuotePageValuationStatsProps> = ({Statis
     
     return ( <div>
          <table>
+             <tbody>
+                 
             <tr>
                 <td>
                     <table>
@@ -64,6 +66,8 @@ const QuotePageValuationStats: React.FC<QuotePageValuationStatsProps> = ({Statis
                     </table>
                 </td>
             </tr>
+            </tbody>
+
         </table>
    
     </div> );

@@ -5,6 +5,7 @@ import QuotePageCompanyStatistics from './quotePageCompany';
 import QuotePageKeyCompetitors from './quotePageKeyCompetitors';
 import './quotePageStatistics.styles.css'
 import QuotePageValuationStats from './quotePageValuation';
+import { SectionHeader } from './quotestatistics.styles';
 
 const QuotePageStatistics: React.FC<IStock> = ({Stock}) => {
 
@@ -30,7 +31,7 @@ const QuotePageStatistics: React.FC<IStock> = ({Stock}) => {
             });
     }, []);
     return ( <div className="statisticsFont">
-<div>Key Statistics</div>
+<SectionHeader>Key Statistics</SectionHeader>
 <div>
     <div className="valuationContainer">
         {status === REQUEST_STATUSES.LOADING ? <div> Loading ...</div> : null}

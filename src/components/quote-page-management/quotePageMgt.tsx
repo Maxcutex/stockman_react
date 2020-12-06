@@ -1,6 +1,10 @@
 import React, {useState , useEffect} from 'react';
 import { getStockManagement, } from '../../API/analysisStock';
+import {StyledCounter} from './quotePageManagement.styles';
+import './quotePageCss.css' 
 import {  REQUEST_STATUSES, IStockManagement, StockManagementType } from '../../types'
+import { TableStyles } from '../common/genericStyles';
+import { Table } from '../table/table';
 const QuotePageMgt : React.FC<IStockManagement> = ({Stock, ManagementType}) =>  {
     const [stockManagement, setStockManagement] = useState<StockManagementType[] | null>(null)
     const [status, setStatus] = useState<REQUEST_STATUSES>(REQUEST_STATUSES.IDLE)
@@ -20,6 +24,26 @@ const QuotePageMgt : React.FC<IStockManagement> = ({Stock, ManagementType}) =>  
         })
     
       }, [])
+
+      const columns = React.useMemo(
+        () => [
+          {
+            Header: typeManagement,
+            columns: [
+              {
+                Header: 'Name',
+                accessor: 'name',
+              },
+              {
+                Header: 'Position',
+                accessor: 'position',
+              },
+            ],
+          },
+         
+        ],
+        []
+      )
     return ( <div>
             {status === REQUEST_STATUSES.LOADING ? <div> Loading ...</div> : null}
             {status === REQUEST_STATUSES.ERROR ? (
@@ -33,29 +57,11 @@ const QuotePageMgt : React.FC<IStockManagement> = ({Stock, ManagementType}) =>  
             {status === REQUEST_STATUSES.SUCCESS && stockManagement!==null
                 ? (
                     <div>
-                        <div>Header</div>
                         <div>
-                        <table>
-                        <thead>
-                        <tr>
-                            <th colSpan={2}>{typeManagement}</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                            {
-                                stockManagement.map(
-                                    (stock) => {
-                                        <tr>
-                                            <td>{stock.name}</td>
-                                            <td>{stock.position}</td>
-                                        </tr>
-                                    }
-                                )
-                            }
-                            
-                            
-                        </tbody>
-                    </table>
+                        <TableStyles>
+                            <Table columns={columns} data={stockManagement} tableClass="tableClass" />
+                        </TableStyles>
+                       
 
                         </div>
                     </div>
