@@ -24,13 +24,10 @@ const fetchPriceListLoading = (action) => ({
     payload: action,
 });
 
-export const fetchPriceList = (price_date) => dispatch => {
-    console.log("before setting loader")
-
+export const fetchPriceList = (price_date, optionSearch) => dispatch => {
     dispatch(fetchPriceListLoading(true));
-    console.log("after setting loader")
     return axios
-        .get(`${baseUrl}/sectorpricelist?price_date=${price_date}`)
+        .get(`${baseUrl}/sectorpricelist?price_date=${price_date}&option_search=${optionSearch}`)
         .then(res => {
             console.log(res)
             dispatch(fetchPriceListSuccess(res.data));

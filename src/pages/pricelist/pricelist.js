@@ -24,7 +24,7 @@ class PriceListPage extends Component {
     }
 
     componentDidMount(){
-        this.props.fetchPriceList(`${this.state.currentDate}`);
+        this.props.fetchPriceList(`${this.state.currentDate}`, 'default');
     }
 
     handleSubmit = event => {
@@ -32,7 +32,7 @@ class PriceListPage extends Component {
         // console.log('we are here now');
         const formattedDate =  dateFormat(new Date(this.state.dateFull), 'yyyy-mm-dd') 
         // console.log(formattedDate);
-        this.props.fetchPriceList(formattedDate);
+        this.props.fetchPriceList(formattedDate, 'search');
         this.setState({ firstSearch: true });
         this.setState({ currentDate: formattedDate });
     }
