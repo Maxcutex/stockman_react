@@ -19,12 +19,16 @@ export const fetchPriceListFailure = error => ({
 });
  
 
-const fetchPriceListLoading = () => ({
+const fetchPriceListLoading = (action) => ({
     type: FETCH_PRICE_LIST_LOADING,
+    payload: action,
 });
 
 export const fetchPriceList = (price_date) => dispatch => {
-    dispatch(fetchPriceListLoading);
+    console.log("before setting loader")
+
+    dispatch(fetchPriceListLoading(true));
+    console.log("after setting loader")
     return axios
         .get(`${baseUrl}/sectorpricelist?price_date=${price_date}`)
         .then(res => {

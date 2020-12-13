@@ -32,6 +32,7 @@ export const initialPriceList = {
   isUpdating: false,
   priceList: null,
   priceListLoading: false,
+  testPriceLoading: false,
 };
 
 export const initialNewsSearch = {

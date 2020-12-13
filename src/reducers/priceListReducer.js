@@ -13,14 +13,21 @@ const priceListReducer = (state = initialPriceList, action) => {
                 ...state,
                 priceList: action.payload,
                 priceListLoading: false,
+                testPriceLoading: false,
             };
         case FETCH_PRICE_LIST_FAILURE:
-            return state;
-
-        case FETCH_PRICE_LIST_LOADING:
             return {
                 ...state,
-                priceListLoading: true,
+                priceListLoading: false,
+                testPriceLoading: false,
+            };
+
+        case FETCH_PRICE_LIST_LOADING:
+            console.log("attempting to set loader")
+            return {
+                ...state,
+                priceListLoading: action.payload,
+                testPriceLoading: action.payload,
             };
         default:
             return state;

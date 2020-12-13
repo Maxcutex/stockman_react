@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import {getCurrentDate} from '../../utils/utils';
 import  PriceTable from '../../components/price-table/price-table';
@@ -7,6 +8,7 @@ import  NotFound from '../../components/not-found/not-found';
 import  SearchPrice  from '../../components/search-price/search-price';
 import { fetchPriceList } from '../../actions/pricelistAction';
 import Loader from '../../components/Loader/Loader';
+import IsLoading from '../../components/Loader/IsLoading';
 import './pricelist-styles.scss'
 import dateFormat from 'dateformat';
 
@@ -46,9 +48,9 @@ class PriceListPage extends Component {
             
             paddingTop: '10px', marginLeft:'-10px', fontSize:'12px',
           };
-        if (!this.props.priceList || this.props.isLoading) {
-            return <Loader />;
-        }
+        // if (!this.props.priceList || this.props.IsPageLoading) {
+        //     return <Loader />;
+        // }
         //const formattedDate = new Date(this.state.currentDate).toLocaleDateString();
         return (
             <div>
@@ -72,8 +74,15 @@ class PriceListPage extends Component {
                                 <div className='col-sm-12' style={container}>
                                   {
                                     this.state.firstSearch ? 
-                                    this.props.priceList.length ?   <PriceTable priceList={this.props.priceList}/> : <NotFound />
+                                    (
+                                      this.props.priceListLoading === false ? (
+                                      this.props.priceList.length ?   <PriceTable priceList={this.props.priceList}/> : <NotFound />
+                                    ): <IsLoading />
+                                    )
                                     : 'Kindly search for pricelist to view data'
+                                  }
+                                  {
+                                    console.log("this is the current is loading state: ",this.props.priceListLoading)
                                   }
                                 </div>
                                 
@@ -93,11 +102,15 @@ class PriceListPage extends Component {
         );
         }
 }
-PriceListPage.propTypes = {};
+PriceListPage.propTypes = {
+  priceListLoading: PropTypes.bool,
+  testPriceLoading: PropTypes.bool,
+};
 
 const mapStateToProps = state => ({
     priceList: state.pricelist.priceList,
-    isLoading: state.pricelist.priceListLoading,
+    priceListLoading: state.pricelist.priceListLoading,
+    testPriceLoading: state.pricelist.testPriceLoading,
 });
 
 export default connect(mapStateToProps, { fetchPriceList })(
