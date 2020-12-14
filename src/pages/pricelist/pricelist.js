@@ -73,17 +73,13 @@ class PriceListPage extends Component {
                                 <br/>
                                 <div className='col-sm-12' style={container}>
                                   {
-                                    this.state.firstSearch ? 
-                                    (
+                                   
                                       this.props.priceListLoading === false ? (
-                                      this.props.priceList.length ?   <PriceTable priceList={this.props.priceList}/> : <NotFound />
+                                      this.props.priceList !==null && this.props.priceList.length ?   <PriceTable priceList={this.props.priceList}/> : <NotFound />
                                     ): <IsLoading />
-                                    )
-                                    : 'Kindly search for pricelist to view data'
+                                   
                                   }
-                                  {
-                                    console.log("this is the current is loading state: ",this.props.priceListLoading)
-                                  }
+                                  
                                 </div>
                                 
                                 
