@@ -123,7 +123,14 @@ const DesktopHeader = ({buttonClass, menuClass,searchDivClass, searchLinkClass,
                                         </li>
                                     </ul>
                                 </li>
-                               
+                                <li className='active rd-navbar-submenu'>
+                                    <a href='https://stockmanacademy.com.ng/member.php?action=register' target='_blank'>Market Forum</a>
+                                    
+                                </li>
+                                <li className='active rd-navbar-submenu'>
+                                    <a href='https://stockmancooperative.com/register/' target='_blank'>Investor's Club</a>
+                                    
+                                </li>
                        </ul>
                 </div>
                 <div className='rd-navbar-search toggle-original-elements'>
