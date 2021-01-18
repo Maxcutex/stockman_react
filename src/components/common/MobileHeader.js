@@ -163,7 +163,7 @@ const MobileHeader = ({buttonClass, menuClass,searchDivClass, searchLinkClass,
                                     </ul>
                                 </li>
                                 <li >
-                                    <a href='https://stockmanacademy.com.ng/member.php?action=register' target='_blank'>Market Forum</a>
+                                    <a href='https://stockmanacademy.com.ng/member.php?action=register' target='_blank'>Learning Academy</a>
                                     
                                 </li>
                                 <li >
