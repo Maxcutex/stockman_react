@@ -7,6 +7,9 @@ export enum REQUEST_STATUSES {
   export interface IStock {
     Stock: string
   }
+  export interface IRecentArticles {
+    size: number
+  }
   export interface IStockManagement {
     Stock: string,
     ManagementType: string
@@ -137,3 +140,13 @@ export enum REQUEST_STATUSES {
     position: string,
     management_type: string
   }
+
+  export type RecentArticles = {
+    article_type: string,
+    author: string,
+    title: string,
+    id: number,
+    date: string,
+    url: string,
+    stock: string | null
+}

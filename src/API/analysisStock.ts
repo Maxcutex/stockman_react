@@ -85,3 +85,18 @@ export const getCurrentAnalysis = async (
       )
     }
   }
+
+  export const getRecentArticles = async  (): Promise<RecentArticles[]> => {
+    try {
+        const url = `${baseUrl}/recent_articles`
+        const { data }  = await axios(url);
+        return data
+    } catch (error) {
+    //   if (error?.response?.data?.message) {
+    //     throw new Error(error.response.data.message)
+    //   }
+      throw new Error(
+        error.message || `Oops! That's awkward. We messed up.`
+      )
+    }
+  }
