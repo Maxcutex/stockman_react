@@ -10,11 +10,11 @@ export default function OpinionSectionSideBar() {
         <div className='cell-md-4'>
             <div className='section-left-sidebar'>
                 <div className='range range-50'>
-                    <OpinionSectionSideBarSubscriptionCard/>
-                    <OpinionSectionSideBarYouTubeSection/>
-                    <OpinionSectionSideBarRecentArticles/>
+                    <OpinionSectionSideBarSubscriptionCard />
+                    <OpinionSectionSideBarYouTubeSection />
+                    <OpinionSectionSideBarRecentArticles size={10} />
                     <div className='cell-sm-6 cell-md-12'>
-                        <OpinionSectionSideBarInstagramSection/>
+                        <OpinionSectionSideBarInstagramSection />
                         <div
                             className='instafeed'
                             data-instafeed-get='tagged'

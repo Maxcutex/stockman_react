@@ -1,4 +1,4 @@
-import { StockManagementType, StockStatistics } from './../types';
+import { RecentArticles, StockManagementType, StockStatistics } from './../types';
 import axios from 'axios'
 
 import { stockAnalysisType , StockInfoType, StockInfoTypeWithPrice  } from '../types'

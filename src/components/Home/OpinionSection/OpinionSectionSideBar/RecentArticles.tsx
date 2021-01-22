@@ -42,15 +42,16 @@ const OpinionSectionSideBarRecentArticles: React.FC<IRecentArticles> = ({size}) 
                 ? (
                     <div>
                         <ul className="post-list">
+                            {console.log(articles)}
                             {
                                 articles.length > 0 ? (
-                                   articles.slice(0, size).map((article)=>{
-                                    <li>
+                                   articles.slice(0, size).map((article)=>(
+                                    <li key={article.id}>
                                     <a href={article.url}>
                                         {article.title}
                                     </a>
-                                </li>
-                                   })
+                                </li>)
+                                   )
                                 ) : (
                                     <li>
                                
