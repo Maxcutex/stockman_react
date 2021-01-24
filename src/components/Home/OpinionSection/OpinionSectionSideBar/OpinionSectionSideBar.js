@@ -12,7 +12,7 @@ export default function OpinionSectionSideBar() {
                 <div className='range range-50'>
                     <OpinionSectionSideBarSubscriptionCard />
                     <OpinionSectionSideBarYouTubeSection />
-                    <OpinionSectionSideBarRecentArticles size={10} />
+                    <OpinionSectionSideBarRecentArticles size={5} />
                     <div className='cell-sm-6 cell-md-12'>
                         <OpinionSectionSideBarInstagramSection />
                         <div
